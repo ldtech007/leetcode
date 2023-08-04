@@ -34,11 +34,11 @@ nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0 。
 
 **算法如下：**
 
-1. `nums[i] + nums[left] + nums[right] > target`时，`nums[left]`或`nums[right]`需要一个更小的值，由于`nums`是升序的，故只能把索引`right`往左移，`--right`。如果`left >= right`，向右移动`i`，直到`nums[i] != nums[i-1]`（对`nums[i]`去重）。
+1. **`nums[i] + nums[left] + nums[right] > target`时**，`nums[left]`或`nums[right]`需要一个更小的值，由于`nums`是升序的，故**只能把索引`right`往左移，`--right`**。如果`left >= right`，向右移动`i`，直到`nums[i] != nums[i-1]`（对`nums[i]`去重）。
 
-2. `nums[i] + nums[left] + nums[right] < target`时，`nums[left]`或`nums[right]`需要一个更大的值，由于`nums`是升序的，故只能把索引`left`往右移，`++left`。如果`left >= right`，向右移动`i`，直到`nums[i] != nums[i-1]`（对`nums[i]`去重）。
+2. **`nums[i] + nums[left] + nums[right] < target`时**，`nums[left]`或`nums[right]`需要一个更大的值，由于`nums`是升序的，故**只能把索引`left`往右移，`++left`**。如果`left >= right`，向右移动`i`，直到`nums[i] != nums[i-1]`（对`nums[i]`去重）。
 
-3. `nums[i] + nums[left] + nums[right] == target`时，同时移动`left`和`right`，`left`右移直到`nums[left-1] ！=nums [left]`，`right`左移直到`nums[right] != nums[right+1]`(对`nums[left]`和`nums[right]`去重)。
+3. **`nums[i] + nums[left] + nums[right] == target`时，同时移动`left`和`right`**，`left`右移直到`nums[left-1] != nums [left]`，`right`左移直到`nums[right] != nums[right+1]`(对`nums[left]`和`nums[right]`去重)。
 
 4. 如果`i == nums.size()`，算法结束。
 
