@@ -71,7 +71,7 @@ a >> 2 = 0011
 根据上述规律，对于`a`，`b`两个整数，我们可以得到算法如下：
 1. `temp_add = a ^ b`，获取到每一位的和（不包含进位），进入`步骤2`。
 2. `temp_carry = (a & b) << 1`，获取到每一位的进位，进入`步骤3`。
-3. `a = temp_add`，`b = temp_carry`。如果进位`temp_carry`为`0`，最终结果就是`a`。如果进位`temp_carry`不为`0`，进入`步骤1`。
+3. 如果进位`temp_carry`为`0`，最终结果就是`temp_add`。如果进位`temp_carry`不为`0`，`a = temp_add`，`b = temp_carry`，进入`步骤1`。
 
 ## C++代码
 
