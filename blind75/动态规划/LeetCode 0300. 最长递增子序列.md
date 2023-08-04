@@ -23,8 +23,6 @@
 
 ## 思路解析
 
-### 方法一 动态规划
-
 下图给出了`nums = [1, 4, 3]`枚举最长递增子序列的过程，每个节点都是`nums`的一个子序列。
 
 ![](https://raw.githubusercontent.com/ldtech007/leetcode/main/pic/lc-0300-01.png)
@@ -59,7 +57,7 @@ dp[n] = max{dp[0] + 1, ...,dp[i] + 1，dp[n]}
 
 最终`dp`中最大的元素就是我们要找的答案。
 
-### C++代码
+## C++代码
 
 ```cpp
 class Solution {
@@ -80,58 +78,9 @@ public:
   }
 };
 ```
-### 复杂度分析
+## 复杂度分析
 
 **时间复杂度:** *O(n<sup>2</sup>)*，其中`n`为`nums`的长度。
 
 **空间复杂度：** *O(n)*， 其中`n`为`nums`的长度。
 
-接下来介绍一种时间复杂度更低的方法。
-
-### 方法二 二分法
-
-定义一个数组`tail`，遍历完`nums`，保证`tail[i]`是`nums`所有长度为`i`的递增子序列中最后一个元素的最小值，最终`tail`的长度就是最长递增子序列的大小。
-
-比如`nums = [1,2,5,4]`，`[1,2,5]`和`[1,2,4]`都是`nums`长度为`3`的递增子序列，他们的最后一个元素是`5`和`4`，这个时候`tail[3] = 4`。
-
-实现这个算法需要用到二分查找，步骤如下：
-
-* 遍历`nums`，如果`nums[i] > tail[i]`就把`nums[i]`加到`tail`后面。否则就用`nums[i]`替换第一个大于`nums[i]`的`tail[j]`（二分查找），`0 <= j <= i`。
-
-上面的步骤始终保证`tail`是单调递增的，且`tail`最后一个元素足够小，更容易满足`nums[i] > tail.back()`，使`tail`长度更长。进而得到最长的递增子序列长度。
-
-### C++代码
-
-```cpp
-class Solution {
-public:
-    int lengthOfLIS(vector<int>& nums) {
-        //用来存储递增的元素
-        vector<int> tail;
-        for(auto& num:nums){
-            if(tail.size()==0 || num>tail.back()){
-                tail.emplace_back(num);
-                continue;
-            }
-            //通过二分查找获取tail中第一个大于num的元素
-            int left = 0,right = tail.size()-1;
-            while(left<right){
-                int mid = (left + right)/2;
-                if(tail[mid]<num){
-                    left = mid+1;
-                }else{
-                    right = mid;
-                }
-            }
-            tail[left] = num;
-        }
-        //返回最长递增子序列的长度
-        return tail.size();
-    }
-};
-```
-### 复杂度分析
-
-**时间复杂度:** *O(nlogn)*，其中`n`为`nums`的长度。
-
-**空间复杂度：** *O(n)*， 其中`n`为`nums`的长度。
