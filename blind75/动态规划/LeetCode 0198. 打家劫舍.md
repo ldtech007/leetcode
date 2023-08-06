@@ -30,7 +30,7 @@
 
 对于`nums=[1, 2, 3, 1]`其所有可能的偷盗路线如下：
 
-![](https://raw.githubusercontent.com/ldtech007/leetcode/main/pic/lc-0198-01.png)
+![](../../pic/lc-0198-01.png)
 
 根节点到叶子节点就是一条偷盗路线，每个节点表示偷到的总金额，对于上面的例子`dp[4] = 4`。
 

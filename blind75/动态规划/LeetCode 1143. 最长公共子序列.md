@@ -34,23 +34,23 @@
 接下来我们来看两种情况下的**子问题分解**：
 1. `text1[i-1] == text2[j-1]`，这个时候`text1`的`[0, i)`区间和`text2`的`[0, j)`区间上的最长公共子序列就变成了 ***`text1`的`[0, i-1)`区间和`text2`的`[0, j-1)`区间上的最长公共子序列加`1`*** 。即`dp[i][j] = dp[i-1][j-1] + 1`。
 
-![](https://raw.githubusercontent.com/ldtech007/leetcode/main/pic/lc-1143-01.png)
+![](../../pic/lc-1143-01.png)
 
 2. `text1[i-1] != text2[j-1]`，这个时候`text1`的`[0, i)`区间和`text2`的`[0, j)`区间上的最长公共子序列就变成了 ***`text1`的`[0, i-1)`区间和`text2`的`[0, j)`区间上的最长公共子序列*** 以及 ***`text1`的`[0, i)`区间和`text2`的`[0, j-1)`区间上的最长公共子序列*** 中比较长的一个。即`dp[i][j] = max(dp[i-1][j], dp[i][j-1])`。
 
-![](https://raw.githubusercontent.com/ldtech007/leetcode/main/pic/lc-1143-02.png)
+![](../../pic/lc-1143-02.png)
 
 由于整个推导过程是**自下而上**的，在求`dp[i][j]`的时候`dp[i-1][j-1]`，`dp[i][j-1]`，`dp[i-1][j]`都是已经推出结果的。
 
 所以**状态转移公式**为：
 
-![](https://raw.githubusercontent.com/ldtech007/leetcode/main/pic/lc-1143-03.png)
+![](../../pic/lc-1143-03.png)
 
 对于**边界条件**，很明显`dp[i][0] = 0`且`dp[j][0] = 0`。
 
 `text1 = "abcde"`， `text2 = "ace"`的推导过程如下图：
 
-![](https://raw.githubusercontent.com/ldtech007/leetcode/main/pic/lc-1143-04.png)
+![](../../pic/lc-1143-04.png)
 
 最终`dp[5][3] = 3`，最长公共子序列的长度为`3`。
 

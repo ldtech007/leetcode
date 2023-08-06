@@ -25,7 +25,7 @@
 
 定义三个变量，`buy_price`表示买入价，`cur_price`表示当前价格，`max_profit`表示最大利润。
 
-![](https://raw.githubusercontent.com/ldtech007/leetcode/main/pic/lc-0121-01.png)
+![](../../pic/lc-0121-01.png)
 
 下面给出核心算法：
 

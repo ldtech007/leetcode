@@ -29,7 +29,7 @@
 
 对于`s = "leetcode"`, `wordDict = ["hello", "leet", "code"]`的推导树如下:
 
-![](https://raw.githubusercontent.com/ldtech007/leetcode/main/pic/lc-0139-01.png)
+![](../../pic/lc-0139-01.png)
 
 推导的核心思想就是：
 * 在遍历`s`的过程中如果满足`wordDict`中的单词`word`和字符串`s`的区间`[i, i + len(word))`组成的子串相同且`dp[i] == true`，就更新`dp[i+len(word)] = dp[i]`。

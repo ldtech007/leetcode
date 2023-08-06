@@ -35,13 +35,13 @@
 
 1. **`[L, M)`为升序区间。**
 
-![](https://raw.githubusercontent.com/ldtech007/leetcode/main/pic/lc-0033-01.png)
+![](../../pic/lc-0033-01.png)
 
 这个时候`target`如果在升序区间`[L, M)`范围，后面就只需在升序区间查找`R = M - 1`。否则`L = M + 1`。
 
 2. **`(M, R]`为升序区间。**
 
-![](https://raw.githubusercontent.com/ldtech007/leetcode/main/pic/lc-0033-02.png)
+![](../../pic/lc-0033-02.png)
 
 这个时候`target`如果在升序区间`(M, R]`范围，后面就只需在升序区间查找`L = M + 1`。否则`R = M - 1`。
 

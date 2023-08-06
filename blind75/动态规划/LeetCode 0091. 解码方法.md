@@ -56,7 +56,7 @@
 
 由上面的分析可以知道**状态转移公式**如下：
 
-![](https://raw.githubusercontent.com/ldtech007/leetcode/main/pic/lc-0091-01.png)
+![](../../pic/lc-0091-01.png)
 
 对于**边界条件** `dp[0] = 1`，因为空字符串也可以被解码为空字符串。
 

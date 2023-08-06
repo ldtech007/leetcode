@@ -32,7 +32,7 @@
 
 下图是`target = 7`， `candidates = [2, 3, 7]`，**自上而下枚举所有可能解**的过程，叶子节点为`0`，说明找到一个符合条件的解，其解就是由根节点到叶子节点之间树枝上的数组成。比如`[2, 2, 3]`，`[2, 3, 2]`，`[3, 2, 2]`，`[7]`都是符合条件的解。
 
-![](https://raw.githubusercontent.com/ldtech007/leetcode/main/pic/lc-0039-01.png)
+![](../../pic/lc-0039-01.png)
 
 从上面的例子可以看出对于`target = 7`的情况可以划分为求`target = 5`，`target = 4`，`target = 0`三个子问题，这样就明确了**子问题的划分：** 对于`target = n`，我们可以划分成`target = n - candidates[0]`，`...`，`target = n - candidates[m-1]`，`m`个子问题，其中`m`为`candidates`的长度。
 

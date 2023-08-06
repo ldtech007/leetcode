@@ -21,13 +21,13 @@
 1. `n`和`1`进行与运算`n & 1`可以获取`n`对应二进制的最右面一位。
 2. `n`对`2`取余`n % 2`即可获取`n`对应二进制的最右面一位。
 
-![](https://raw.githubusercontent.com/ldtech007/leetcode/main/pic/lc-0191-01.png)
+![](../../pic/lc-0191-01.png)
 
 **将`n`对应的二进制右移一位有两种方式：**
 1. 直接使用编程语言自带的右移符号，比如`c++`可以写为`n >> 1`。
 2. `n / 2` 也可以将`n`对应的二进制右移一位。
 
-![](https://raw.githubusercontent.com/ldtech007/leetcode/main/pic/lc-0191-02.png)
+![](../../pic/lc-0191-02.png)
 
 ### C++代码
 
@@ -56,7 +56,7 @@ public:
 
 `n & (n - 1)`其实就是将`n`对应的二进制最右边值为`1`的`bit位`置为`0`。
 
-![](https://raw.githubusercontent.com/ldtech007/leetcode/main/pic/lc-0191-03.png)
+![](../../pic/lc-0191-03.png)
 
 在纸上继续按照上面步骤模拟一遍，会帮助大家更好的理解。
 

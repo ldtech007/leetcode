@@ -30,19 +30,19 @@
 
 1. **数组旋转后的顺序没有变化。**
 
-![](https://raw.githubusercontent.com/ldtech007/leetcode/main/pic/lc-0153-01.png)
+![](../../pic/lc-0153-01.png)
 
 这种情况下`nums[L] <= nums[M] <= nums[R]`，最小值为`nums[L]`。
 
 2. **数组旋转后最小值在索引 `M` 的右侧。**
 
-![](https://raw.githubusercontent.com/ldtech007/leetcode/main/pic/lc-0153-02.png)
+![](../../pic/lc-0153-02.png)
 
 这种情况下`nums[L] <= nums[M] >= nums[R]`，`[L, M]`为升序，最小值只能在 `M` 的右边，故更改左边界`L = M + 1`。 
 
 3. **数组旋转后最小值在索引 `M` 的左侧。**
 
-![](https://raw.githubusercontent.com/ldtech007/leetcode/main/pic/lc-0153-03.png)
+![](../../pic/lc-0153-03.png)
 
 这种情况下`nums[L] >= nums[M]`，`nums[R] >= nums[M]`, `[M, R]`为升序，最小值只能在 `M` 的左边(包含`M`)，故更改右边界`R = M`。
 
