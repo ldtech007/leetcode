@@ -17,7 +17,7 @@
 
 ## 思路解析
 
-循环遍历`intervals`，对于`newInterval`和`intervals[i]`我们分三种情况来讨论：
+循环遍历数组`intervals`，对于`newInterval`和`intervals[i]`我们分三种情况来讨论：
 
 1. `newInterval`在`intervals[i]`的左边，此时把`newInterval`和`intervals`区间`[i,n)`的元素依次压入`res`中，并返回`res`， 其中`n`为`intervals`的大小，`res`为存储结果的数组。
 
