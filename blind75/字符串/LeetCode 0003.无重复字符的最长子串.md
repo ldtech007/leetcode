@@ -38,7 +38,7 @@
 
 比如给定`s="abcac"`,其大致流程如图所示：
 
-![](../../pic/lc-0003-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0003-01.png)
 
 ## C++代码实现
 

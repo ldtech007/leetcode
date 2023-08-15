@@ -10,7 +10,7 @@
 
 **举个例子：**
 
-![](../../pic/lc-0048-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0048-01.png)
 
 ```
 输入：matrix = [[1,2,3],[4,5,6],[7,8,9]]
@@ -27,7 +27,7 @@
 2. 先借助一个整型变量，旋转四个角的元素。
 3. 再借助同一个整型变量旋转基于四个角偏移的元素，最多偏移`right - left - 1`。
 
-![](../../pic/lc-0048-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0048-02.png)
 
 4. 把最外层全部旋转以后，缩小矩阵的边界，`++left`、`++top`、`--right`、`--bottom`。如果`left < right`，进入`步骤2`，否则结束。
 

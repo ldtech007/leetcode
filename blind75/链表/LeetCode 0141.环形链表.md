@@ -12,7 +12,7 @@
 
 **举个例子：**
 
-![](../../pic/lc-0141-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0141-01.png)
 
 ```
 输入：head = [3,2,0,-4], pos = 1
@@ -66,7 +66,7 @@ public:
 1. 如果链表不存在环，那么`fast`指针会率先移动到`NULL`节点。
 2. 如果链表中存在环，`slow`指针和`fast`指针最终都会进入到环里，这个时候两个指针的移动可以看成`fast`指针追`slow`指针。如下图，假设`fast`指针和`slow`指针在环中的距离为`3`，`fast`指针每次移动两步，`slow`指针每次移动一步，每次移动他们之间的距离就会缩小`2 - 1 = 1`，这样他们只需要移动`3`次就可以相遇。同理，如果`fast`指针和`slow`指针在环中的距离为`n`，只需要移动`n`次就可以相遇。
 
-![](../../pic/lc-0141-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0141-02.png)
 
 ### C++代码
 

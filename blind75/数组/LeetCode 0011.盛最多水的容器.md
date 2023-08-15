@@ -15,7 +15,7 @@
 
 **举个例子：**
 
-![](../../pic/lc-0011-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0011-01.png)
 
 ```
 输入：[1,8,6,2,5,4,8,3,7]
@@ -31,7 +31,7 @@
 
 定义索引`L`为容器的左边界，索引`R`为容器的右边界。那么区间`[L, R]`围成的容器的面积可以表示为`area = (R - L) * min(height[L], height[R])`，这个面积公式对后续的推导过程很关键。
 
-![](../../pic/lc-0011-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0011-02.png)
 
 我们知道了面积的计算方式，给定数组`height=[1, 8, 6, 2, 5, 4, 8, 3, 7]`，初始化索引`L = 0`，`R = height.size - 1`。接下来就是要通过移动`L`，`R`去寻找区间`[L, R]`围成的最大的面积。那么`L`，`R`要如何移动呢？
 

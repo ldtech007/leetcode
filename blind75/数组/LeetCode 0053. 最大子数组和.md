@@ -25,13 +25,13 @@
 
 1. **考虑数组元素全部都是大于等于`0`的场景**：
 
-![](../../pic/lc-0053-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0053-01.png)
 
 在这种场景下，因为元素都是正数，不难看出`cur_max[i] = cur_max[i-1] + nums[i]`。
 
 2. **考虑数组元素包含负数的场景**：
 
-![](../../pic/lc-0053-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0053-02.png)
 
 由于`cur_max[0] = -1`，负数加上一个数会导致和变的更小。那么`cur_max[1] != cur_max[0] + nums[1]`，正确的结果为`cur_max[1] = nums[1]`。进一步优化转移公式为`cur_max[i] = max{cur_max[i-1] + nums[i], nums[i]}`。
 

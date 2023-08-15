@@ -47,7 +47,7 @@ public:
 
 1. 定义两个`hash`表`u_mapS`用来统计`s`中字符出现的次数，`u_mapT`用来统计`t`中字符出现的次数。
 
-![](../../pic/lc-0242-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0242-01.png)
 
 2. 比较两个`hash`表中的元素是否相等。
 

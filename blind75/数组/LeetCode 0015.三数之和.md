@@ -44,7 +44,7 @@ nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0 。
 
 对于`nums = [-1,0,1,2,-1,-4]`，流程如下图：
 
-![](../../pic/lc-0015-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0015-01.png)
 
 ## C++代码
 

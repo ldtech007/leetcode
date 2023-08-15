@@ -21,15 +21,15 @@
 
 1. `newInterval`在`intervals[i]`的左边，此时把`newInterval`和`intervals`区间`[i,n)`的元素依次压入`res`中，并返回`res`， 其中`n`为`intervals`的大小，`res`为存储结果的数组。
 
-![](../../pic/lc-0057-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0057-01.png)
 
 2. `newInterval`在`intervals[i]`的右边，此时把`intervals[i]`压入`res`中，`newInterval`继续跟`intervals[i]`后面的元素比较，`++i`。
 
-![](../../pic/lc-0057-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0057-02.png)
 
 3. `newInterval`和`intervals[i]`有重叠，更新`newInterval`。`newInterval[0] = min(newInterval[0], intervals[i][0])`，`newInterval[1] = max(newInterval[1], intervals[i][1])`，更新后的`newInterval`继续和`intervals[i]`后面的元素比较，`++i`。
 
-![](../../pic/lc-0057-03.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0057-03.png)
 
 ## C++代码
 

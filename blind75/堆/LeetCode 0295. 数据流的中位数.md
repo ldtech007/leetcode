@@ -46,7 +46,7 @@ medianFinder.findMedian(); // return 2.0
 
 比如，`arr = [1, 2, 3, 4]`对应的大根堆和小根堆情况如下图。
 
-![](../../pic/lc-0295-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0295-01.png)
 
 其中位数为`(2 + 3) / 2.0 = 2.5`。
 

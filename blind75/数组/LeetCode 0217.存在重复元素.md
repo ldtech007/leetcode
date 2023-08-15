@@ -22,7 +22,7 @@
 
 首先对给定的`nums`进行排序，然后遍历排序后的`nums`进行遍历，如果存在`nums[i] == nums[i-1]`，说明`nums`中存在重复的元素。
 
-![](../../pic/lc-0217-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0217-01.png)
 
 ### C++代码
 
@@ -54,7 +54,7 @@ public:
 
 定义一个哈希表`hash_map`用来保存已经遍历过的元素，遍历`nums`，如果`nums[i]`在`hash_map`中，说明存在重复的元素。否则把`nums[i]`作为`key`，`1`作为`value`存到`hash_map`中。
 
-![](../../pic/lc-0217-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0217-02.png)
 
 ### C++代码
 

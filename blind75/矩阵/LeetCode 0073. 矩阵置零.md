@@ -8,7 +8,7 @@
 
 **举个例子：**
 
-![](../../pic/lc-0073-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0073-01.png)
 
 ```
 输入：matrix = [[1,1,1],[1,0,1],[1,1,1]]
@@ -21,11 +21,11 @@
 
 使用两个布尔数组`rowsZero`、`colsZero`来保存每一行和每一列是否需要置为`0`，`true`代表需要置`0`。假设`matrix = [[1,1,1], [1,0,1], [1,1,1]]`，两个数组的情况如下图：
 
-![](../../pic/lc-0073-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0073-02.png)
 
 进一步观察矩阵的特征，其实我们可以使用矩阵的第一行来代替`colsZero`数组，矩阵的第一列(除去第一个元素)外加一个额外的变量(表示第`0`行是否置`0`)代替`rowsZero`数组，值为`0`表示需要置`0`。过程如下图所示：
 
-![](../../pic/lc-0073-03.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0073-03.png)
 
 这样只需要使用常量的空间复杂度。
 

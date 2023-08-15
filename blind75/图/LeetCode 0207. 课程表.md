@@ -28,7 +28,7 @@
 
 下图中`顶点1`的入度为`0`出度为`1`，`顶点4`的入度为`2`出度为`0`。
 
-![](../../pic/lc-0207-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0207-01.png)
 
 接下来复习一下拓扑排序及其实现。
 **拓扑排序**是一种对有向无环图（`DAG`）进行排序的算法。在拓扑排序中，对于每个有向边 `(u, v)`，顶点 `u` 在排序中必须出现在顶点 `v` 的前面。换句话说，拓扑排序将 DAG 中的所有顶点排成一个线性序列，使得对于所有的有向边 `(u, v)`，顶点 `u` 在顶点 `v` 的前面。
@@ -44,18 +44,18 @@
 
 下图就是一种有环的有向图。
 
-![](../../pic/lc-0207-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0207-02.png)
 
 举个例子，对于`numCourses = 4`，`prerequisites = [[0,1],[0,2],[1,3],[2,3]]`，其课程之间的关系如下图：
 
-![](../../pic/lc-0207-03.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0207-03.png)
 
 要完成`课程0`，需要先完成`课程1`和`课程2`，要完成`课程1`和`课程2`需要先完成`课程3`。
 
 判断能否完成课程的算法步骤如下，使用了广度优先算法(`BFS`)。
 1. 用hash表`preCourse`保存每个课程对于的先修课程，用数组`ingree`保存每个课程组成顶点的入度。
 
-![](../../pic/lc-0207-04.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0207-04.png)
 
 2. 所有入度为`0`的顶点存入队列并用`count`计数。
 3. 当队列中元素不为空，从队列中取出一个元素将此元素对应的所有先修课程的入度减`1`，并将入度为`0`的先修课程存入队列用`count`计数。
@@ -116,13 +116,13 @@ public:
 
 还是这个例子，对于`numCourses = 4`，`prerequisites = [[0,1],[0,2],[1,3],[2,3]]`，其课程之间的关系如下图：
 
-![](../../pic/lc-0207-03.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0207-03.png)
 
 要完成`课程0`，需要先完成`课程1`和`课程2`，要完成`课程1`和`课程2`需要先完成`课程3`。
 
 * 用`hash`表`m_preCourse`保存每个课程对于的先修课程，用`hash`表`m_Visit`保存每个课程是否被访问。
 
-![](../../pic/lc-0207-05.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0207-05.png)
 
 * 对于课程`cur_course`深搜的过程中`m_Visit[cur_course]==true`说明有向图存在环，直接返回`false`。
 * 对于课程`cur_course`，深搜的过程中先修课程列表`m_preCourse[cur_course]`被置为空说明课程`cur_course`可以完成。

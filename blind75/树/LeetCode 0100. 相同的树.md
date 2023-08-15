@@ -10,7 +10,7 @@
 
 **举个例子：**
 
-![](../../pic/lc-0100-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0100-01.png)
 
 ```
 输入：p = [1,2,3], q = [1,2,3]
@@ -29,7 +29,7 @@
 
 整个递归的过程如下图：
 
-![](../../pic/lc-0100-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0100-02.png)
 
 ## C++代码
 

@@ -8,7 +8,7 @@
 
 **举个例子：**
 
-![](../../pic/lc-0226-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0226-01.png)
 
 ```
 输入：root = [4,2,7,1,3,6,9]
@@ -27,7 +27,7 @@
 
 整个递归的过程如下图：
 
-![](../../pic/lc-0226-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0226-02.png)
 
 ## C++代码
 

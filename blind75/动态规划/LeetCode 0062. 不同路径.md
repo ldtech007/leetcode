@@ -13,7 +13,7 @@
 
 **举个例子：**
 
-![](../../pic/lc-0062-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0062-01.png)
 
 ```
 输入：m = 3, n = 7
@@ -43,7 +43,7 @@ dp[i][j]=dp[i-1][j] + dp[i][j-1], 0 < i < m, 0 < j < n
 
 对于`3 x 7`的网格其推导过程如下：
 
-![](../../pic/lc-0062-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0062-02.png)
 
 ## C++代码
 

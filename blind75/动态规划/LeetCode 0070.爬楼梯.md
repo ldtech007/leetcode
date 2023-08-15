@@ -28,11 +28,11 @@
 
 **下面我们先来推导状态转移公式**，假设只有`4`个台阶，`0`阶代表地面。
 
-![](../../pic/lc-0070-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0070-01.png)
 
 整个爬楼梯的过程可以表示成下图：
 
-![](../../pic/lc-0070-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0070-02.png)
 
 **每个节点的值表示剩余的台阶数**，从根节点到叶子结点组成的路径代表一种爬楼梯的方法。
 
@@ -68,7 +68,7 @@ public:
 
 上面的代码实现使用了一个长为`n+1`的`dp`数组，我们观察状态转移公式的规律，其实并不需要保存每个台阶数为`i`的爬楼梯方法，可以通过两个整型变量来优化上面的实现。
 
-![](../../pic/lc-0070-03.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0070-03.png)
 
 ## 代码优化
 

@@ -8,7 +8,7 @@
 
 **举个例子：**
 
-![](../../pic/lc-0021-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0021-01.png)
 
 ```
 输入：l1 = [1,2,4], l2 = [1,3,4]

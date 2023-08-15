@@ -12,7 +12,7 @@
 
 **举个例子：**
 
-![](../../pic/lc-0124-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0124-01.png)
 
 ```
 输入：root = [1,2,3]
@@ -24,26 +24,26 @@
 
 首先定义变量 **`lmax`表示`root`的左子树中能与`root`节点组成合法路径的节点组合的最大和**。对于下图中的`root`节点，绿色的节点`[1,3]`就是其左子树中能与`root`组成合法路径的节点组合，此时`lmax = 4`。同样定义 **`rmax`表示`root`右子树中能与`root`节点组成合法路径的节点组合的最大和**。定义 **`res`保存二叉树中合法路径最大和**。
 
-![](../../pic/lc-0124-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0124-02.png)
 
 本题可以使用递归，难点在于**不能简单的把二叉树的最大路径和**分解为**左子树的最大路径和**与**右子树的最大路径和**的组合。我们通过递归来获取**左子树中能与`root`组成合法路径的节点组合最大和`lmax`**与**右子树中能与`root`组成合法路径的节点组合最大和`rmax`**，并在**递归函数中更新`res`**。
 
 下面讨论三种更新`res`的最基本情况。
 1. **所有节点的值均为正数。**
 
-![](../../pic/lc-0124-03.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0124-03.png)
 
 此时合法路径最大和`res = lmax + rmax + root->val`。
 
 2. **孩子节点中存在值为负数。**
 
-![](../../pic/lc-0124-04.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0124-04.png)
 
 此时为**负数值的节点不能包含到路径中**，否则路径的和会变小。所以这个时候需要对上面的公式进行改造一下`res = max(lmax, 0) + max(rmax, 0) + root->val`。
 
 3. **根节点值为负数。**
 
-![](../../pic/lc-0124-05.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0124-05.png)
 
 这时**根节点**可能会导致**新的路径和**比**左子树的最大路径和**或**右子树的最大路径和**小，所以需要进一步对上面的公式进行改造`res = max(res, max(lmax, 0) + max(rmax, 0) + root->val)`。
 
@@ -51,7 +51,7 @@
 
 如下图，`root'`的`lmax = max(lmax, rmax) + root->val`。
 
-![](../../pic/lc-0124-06.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0124-06.png)
 
 同样的`rmax = max(lmax, rmax) + root->val`。
 

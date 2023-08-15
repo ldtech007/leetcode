@@ -8,7 +8,7 @@
 
 **举个例子：**
 
-![](../../pic/lc-0102-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0102-01.png)
 
 ```
 输入：root = [3,9,20,null,null,15,7]
@@ -27,15 +27,15 @@
 
 1. 根节点首先入队。
 
-![](../../pic/lc-0102-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0102-02.png)
 
 2. 访问队列中的二叉树的第一层节点，并将第一层节点的左孩子和右孩子依次入队。第一层节点访问完，第二层的节点自左向右已经全部入队。
 
-![](../../pic/lc-0102-03.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0102-03.png)
 
 3. 访问队列中的二叉树的第二层节点，并将第二层节点的左孩子和右孩子依次入队。第二层节点访问完，第三层的节点自左向右已经全部入队。
 
-![](../../pic/lc-0102-04.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0102-04.png)
 
 4. 直到队列为空，返回的顺序为`[[3], [9, 20], [15, 7]]`。
 

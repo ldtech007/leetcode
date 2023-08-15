@@ -29,7 +29,7 @@
 
 递归的关键是**将问题分解成独立的子问题**。
 
-![](../../pic/lc-0104-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0104-01.png)
 
 如上图所示，**以`root`为根节点树的高度** 可以分解成 **以`root->left`为根节点树的高度`depth1`** 和 **以`root->right`为根节点树的高度`depth2`** 中的较大值加一，即`max{depth1, depth2} + 1`。
 

@@ -8,7 +8,7 @@
 
 **举个例子：**
 
-![](../../pic/lc-0206-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0206-01.png)
 
 ```
 输入：head = [1,2,3,4,5]
@@ -22,7 +22,7 @@
 * 定义两个指针`pre = NULL`，`cur = head`。
 * 遍历链表，当`cur`不为空，就让`cur`指向它的前一个节点`pre`，然后`pre`和`cur`均向后移动一步。
 
-![](../../pic/lc-0206-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0206-02.png)
 
 * 最终`cur == NULL`，`pre`变成新的头节点，返回`pre`即可。
 
@@ -73,7 +73,7 @@ public:
 
 递归是函数一层一层调用的过程，函数调用实际上是一个入栈出栈的过程，这里的栈就是函数调用栈，你可以用`gdb`调试一个程序通过`bt`命令来查看函数调用栈。这里的递归函数是`reverseList`，它的入参是链表的头节点，返回值是链表反转后新的头节点。对于链表`head = [1,2,3]`，它的递归反转过程如下图。
 
-![](../../pic/lc-0206-03.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0206-03.png)
 
 ### C++代码
 

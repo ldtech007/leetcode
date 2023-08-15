@@ -8,7 +8,7 @@
 
 **举个例子：**
 
-![](../../pic/lc-0019-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0019-01.png)
 
 ```
 输入：head = [1,2,3,4,5], n = 2
@@ -19,13 +19,13 @@
 
 根据题目描述中的例子，如果要删除倒数第`2`个节点，那么需要拿到指向倒数第`3`个节点的指针`pre`。执行`pre->next = pre->next->next`，即可删除倒数第`2`个节点。
 
-![](../../pic/lc-0019-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0019-02.png)
 
 寻找倒数第三个节点的算法如下：
 
 * 创建一个虚拟头节点`tempHead`，`tempHead->next = head`，定义两个指针`left = tempHead`，`right = head`。`right`先走`2`步，然后`left`和`right`同时往前走，直到`right`指向空节点，这个时候`left`指向的节点就是倒数第`3`个节点。
 
-![](../../pic/lc-0019-03.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0019-03.png)
 
 有些同学会疑惑，怎么知道`right`要让`left`领先几步？这个时候我们可以倒推，根据例子在纸上画个简单的链表，让`right`指向最终的状态，最后一个节点的下一个节点，即`NULL`节点。`left`指向要删除节点的前一个节点，然后数一数有几个箭头，就让`right`领先`left`几步。
 

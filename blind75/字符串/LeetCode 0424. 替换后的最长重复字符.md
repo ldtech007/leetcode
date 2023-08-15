@@ -25,7 +25,7 @@
 
 定义`left = 0`，`right = 0`来表示窗口的左右边界，`res`来保存结果，哈希表`u_charCount`保存当前窗口中所有字母出现的频率。窗口的长度为`right - left + 1`，窗口中字母出现的最高频率为`maxCount`。所以`right - left + 1 - maxCount`就是当前窗口最多要替换的字母数，`right - left + 1 - maxCount`小于等于`k`时`[left, right]`就是我们要找的一个候选窗口。
 
-![](../../pic/lc-0424-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0424-01.png)
 
 上图中，`[left,right]`组成的窗口中出现频率最高的字母为`A`，所以此时`maxCount = 3`，只需要把`B`替换成`A`就可以满足窗口就中所有字母都是相同的。
 

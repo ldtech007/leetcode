@@ -10,7 +10,7 @@
 
 **举个例子：**
 
-![](../../pic/lc-0572-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0572-01.png)
 
 ```
 输入：root = [3,4,5,1,2], subRoot = [4,1,2]
@@ -21,7 +21,7 @@
 
 首先明确**子树**的概念，对于下图，`subRoot`中节点虽然和`root`中节点的值相等，但是`subRoot`中`节点2`的左孩子是`NULL`，`root`中`节点2`的左孩子是`节点0`，这违反了结构相同，所以`subRoot`不是`root`的子树。
 
-![](../../pic/lc-0572-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0572-02.png)
 
 明确了子树的概念，此问题的递归步骤如下：
 1. `root`和`subRoot`是否相等(`root`本身也是自己的子树)。

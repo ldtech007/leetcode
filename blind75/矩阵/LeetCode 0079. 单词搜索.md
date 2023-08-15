@@ -10,7 +10,7 @@
 
 **举个例子：**
 
-![](../../pic/lc-0079-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0079-01.png)
 
 ```
 输入：board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"
@@ -31,11 +31,11 @@
 
 假设二维数组`board = [['F', 'C', 'S'], ['F', 'E', 'D'], ['A', 'B', 'C']]`。
 
-![](../../pic/lc-0079-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0079-02.png)
 
 要搜索的字符串`word = "BEF"`，那么从`board`边界坐标`(2, 1)`即`字符B`开始，按照`下右上左`的顺序进行`dfs`的过程如下图，因为每个字符最多有四个相邻字符，所以搜索树是一个四叉树。
 
-![](../../pic/lc-0079-03.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0079-03.png)
 
 从`字符B`搜索到`字符C`发现不匹配，把`字符C`置为未被访问的状态，回溯到`字符B`，接着对`字符E`进行搜索，直到搜索到`字符F`，整个`word`被搜索到，返回`true`。
 

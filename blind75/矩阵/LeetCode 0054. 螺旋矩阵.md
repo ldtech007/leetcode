@@ -8,7 +8,7 @@
 
 **举个例子：**
 
-![](../../pic/lc-0054-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0054-01.png)
 
 ```
 输入：matrix = [[1,2,3],[4,5,6],[7,8,9]]
@@ -24,7 +24,7 @@
 1. 先根据题目中的规则遍历矩阵`matrix`由`left`，`right`，`top`，`bottom`组成的边界上的元素。
 2. 缩小矩阵的边界(`++left`,`--right`,`++top`,`--bottom`)。如果`left >= right` 或 `top >= bottom`结束遍历，否则进入`步骤1`。
 
-![](../../pic/lc-0054-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0054-02.png)
 
 ## C++代码
 

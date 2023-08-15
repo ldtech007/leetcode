@@ -36,7 +36,7 @@ res[i] = prefix[i] * postfix[i], 0 <= i < n
 
 对于数组`nums = [1,2,3,4]`，其计算流程如下：
 
-![](../../pic/lc-0238-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0238-01.png)
 
 最终结果为`res=[24,12,8,6]`。
 

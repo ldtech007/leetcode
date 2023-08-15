@@ -29,19 +29,19 @@
 
 1. **数组元素全部都是大于`0`的场景：**
 
-![](../../pic/lc-0152-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0152-01.png)
 
 在这种场景下，因为元素都是正数，不难看出`cur_max[i] = cur_max[i-1] * nums[i]`。
 
 2. **数组元素中含`0`的场景：**
 
-![](../../pic/lc-0152-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0152-02.png)
 
 这个时候，`cur_max[2] = 0`，`nums[3] = 3`，如果继续套用上面的公式算出`cur_max[3] = cur_max[2] * nums[3] = 0`，显然这是不对的，正确的`cur_max[3] = nums[3] = 3`。我们需要修改下上面的公式，`cur_max[i] = max{cur_max[i-1] * nums[i], nums[i]}`。
 
 3. **数组元素包含负数的场景：**
 
-![](../../pic/lc-0152-03.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0152-03.png)
 
 负数比较特殊，`cur_max[2] = -1`，但`cur_max[3] != max{cur_max[2] * nums[3], nums[3]}`。这是因为**负数的存在可能会导致最大值乘以负数变最小值，最小值乘以负数变最大值**。针对这种情况我们增加一个数组`cur_min[i]`来表示以`nums`中第`i`个元素结尾子数组乘积最小的值，这个时候最终获得的状态转移公式如下。
 

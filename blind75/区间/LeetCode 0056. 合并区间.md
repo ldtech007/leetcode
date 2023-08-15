@@ -20,7 +20,7 @@
 * 用数组`res`来保存结果，区间`[tempStart, tempEnd]`用来保存数组`intervals`中第一个暂未保存到结果数组`res`中的区间。
 * 遍历数组`intervals`，如果区间`[tempStart, tempEnd]`和`intervals[i]`有重合，就更新`tempEnd = max(tempEnd, intervals[i][1])`。否则把区间`[tempStart, tempEnd]`存到`res`中，并更新`[tempStart, tempEnd] = [intervals[i][0], intervals[i][1]]`。
 
-![](../../pic/lc-0056-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0056-01.png)
 
 ## C++代码
 

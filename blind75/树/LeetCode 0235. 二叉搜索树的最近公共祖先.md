@@ -10,7 +10,7 @@
 
 例如，给定如下二叉搜索树: `root = [6,2,8,0,4,7,9,null,null,3,5]`
 
-![](../../pic/lc-0235-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0235-01.png)
 
 **举个例子：**
 

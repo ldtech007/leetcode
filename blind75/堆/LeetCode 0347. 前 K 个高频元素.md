@@ -23,11 +23,11 @@
 
 1. 先统计其中元素的频率如下图。
 
-![](../../pic/lc-0347-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0347-01.png)
 
 2. 然后使用桶排序，把元素频率作为数组`Freq`的索引，对应频率元素组成的数组作为`Freq`的元素。
 
-![](../../pic/lc-0347-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0347-02.png)
 
 3. 最后逆序获取二维数组`Freq`中`k`个元素作为结果返回。
 

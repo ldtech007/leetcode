@@ -25,7 +25,7 @@
 
 对于`strs = ["eat", "tea", "tan", "ate", "nat", "bat"]`，在`hash`表中的分布如下图：
 
-![](../../pic/lc-0049-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0049-01.png)
 
 ### C++代码
 
@@ -62,7 +62,7 @@ public:
 
 字符串的索引和字母的对应关系如下图：
 
-![](../../pic/lc-0049-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0049-02.png)
 
 >思考：能否使用`vector`作为`hash`表的`key`？需要做哪些额外操作？
 

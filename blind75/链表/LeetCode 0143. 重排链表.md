@@ -16,7 +16,7 @@ L<sub>0</sub> → L<sub>n</sub> → L<sub>1</sub> → L<sub>n - 1</sub> → L<su
 
 **举个例子：**
 
-![](../../pic/lc-0143-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0143-01.png)
 
 ```
 输入：head = [1,2,3,4]
@@ -31,11 +31,11 @@ L<sub>0</sub> → L<sub>n</sub> → L<sub>1</sub> → L<sub>n - 1</sub> → L<su
 
 1. 如果链表节点数为奇数
 
-![](../../pic/lc-0143-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0143-02.png)
 
 2. 如果链表节点数为偶数
 
-![](../../pic/lc-0143-03.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0143-03.png)
 
 上面的两种情况均可通过下面的算法来实现：
 

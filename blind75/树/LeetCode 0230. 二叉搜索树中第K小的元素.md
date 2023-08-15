@@ -8,7 +8,7 @@
 
 **举个例子：**
 
-![](../../pic/lc-0230-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0230-01.png)
 
 ```
 输入：root = [3,1,4,null,2], k = 1
@@ -29,7 +29,7 @@
 
 比如对于下图的二叉搜索树进行中序遍历，得到一个单调递增的序列`[1,2,3]`。
 
-![](../../pic/lc-0230-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0230-02.png)
 
 这里要得到二叉搜索树第`k`小的元素，最简单的方法就是对二叉搜索树进行中序遍历，遍历过程中把访问到的节点的值存到一个数组`vals`里，最终只需要返回数组`vals`的第`k`个元素即可。
 

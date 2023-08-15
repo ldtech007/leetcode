@@ -8,7 +8,7 @@
 
 **举个例子：**
 
-![](../../pic/lc-0105-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0105-01.png)
 
 ```
 输入: preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]
@@ -34,19 +34,19 @@
 
 比如，对于下图中的树。
 
-![](../../pic/lc-0105-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0105-01.png)
 
 它的前序遍历结果为`preorder = [3,9,20,15,7]`，根据前序遍历的特点可以确定根节点的值为`3`。
 
-![](../../pic/lc-0105-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0105-02.png)
 
 它的中序遍历结果为`inorder = [9,3,15,20,7]`，从中找到`根节点3`，那么`根节点3`左边的区间就是左子树的序列，右边的区间就是右子树的序列。
 
-![](../../pic/lc-0105-03.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0105-03.png)
 
 确定了根节点和左右子树序列，通过递归就可以很容易的构造出整棵二叉树。
 
-![](../../pic/lc-0105-04.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0105-04.png)
 
 在中序遍历序列中寻找根节点时，这里使用了一个`hash`表来**保存中序遍历序列中节点值和索引的关系**，这种空间换时间的方式可以大大节省寻找根节点时间。
 

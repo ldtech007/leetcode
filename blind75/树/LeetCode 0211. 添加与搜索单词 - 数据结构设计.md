@@ -62,11 +62,11 @@ struct TrieNode {
 
 前缀树节点的结构如下图，图中的`node`字段在真实结构体中是不存在的，为了方便理解`node`相当于二叉树的`val`字段，弄清楚图中节点的布局是搞懂前缀树的关键。
 
-![](../../pic/lc-0211-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0211-01.png)
 
 由单词`"a"`生成的前缀树如下图。
 
-![](../../pic/lc-0211-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0211-02.png)
 
 前缀树的根节点是没有类似二叉树`val`字段信息的，单词`"a"`中只有一个字符，生成的前缀树需要两个节点，孩子节点表示字符`‘a’`，孩子节点中的`isWord = true`表示这个节点为单词`“a”`在前缀树中的最后一个节点。
 

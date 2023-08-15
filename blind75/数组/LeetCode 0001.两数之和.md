@@ -21,7 +21,7 @@
 
 首先暴力的方法就不说了，比较简单但是时间复杂度比较高。这里讲一种空间换时间的方法，利用`hash`表，提前把`nums`中的元素`nums[i]`作为`hash`表的`key`主键，`nums`的索引作为`hash`表的`value`值存到`hash`表中。
 
-![](../../pic/lc-0001-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0001-01.png)
 
 这样我们只需要遍历`nums`，在`hash`表中寻找`target-nums[i]`，如果`target-nums`存在`hash`表中，且`hash[target-nums] != i`，那么就返回`{i,hash[target-nums]}`。如果遍历完整个`nums`都没有任何结果返回，就说明没有找到。
 

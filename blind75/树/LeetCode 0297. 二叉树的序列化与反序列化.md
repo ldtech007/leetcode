@@ -12,7 +12,7 @@
 
 **举个例子：**
 
-![](../../pic/lc-0297-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0297-01.png)
 
 ```
 输入：root = [1,2,3,null,null,4,5]
@@ -25,11 +25,11 @@
 
 比如，对于`root = [1,2,3,null,null,4,5]`这棵树，如下图。
 
-![](../../pic/lc-0297-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0297-02.png)
 
 它的前序遍历结果为`"1,2,3,4,5"`，对于这个结果，如果没有任何额外信息我们只能判断出根节点是`1`，左子树和右子树无法唯一的确定。如果对前序遍历稍加改造，`NULL`节点也保存起来，那么结果就变成`"1,2,N,N,3,4,N,N,5,N,N"`，其中`'N'`表示`NULL`点。结合二叉树的特点和改造后前序遍历的结果，很容易唯一的确定根节点和左右子树范围。
 
-![](../../pic/lc-0297-03.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0297-03.png)
 
 根据上面的讨论，**本题的序列化方案如下：**
 

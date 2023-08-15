@@ -25,7 +25,7 @@ class Node {
 
 本题可以采用深度优先（`DFS`）搜索来解。使用一个`hash`表存储**旧节点**和**克隆出的新节点**之间的一一对应关系。
 
-![hashmap](../../pic/lc-0133-01.png)
+![hashmap](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0133-01.png)
 
 通过`hash`表即可以方便的获取到已经克隆的新节点，还能知道旧节点是否被克隆过。
 

@@ -35,7 +35,7 @@
 
 合并过程如下图。
 
-![](../../pic/lc-0023-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0023-01.png)
 
 ### C++代码
 
