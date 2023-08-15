@@ -197,5 +197,5 @@
 毕业于哈尔滨工业大学，曾在腾讯从事了 `3+` 年 `C++` 相关的开发工作，目前在一家大厂从事网络安全相关的工作。热爱技术分享，文章第一时间会发布在微信公众号，&#x1F496; &#x1F496; **喜欢我的文章就扫码关注吧** &#x1F496; &#x1F496;。
 
 <div aglign="center">
-    <img src="https://gitee.com/ldtech007/picture/raw/master/pic/readme-01.png" width="50%">
+    <img src="./picture/readme-01.jpg" width="50%">
 </div>
