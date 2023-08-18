@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://gitee.com/ldtech007/picture/raw/master/pic/readme-01.jpg" target="_blank"><img src="https://img.shields.io/badge/公众号-溜达虎爱编程-brightgreen.svg" alt="公众号"></a>
+  <a href="https://docs.qq.com/sheet/DWGJZdmZSQUJvWWp3" target="_blank"><img src="https://img.shields.io/badge/共享文档-blind75-blue.svg" alt="共享文档"></a>
+</p>
+
+
 网络慢？ 点击&#x1F496; &#x1F496;**[gitee 同步仓库](https://gitee.com/ldtech007/leetcode)：&#x1F496; &#x1F496;** 
 
 >https://gitee.com/ldtech007/leetcode
