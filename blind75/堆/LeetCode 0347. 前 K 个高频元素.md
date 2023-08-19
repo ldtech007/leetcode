@@ -88,7 +88,7 @@ public:
  };
 ```
 
-使用优先对列的算法如下：
+使用优先队列的算法如下：
 
 1. 使用`hash`表`u_mapCount`统计数组`nums`中元素出现的频率。
 2. 遍历`hash`表`u_mapCount`，如果优先队列`q`中元素个数小于`k`，将`u_mapCount`中的元素入队，否则，如果优先队列`q`中元素个数等于`k`且`u_mapCount`中元素大于`q.top()`, 就用`u_mapCount`中元素替换`q.top()`。
