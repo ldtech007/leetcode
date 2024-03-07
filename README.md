@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://raw.githubusercontent.com/ldtech007/leetcode/main/picture/readme-01.jpg" target="_blank"><img src="https://img.shields.io/badge/公众号-溜达虎爱编程-brightgreen.svg" alt="公众号"></a>
+  <a href="https://raw.githubusercontent.com/ldtech007/leetcode/main/picture/readme-01.jpg" target="_blank"><img src="https://img.shields.io/badge/公众号-编程网事-brightgreen.svg" alt="公众号"></a>
   <a href="https://docs.qq.com/sheet/DWGJZdmZSQUJvWWp3" target="_blank"><img src="https://img.shields.io/badge/共享文档-blind75-blue.svg" alt="共享文档"></a>
 </p>
 
@@ -33,6 +33,10 @@
 **常用的解题方法：** 递归、迭代、二分法、回溯、贪心、动态规划、位运算、双指针、模拟、拓扑排序、桶排序、单调栈、深度优先搜索、广度优先搜索都有覆盖。
 
 ## blind75 目录
+
+### 数据结构基础
+
+[001.面试中需要熟知的数组知识](./blind75/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80/%E9%9D%A2%E8%AF%95%E4%B8%AD%E9%9C%80%E8%A6%81%E7%86%9F%E7%9F%A5%E7%9A%84%E6%95%B0%E7%BB%84%E7%9F%A5%E8%AF%86.md)
 
 ### 数组
 
