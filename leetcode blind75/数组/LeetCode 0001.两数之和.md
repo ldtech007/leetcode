@@ -48,6 +48,45 @@ public:
 };
 ```
 
+## java代码
+
+```java
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> u_map = new HashMap<>();
+        int nums_len = nums.length;
+        // 预先生成哈希表
+        for (int i = 0; i < nums_len; i++) {
+            u_map.put(nums[i], i);
+        }
+        for (int i = 0; i < nums_len; i++) {
+            // 查询由nums所有元素生成的哈希表
+            if (u_map.containsKey(target - nums[i]) && u_map.get(target - nums[i]) != i) {
+                return new int[]{i, u_map.get(target - nums[i])};
+            }
+        }
+        return new int[]{};
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        u_map = {}
+        nums_len = len(nums)
+        # 预先生成哈希表
+        for i in range(nums_len):
+            u_map[nums[i]] = i
+        for i in range(nums_len):
+            # 查询由nums所有元素生成的哈希表
+            if target - nums[i] in u_map and u_map[target - nums[i]] != i:
+                return [i, u_map[target - nums[i]]]
+        return []
+```
+
 上面的方法我们需要预先生成`hash`表，这样就会遍历两次`nums`，那么能否只遍历一遍`nums`呢？对于`nums[i]`，我们只需要把每次查询由`nums`中所有元素组成的`hash`表，修改为每次查询由`nums[0]~nums[i-1]`组成的`hash`表，其实效果是一样的。
 
 ## C++代码
@@ -56,22 +95,60 @@ public:
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
-        unordered_map<int, int> u_map;
+        unordered_map<int, int> pre_map;
         int nums_len = nums.size();
         for (int i = 0; i < nums_len; ++i) {
             //查询由nums[0]~nums[i-1]组成的hash表
-            if(u_map.find(target-nums[i]) != u_map.end()) {
-                return {u_map[target-nums[i]], i};
+            if(pre_map.find(target-nums[i]) != pre_map.end()) {
+                return {pre_map[target-nums[i]], i};
             } else {
                 //把当前nums[i]放入hash表
-                u_map[nums[i]] = i;
+                pre_map[nums[i]] = i;
             }
         }
         return {};
     }
 };
-
 ```
+
+## java代码
+
+```java
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> preMap = new HashMap<>();
+        int numsLen = nums.length;
+        for (int i = 0; i < numsLen; i++) {
+            // 查询由nums[0]~nums[i-1]组成的哈希表
+            if (preMap.containsKey(target - nums[i])) {
+                return new int[]{preMap.get(target - nums[i]), i};
+            } else {
+                // 把当前nums[i]放入哈希表
+                preMap.put(nums[i], i);
+            }
+        }
+        return new int[]{};
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        pre_map = {}
+        nums_len = len(nums)
+        for i in range(nums_len):
+            # 查询由nums[0]~nums[i-1]组成的哈希表
+            if target - nums[i] in pre_map:
+                return [pre_map[target - nums[i]], i]
+            else:
+                # 把当前nums[i]放入哈希表
+                pre_map[nums[i]] = i
+        return []
+```
+
 ## 复杂度分析
 
 **时间复杂度：** 只需要遍历一遍`nums`，每次查`hash`表的时间复杂度是*O(1)*，故整体的时间复杂是*O(n)*，其中`n`为`nums`的长度。
