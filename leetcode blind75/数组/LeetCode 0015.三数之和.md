@@ -89,6 +89,86 @@ public:
 };
 ```
 
+## java代码
+
+```java
+class Solution {
+    public List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> res = new ArrayList<>();
+        int numsLen = nums.length;
+        Arrays.sort(nums);
+        
+        for (int i = 0; i < numsLen; ++i) {
+            //去重
+            if (i > 0 && nums[i] == nums[i - 1])
+                continue;
+
+            int left = i + 1, right = numsLen - 1;
+            while (left < right) {
+                if (nums[i] + nums[left] + nums[right] == 0) {
+                    res.add(Arrays.asList(nums[i], nums[left], nums[right]));
+                    ++left;
+                    //去重 [-2,-2,0,0,2,2]
+                    //      i     L     R
+                    //避免[-2,0,2]多次被加到res中
+                    while (left < right && nums[left - 1] == nums[left])
+                        ++left;
+
+                    --right;
+                    //去重
+                    while (left < right && nums[right] == nums[right + 1])
+                        --right;
+
+                } else if (nums[i] + nums[left] + nums[right] < 0) {
+                    ++left;
+                } else {
+                    --right;
+                }
+            }
+        }
+        return res;
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        res = []
+        nums_len = len(nums)
+        nums.sort()
+        
+        for i in range(nums_len):
+            #去重
+            if i > 0 and nums[i] == nums[i - 1]:
+                continue
+
+            left, right = i + 1, nums_len - 1
+            while left < right:
+                if nums[i] + nums[left] + nums[right] == 0:
+                    res.append([nums[i], nums[left], nums[right]])
+                    left += 1
+                    #去重 [-2,-2,0,0,2,2]
+                    #      i     L     R
+                    #避免[-2,0,2]多次被加到res中
+                    while left < right and nums[left - 1] == nums[left]:
+                        left += 1
+
+                    right -= 1
+                    #去重
+                    while left < right and nums[right] == nums[right + 1]:
+                        right -= 1
+
+                elif nums[i] + nums[left] + nums[right] < 0:
+                    left += 1
+                else:
+                    right -= 1
+        return res
+```
+
+
 ## 复杂度分析
 
 **时间复杂度：** 首先排序最快 *O(nlogn)*，然后索引`i`遍历一遍字符串`nums`，针对每个`i`，都有`left`和`right`共同遍历一遍`nums`，总共需要 *O(n<sup>2</sup>)*，故时间复杂度是 *(nlogn)* + *O(n<sup>2</sup>)* = *O(n<sup>2</sup>)*。

@@ -47,14 +47,45 @@ public:
     int maxSubArray(vector<int>& nums) {
         int max_res = nums[0];
         int cur_max = nums[0];
-        for(int i=1;i<nums.size();++i){
+        for(int i = 1; i < nums.size(); ++i){
             //状态转移公式
-            cur_max = max(cur_max+nums[i] ,nums[i]);
-            max_res=max(max_res,cur_max);
+            cur_max = max(cur_max + nums[i], nums[i]);
+            max_res = max(max_res, cur_max);
         }
         return max_res;
     }
 };
+```
+
+## java代码
+
+```java
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int maxRes = nums[0];
+        int curMax = nums[0];
+        for (int i = 1; i < nums.length; ++i) {
+            //状态转移公式
+            curMax = Math.max(curMax + nums[i], nums[i]);
+            maxRes = Math.max(maxRes, curMax);
+        }
+        return maxRes;
+    }
+}
+```
+
+## python代码
+
+```python
+ class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        maxRes = nums[0]
+        curMax = nums[0]
+        for i in range(1, len(nums)):
+            #状态转移公式
+            curMax = max(curMax + nums[i], nums[i])
+            maxRes = max(maxRes, curMax)
+        return maxRes
 ```
 
 ## 复杂度分析

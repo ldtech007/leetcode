@@ -86,6 +86,78 @@ public:
     }
 };
 ```
+## java代码
+
+```java
+class Solution {
+    public int search(int[] nums, int target) {
+        int numsLen = nums.length;
+        int left = 0, right = numsLen - 1;
+
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            //找到target
+            if (target == nums[mid]) {
+                return mid;
+            }
+            //[left, mid)有序
+            if (nums[left] <= nums[mid]) {
+                //target在左侧有序范围内
+                if (nums[left] <= target && target < nums[mid]) {
+                    right = mid - 1;
+                //target在右侧区间
+                } else {
+                    left = mid + 1;
+                }
+            //(mid, right]有序
+            } else {
+                //target在右侧有序范围内
+                if (nums[mid] < target && target <= nums[right]) {
+                    left = mid + 1;
+                //target在左侧区间
+                } else {
+                    right = mid - 1;
+                }
+            }
+        }
+        return -1;
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        numsLen = len(nums)
+        left, right = 0, numsLen - 1
+
+        while left <= right:
+            mid = (left + right) // 2
+            #找到target
+            if target == nums[mid]:
+                return mid
+            #[left, mid)有序
+            if nums[left] <= nums[mid]:
+                #target在左侧有序范围内
+                if nums[left] <= target < nums[mid]:
+                    right = mid - 1
+                #target在右侧区间
+                else:
+                    left = mid + 1
+            #(mid, right]有序
+            else:
+                #target在右侧有序范围内
+                if nums[mid] < target <= nums[right]:
+                    left = mid + 1
+                #target在左侧区间
+                else:
+                    right = mid - 1
+        return -1
+```
+
+
 ## 复杂度分析
 
 **时间复杂度：** 使用了二分查找，故时间复杂度为 *O(log n)*，其中`n`为`nums`的长度。
