@@ -32,7 +32,7 @@
 1. 如果`cur_price < buy_price`，就更新`buy_price = cur_price`(符合逢低买入的思想)。否则就计算**以当前价格卖出获得的利润**，如果利润大于`max_profit`，就更新`max_profit = cur_price - buy_price`。进入`步骤2`。
 2. 重复执行`步骤1`，直到遍历完`prices`数组。
 
-根据上面的算法，在股票卖出时我们始终保证**买入价`buy_price`是目前为止最低的**，这就是解决本题的关键，只要遍历一遍数组`prices`就可得到最大利润值。
+根据上面的算法，遍历一遍数组，枚举股票的所有卖出价，在股票卖出时我们始终保证**买入价`buy_price`是目前为止最低的**，这是解决本题的关键，只要遍历一遍数组`prices`就可得到最大利润值。
 
 ## C++代码
 
@@ -56,6 +56,47 @@ public:
     }
 };
 ```
+
+## java代码
+
+```java
+class Solution {
+    public int maxProfit(int[] prices) {
+        int prices_len = prices.length;
+        int buy_price = prices[0];
+        int max_profit = 0;
+        for (int i = 1; i < prices_len; ++i) {
+            if (prices[i] < buy_price) {
+                // 逢低买入
+                buy_price = prices[i];
+            } else if (prices[i] - buy_price > max_profit) {
+                // 更新最大利润
+                max_profit = prices[i] - buy_price;
+            }
+        }
+        return max_profit;
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        prices_len = len(prices)
+        buy_price = prices[0]
+        max_profit = 0
+        for i in range(1, prices_len):
+            if prices[i] < buy_price:
+                # 逢低买入
+                buy_price = prices[i]
+            elif prices[i] - buy_price > max_profit:
+                # 更新最大利润
+                max_profit = prices[i] - buy_price
+        return max_profit
+```
+
 ## 复杂度分析
 
 **时间复杂度：** 整个过程只遍历一遍数组，时间复杂度为*O(n)*，`n`为`prices`数组的长度。
