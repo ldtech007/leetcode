@@ -44,11 +44,49 @@ public:
     }
 };
 ```
+
+### java代码
+
+```java
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        // 先排序
+        Arrays.sort(nums);
+        int numsLen = nums.length;
+        // 遍历排序后的nums
+        for (int i = 1; i < numsLen; i++) {
+            // nums中存在重复的元素
+            if (nums[i] == nums[i-1]) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+```
+
+### python代码
+
+```python
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        # 先排序
+        nums.sort()
+        nums_len = len(nums)
+        # 遍历排序后的nums
+        for i in range(1, nums_len):
+            # nums中存在重复的元素
+            if nums[i] == nums[i-1]:
+                return True
+        return False
+```
+
 ### 复杂度分析
 
-**时间复杂度：** 排序最快的时间复杂度是*O(nlog(n))*，遍历一遍`nums`的时间复杂度是*O(n)*，所以总的时间复杂度是*O(nlog(n)) + O(n) = O(nlogn)*，其中`n`为`nums`的长度。
+**时间复杂度：** 排序最快的时间复杂度是*O(nlogn)*，遍历一遍`nums`的时间复杂度是*O(n)*，所以总的时间复杂度是*O(nlogn) + O(n) = O(nlogn)*，其中`n`为`nums`的长度。
 
-**空间复杂度：** 排序的空间复杂度是*O(1)*，算法本身的空间复杂度也是*O(1)*，所以总的空间复杂度是*O(1)*。
+**空间复杂度：** 排序的空间复杂度是*O(logn)*，算法本身的空间复杂度是*O(1)*，所以总的空间复杂度是*O(logn)*。
+
 
 ### 方法二 哈希表
 
@@ -77,6 +115,41 @@ public:
     }
 };
 ```
+
+### java代码
+
+```java
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        HashMap<Integer, Integer> u_map = new HashMap<>();
+        for (int num : nums) {
+            // hash表中已经存在num，说明有重复的元素
+            if (u_map.containsKey(num)) {
+                return true;
+            }
+            // hash表中不存在num，把num存到hash表中
+            u_map.put(num, 1);
+        }
+        return false;
+    }
+}
+```
+
+### python代码
+
+```python
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        u_map = {}
+        for num in nums:
+            # hash表中已经存在num，说明有重复的元素
+            if num in u_map:
+                return True
+            # hash表中不存在num，把num存到hash表中
+            u_map[num] = 1
+        return False
+```
+
 ### 复杂度分析
 
 **时间复杂度：** `hash`表查找和插入的时间都是*O(1)*的，遍历`nums`的时间是*O(n)*，所以总的时间复杂度是*O(n)*，`n`为`nums`的长度。
