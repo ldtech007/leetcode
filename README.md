@@ -25,7 +25,7 @@
 |[leetcode 15.三数之和](./leetcode%20blind75/数组/LeetCode%200015.%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C.md)| &#10004; | &#10004; | &#10004; | 录制中 |
 |[leetcode 33.搜索旋转排序数组](./leetcode%20blind75/数组/LeetCode%200033.%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84.md)| &#10004; | &#10004; | &#10004; | 录制中 |
 |[leetcode 53.最大子数组和](./leetcode%20blind75/数组/LeetCode%200053.%20%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C.md)| &#10004; | &#10004; | &#10004; | 录制中 |
-|[leetcode 121.买卖股票的最佳时机](./leetcode%20blind75/数组/LeetCode%200121.%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA.md)| &#10004; | &#10004; | &#10004; | 录制中 |
+|[leetcode 121.买卖股票的最佳时机](./leetcode%20blind75/数组/LeetCode%200121.%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA.md)| &#10004; | &#10004; | &#10004; | [买卖股票的最佳时机](https://b23.tv/MDoza2J) |
 |[leetcode 152.乘积最大子数组](./leetcode%20blind75/数组/LeetCode%200152.%E4%B9%98%E7%A7%AF%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84.md)| &#10004; | &#10008; | &#10008; | 录制中 |
 |[leetcode 217. 存在重复元素](./leetcode%20blind75/数组/LeetCode%200217.%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0.md)| &#10004; | &#10004; | &#10004; | 录制中 |
 
