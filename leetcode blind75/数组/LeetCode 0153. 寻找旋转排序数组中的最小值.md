@@ -68,7 +68,7 @@ public:
             } else if (nums[mid] >= nums[left]) {
                 left = mid + 1;
             //数组旋转后最小值在索引M的左侧
-            } else if (nums[mid] <= nums[left]) {
+            } else if (nums[mid] <= nums[right]) {
                 right = mid;
             }
         } 
