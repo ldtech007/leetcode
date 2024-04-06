@@ -59,20 +59,20 @@ public:
 
         int left = 0, right = nums.size() - 1;
         int mid;
-        while (left < right) {
+        while (left <= right) {
             mid = (left + right) / 2;
             // 数组旋转后的顺序没有变化
             if (nums[mid] >= nums[left] && nums[right] >= nums[mid]) {
                 return nums[left];
             //数组旋转后最小值在索引M的右侧
-            } else if (nums[mid] >= nums[left] && nums[mid] >= nums[right]) {
+            } else if (nums[mid] >= nums[left]) {
                 left = mid + 1;
             //数组旋转后最小值在索引M的左侧
-            } else if (nums[mid] <= nums[left] && nums[mid] <= nums[mid]) {
+            } else if (nums[mid] <= nums[left]) {
                 right = mid;
             }
         } 
-        return nums[left];
+        return -1;
     }
 };
 ```
