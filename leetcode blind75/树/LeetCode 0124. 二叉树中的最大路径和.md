@@ -53,7 +53,7 @@
 
 ![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0124-06.png)
 
-同样的`rmax = max(lmax, rmax) + root->val`。
+同样地可以去计算`rmax`的值。 
 
 根据上面的讨论我们需要在递归函数中更新`res`、`lmax`、`rmax`，详细代码如下。
 
