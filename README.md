@@ -21,14 +21,24 @@
 | 题目 | c++ | java | python | 视频题解 |
 | :----: | :----: | :----: | :----: | :----: | 
 |[leetcode 1.两数之和](./leetcode%20blind75/数组/LeetCode%200001.两数之和.md)| &#10004; | &#10004; | &#10004; | [两数之和]( https://b23.tv/g6f8fCg) |
-|[leetcode 11.盛最多水的容器](./leetcode%20blind75/数组/LeetCode%200011.%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8.md)| &#10004; | &#10004; | &#10004; | 录制中 |
-|[leetcode 15.三数之和](./leetcode%20blind75/数组/LeetCode%200015.%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C.md)| &#10004; | &#10004; | &#10004; | 录制中 |
-|[leetcode 33.搜索旋转排序数组](./leetcode%20blind75/数组/LeetCode%200033.%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84.md)| &#10004; | &#10004; | &#10004; | 录制中 |
-|[leetcode 53.最大子数组和](./leetcode%20blind75/数组/LeetCode%200053.%20%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C.md)| &#10004; | &#10004; | &#10004; | 录制中 |
+|[leetcode 11.盛最多水的容器](./leetcode%20blind75/数组/LeetCode%200011.%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8.md)| &#10004; | &#10004; | &#10004; |[盛最多水的容器](https://www.bilibili.com/video/BV1Dm411k78M/) |
+|[leetcode 15.三数之和](./leetcode%20blind75/数组/LeetCode%200015.%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C.md)| &#10004; | &#10004; | &#10004; | [三数之和](https://www.bilibili.com/video/BV1Ux4y127uZ/) |
+|[leetcode 33.搜索旋转排序数组](./leetcode%20blind75/数组/LeetCode%200033.%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84.md)| &#10004; | &#10004; | &#10004; | [搜索旋转排序数组](https://www.bilibili.com/video/BV1tz421r7xC/) |
+|[leetcode 53.最大子数组和](./leetcode%20blind75/数组/LeetCode%200053.%20%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C.md)| &#10004; | &#10004; | &#10004; | [最大子数组和](https://www.bilibili.com/video/BV17q421c7Gs/) |
 |[leetcode 121.买卖股票的最佳时机](./leetcode%20blind75/数组/LeetCode%200121.%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA.md)| &#10004; | &#10004; | &#10004; | [买卖股票的最佳时机](https://b23.tv/MDoza2J) |
-|[leetcode 152.乘积最大子数组](./leetcode%20blind75/数组/LeetCode%200152.%E4%B9%98%E7%A7%AF%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84.md)| &#10004; | &#10008; | &#10008; | 录制中 |
+|[leetcode 152.乘积最大子数组](./leetcode%20blind75/数组/LeetCode%200152.%E4%B9%98%E7%A7%AF%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84.md)| &#10004; | &#10008; | &#10008; | [乘积最大子数组](https://www.bilibili.com/video/BV1qM4m1Q7nZ/) |
 |[leetcode 217.存在重复元素](./leetcode%20blind75/数组/LeetCode%200217.%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0.md)| &#10004; | &#10004; | &#10004; | [存在重复元素](https://b23.tv/OJoSzyx) |
 |[leetcode 238.除自身以外数组的乘积](./leetcode%20blind75/数组/LeetCode%200238.%20%E9%99%A4%E8%87%AA%E8%BA%AB%E4%BB%A5%E5%A4%96%E6%95%B0%E7%BB%84%E7%9A%84%E4%B9%98%E7%A7%AF.md)| &#10004; | &#10004; | &#10004; | [除自身以外数组的乘积](https://b23.tv/GEt0p50) |
+|[leetcode 3.无重复字符的最长子串](./leetcode%20blind75/字符串/LeetCode%200003.无重复字符的最长子串.md)| &#10004; | &#10008; | &#10008; | [无重复字符的最长子串](https://www.bilibili.com/video/BV17D421G7Nv/)|
+|[leetcode 5.最长回文子串](./leetcode%20blind75/字符串/LeetCode%200005.%20最长回文子串.md)| &#10004; | &#10008; | &#10008; | [最长回文子串](https://www.bilibili.com/video/BV1w7421Z798/) |
+|[leetcode 20.有效括号](./leetcode%20blind75/字符串/LeetCode%200020.有效括号.md)| &#10004; | &#10008; | &#10008; | [有效括号](https://www.bilibili.com/video/BV1hT421Q7g3/) |
+|[leetcode 49.字母异位词分组](./leetcode%20blind75/字符串/LeetCode%200049.%20字母异位词分组.md)| &#10004; | &#10008; | &#10008; | [字母异位词分组](https://www.bilibili.com/video/BV1Fm42157HG/) |
+|[leetcode 76.最小覆盖子串](./leetcode%20blind75/字符串/LeetCode%200076.%20最小覆盖子串.md)| &#10004; | &#10008; | &#10008; | [最小覆盖子串](https://www.bilibili.com/video/BV1sJ4m1g727/) |
+|[leetcode 125.验证回文串](./leetcode%20blind75/字符串/LeetCode%200125.%20验证回文串.md)| &#10004; | &#10008; | &#10008; | [验证回文串](https://www.bilibili.com/video/BV1VH4y1P7Gk/) |
+|[leetcode 242.有效的字母异位词](./leetcode%20blind75/字符串/LeetCode%200242.%20有效的字母异位词.md)| &#10004; | &#10008; | &#10008; | [有效的字母异位词](https://www.bilibili.com/video/BV1db421J7qK/) |
+|[leetcode 424.替换后的最长重复字符](./leetcode%20blind75/字符串/LeetCode%200424.%20替换后的最长重复字符.md)| &#10004; | &#10008; | &#10008; | [替换后的最长重复字符](https://www.bilibili.com/video/BV1zf421d7Ui/) |
+|[leetcode 647.回文子串](./leetcode%20blind75/字符串/LeetCode%200647.%20回文子串.md)| &#10004; | &#10008; | &#10008; | [回文子串](https://www.bilibili.com/video/BV1Bs421w7iw/) |
+|[leetcode 19.删除链表的倒数第N个结点](./leetcode%20blind75/链表/LeetCode%200019.%20删除链表的倒数第%20N%20个结点.md)| &#10004; | &#10008; | &#10008; | 录制中 |
 
 所有的文章都是我利用工作之余的时间写的，尽可能使用最简洁易懂的方式，由浅入深，还画了一些帮助理解的图片。每写完一篇我都会以小白的姿态去反复阅读，反复修改。 也获得了一些同学的认可，还有一些同学在力扣的题解评论区给我提建议，我也会根据同学们的建议去不断调整。我始终认为个人的思路是有局限性的，因为每个人对基础知识的掌握程度是不一样的，一个人认为理所当然的结论，另一个人可能想破脑袋都不理解，所以需要我们共同去不断完善。非常欢迎大家通过力扣评论、公众号「编程网事」后台给我提建议，或者直接提给我你的合并请求。
 
