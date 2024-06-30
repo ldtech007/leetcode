@@ -1,8 +1,8 @@
-# LeetCode 121.买卖股票的最佳时机
-
 > *题目链接：* https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/
 >
 > *视频题解：* https://b23.tv/MDoza2J
+
+# LeetCode 121.买卖股票的最佳时机
 
 ## 题目描述
 

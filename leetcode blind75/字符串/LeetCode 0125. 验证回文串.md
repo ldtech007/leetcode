@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/valid-palindrome/
+>
+> *视频题解：* https://www.bilibili.com/video/BV1VH4y1P7Gk/
 
 # LeetCode 125. 验证回文串
 

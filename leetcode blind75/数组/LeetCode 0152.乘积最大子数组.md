@@ -1,5 +1,7 @@
 
 > *题目链接：* https://leetcode.cn/problems/maximum-product-subarray/
+>
+> *视频题解：* https://www.bilibili.com/video/BV1qM4m1Q7nZ/
 
 # LeetCode 152.乘积最大子数组
 

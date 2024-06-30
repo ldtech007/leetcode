@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/group-anagrams/
+>
+> *视频题解：* https://www.bilibili.com/video/BV1Fm42157HG/
 
 # LeetCode 49. 字母异位词分组
 

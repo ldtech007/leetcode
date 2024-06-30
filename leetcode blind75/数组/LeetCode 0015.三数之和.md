@@ -1,7 +1,8 @@
+> *题目链接：* https://leetcode.cn/problems/3sum/
+>
+> *视频链接：* https://www.bilibili.com/video/BV1Ux4y127uZ/
 
 # LeetCode 15.三数之和
-
-> *题目链接：* https://leetcode.cn/problems/3sum/
 
 ## 题目描述
 

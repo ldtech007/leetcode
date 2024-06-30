@@ -1,5 +1,7 @@
 
 > *题目链接：* https://leetcode.cn/problems/maximum-subarray/
+>
+> *视频题解：* https://www.bilibili.com/video/BV17q421c7Gs/
 
 # LeetCode 53. 最大子数组和
 

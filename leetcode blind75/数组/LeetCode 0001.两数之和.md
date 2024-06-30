@@ -1,8 +1,8 @@
-# LeetCode 1.两数之和
-
 > *题目链接：* https://leetcode.cn/problems/two-sum/
 >
 > *视频题解：* https://b23.tv/g6f8fCg
+
+# LeetCode 1.两数之和
 
 ## 题目描述
 

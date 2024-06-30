@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/longest-substring-without-repeating-characters/
+>
+> *视频题解：* https://www.bilibili.com/video/BV17D421G7Nv/
 
 # LeetCode 3.无重复字符的最长子串
 

@@ -1,9 +1,8 @@
-
-# LeetCode 217. 存在重复元素
-
 > *题目链接：* https://leetcode.cn/problems/contains-duplicate/
 
 > *视频题解：* https://b23.tv/OJoSzyx
+
+# LeetCode 217. 存在重复元素
 
 ## 题目描述
 

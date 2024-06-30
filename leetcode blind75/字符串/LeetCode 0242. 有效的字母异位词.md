@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/valid-anagram/
+>
+> *视频题解：* https://www.bilibili.com/video/BV1db421J7qK/
 
 # LeetCode 242. 有效的字母异位词
 

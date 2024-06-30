@@ -1,5 +1,7 @@
 
 > *题目链接：* https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/
+>
+> *视频题解：* https://www.bilibili.com/video/BV1VC41157ha/
 
 # LeetCode 153. 寻找旋转排序数组中的最小值
 

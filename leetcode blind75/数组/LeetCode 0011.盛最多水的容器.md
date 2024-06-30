@@ -1,5 +1,7 @@
 
 > *题目链接：* https://leetcode.cn/problems/container-with-most-water/
+> 
+> *视频题解：* https://www.bilibili.com/video/BV1Dm411k78M/
 
 # LeetCode 11.盛最多水的容器
 

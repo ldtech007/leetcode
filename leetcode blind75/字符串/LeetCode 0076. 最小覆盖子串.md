@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/minimum-window-substring/
+>
+> *视频题解：* https://www.bilibili.com/video/BV1sJ4m1g727/
 
 # LeetCode 76. 最小覆盖子串
 

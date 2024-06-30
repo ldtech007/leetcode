@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/longest-palindromic-substring/
+>
+> *视频题解：* https://www.bilibili.com/video/BV1w7421Z798/
 
 # LeetCode 5. 最长回文子串
 

@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/longest-repeating-character-replacement/
+>
+> *视频题解：* https://www.bilibili.com/video/BV1zf421d7Ui/
 
 # LeetCode 424. 替换后的最长重复字符
 

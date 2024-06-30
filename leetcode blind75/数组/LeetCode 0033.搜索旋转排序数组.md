@@ -1,5 +1,7 @@
 
 > *题目链接：* https://leetcode.cn/problems/search-in-rotated-sorted-array/
+>
+> *视频题解：* https://www.bilibili.com/video/BV1tz421r7xC/
 
 # LeetCode 33.搜索旋转排序数组
 
