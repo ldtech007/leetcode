@@ -34,19 +34,19 @@
 
 1. **数组旋转后的顺序没有变化。**
 
-![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0153-01.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0153-04.png)
 
 这种情况下`nums[L] <= nums[M] <= nums[R]`，最小值为`nums[L]`。
 
 2. **数组旋转后最小值在索引 `M` 的右侧。**
 
-![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0153-02.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0153-05.png)
 
 这种情况下`nums[L] <= nums[M] >= nums[R]`，`[L, M]`为升序，最小值只能在 `M` 的右边，故更改左边界`L = M + 1`。 
 
 3. **数组旋转后最小值在索引 `M` 的左侧。**
 
-![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0153-03.png)
+![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0153-06.png)
 
 这种情况下`nums[L] >= nums[M]`，`nums[R] >= nums[M]`, `[M, R]`为升序，最小值只能在 `M` 的左边(包含`M`)，故更改右边界`R = M`。
 
@@ -63,13 +63,13 @@ public:
         int mid;
         while (left <= right) {
             mid = (left + right) / 2;
-            // 数组旋转后的顺序没有变化
+            // 区间[left,right]收缩到了一个递增的区间
             if (nums[mid] >= nums[left] && nums[right] >= nums[mid]) {
                 return nums[left];
-            //数组旋转后最小值在索引M的右侧
+            //最小值在索引mid的右侧
             } else if (nums[mid] >= nums[left]) {
                 left = mid + 1;
-            //数组旋转后最小值在索引M的左侧
+            //最小值在索引mid的左侧
             } else if (nums[mid] <= nums[right]) {
                 right = mid;
             }
@@ -77,6 +77,51 @@ public:
         return -1;
     }
 };
+```
+
+## java代码
+
+```java
+class Solution {
+    public int findMin(int[] nums) {
+        int left = 0, right = nums.length - 1;
+        int mid;
+        while (left <= right) {
+            mid = (left + right) / 2;
+            // 区间[left,right]收缩到了一个递增的区间
+            if (nums[mid] >= nums[left] && nums[right] >= nums[mid]) {
+                return nums[left];
+            //最小值在索引mid的右侧
+            } else if (nums[mid] >= nums[left]) {
+                left = mid + 1;
+            //最小值在索引mid的左侧
+            } else if (nums[mid] <= nums[right]) {
+                right = mid;
+            }
+        } 
+        return -1;
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
+        left, right = 0, len(nums) - 1
+        while left <= right:
+            mid = (left + right) // 2
+            # 区间[left,right]收缩到了一个递增的区间
+            if nums[mid] >= nums[left] and nums[right] >= nums[mid]:
+                return nums[left]
+            #最小值在索引mid的右侧
+            elif nums[mid] >= nums[left]:
+                left = mid + 1
+            #最小值在索引mid的左侧
+            elif nums[mid] <= nums[right]:
+                right = mid
+        return -1
 ```
 
 ## 复杂度分析
