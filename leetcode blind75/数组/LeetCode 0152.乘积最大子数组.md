@@ -25,7 +25,7 @@
 
 这是一道经典的动态规划题目，**动态规划的关键就是推导状态转移公式**，接下来带你一步步来推导。
 
-定义`cur_max[i]`表示以`nums`中第`i`个元素结尾子数组乘积最大的值，其中`0 <= i < nums.size`。在推导`cur_max[i]`的过程中会枚举以`nums`中任意元素结尾，乘积最大的子数组。最终我们从`cur_max[i]`中选择最大的一个即是最终要返回的结果。
+定义`cur_max[i]`表示以`nums`中第`i`个元素结尾子数组乘积最大的值，其中`0 <= i < nums.size`。**在推导`cur_max[i]`的过程中会枚举以`nums`中任意元素结尾，乘积最大的子数组。最终我们从`cur_max[i]`中选择最大的一个即是最终要返回的结果。**
 
 那么`cur_max[i]`要怎么算呢？
 
@@ -78,6 +78,53 @@ public:
     }
 };
 ```
+
+## java代码
+
+```java
+class Solution {
+    public int maxProduct(int[] nums) {
+        int nums_len = nums.length;
+        int max_res = Integer.MIN_VALUE;
+        long cur_max = 1, cur_min = 1;
+        for (int i = 0; i < nums_len; ++i) {
+            // 提前保存一下cur_max和cur_min前一个状态，避免更新cur_min的时候用了最新状态的cur_max
+            long temp_max = cur_max, temp_min = cur_min;
+            // 状态转移公式
+            cur_max = Math.max(Math.max(temp_max * nums[i], temp_min * nums[i]), nums[i]);
+            cur_min = Math.min(Math.min(temp_max * nums[i], temp_min * nums[i]), nums[i]);
+            if (cur_min < Integer.MIN_VALUE) {
+                cur_min = Integer.MIN_VALUE;
+            }
+            // 更新全局最大值
+            max_res = Math.max(max_res, (int)cur_max);
+        }
+        return max_res;
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def maxProduct(self, nums: List[int]) -> int:
+        nums_len = len(nums)
+        max_res = float('-inf')
+        cur_max = 1
+        cur_min = 1
+        for i in range(nums_len):
+            # 提前保存一下cur_max和cur_min前一个状态，避免更新cur_min的时候用了最新状态的cur_max
+            temp_max = cur_max
+            temp_min = cur_min
+            # 状态转移公式
+            cur_max = max(max(temp_max * nums[i], temp_min * nums[i]), nums[i])
+            cur_min = min(min(temp_max * nums[i], temp_min * nums[i]), nums[i])
+            # 更新全局最大值
+            max_res = max(max_res, cur_max)
+        return max_res
+```
+
 ## 复杂度分析
 
 **时间复杂度：** 整个过程只需要遍历一遍数组`nums`，故时间复杂度为*O(n)*，其中`n`为`nums`的长度。
