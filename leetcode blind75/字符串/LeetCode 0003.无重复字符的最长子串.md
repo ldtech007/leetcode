@@ -31,10 +31,10 @@
 
 问题的关键就是左右边界如何滑动，窗口滑动策略如下：
 
-1. 如果`s[right]`不在`u_set`中，把`s[right]`加入到`u_set`中并更新结果`res = max(res, right - left + 1)`，`right`向右滑动，直到`s[right]`在`u_set`中。
-2. 如果`s[right]`在`u_set`中，`u_set`删除`s[left]`，`left`向右滑动，直到`s[right]`不在`u_set`中。
+1. 如果`s[right]`不在`u_set`中，把`s[right]`加入到`u_set`中并更新结果`res = max(res, right - left + 1)`，`right`向右滑动，直到`s[right]`在`u_set`中,进入步骤2。
+2. 如果`s[right]`在`u_set`中，`u_set`删除`s[left]`，`left`向右滑动，直到`s[right]`不在`u_set`中，进入步骤1。
 
-根据上面的策略我们就可以获得以字符串`s`任意位置为右边界(枚举满足条件的右边界)的所有候选窗口，只需要把其中最长的一个窗口的长度返回即可。
+根据上面的策略我们就可以**获得以字符串`s`任意位置为右边界(枚举满足条件的右边界)的所有候选窗口**，只需要把其中最长的一个窗口的长度返回即可。
 
 看到这里有些同学可能还是不大理解，文字描述的比较抽象，我特意根据一个简单的例子画了个流程图来帮助理解。
 
@@ -68,6 +68,57 @@ public:
         return res;
     }
 };
+```
+
+## java代码
+
+```java
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        Set<Character> uSet = new HashSet<>();
+        int res = 0;
+        int len = s.length();
+        int curWindow = 0; // 当前窗口大小
+        for (int left = 0, right = 0; right < len; ++right) {
+            while (left < right && uSet.contains(s.charAt(right))) {
+                // s.charAt(right) 已经在 uSet 中，窗口区间 [left, right] 中存在重复的元素
+                // 移动 left 直到窗口区间 [left, right] 中不存在重复元素
+                uSet.remove(s.charAt(left));
+                ++left;
+                --curWindow;
+            }
+            uSet.add(s.charAt(right));
+            ++curWindow;
+            res = Math.max(res, curWindow);
+        }
+        return res;
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        u_set = set()
+        res = 0
+        length = len(s)
+        cur_window = 0  # 当前窗口大小
+        left = 0
+        right = 0
+        while right < length:
+            while left < right and s[right] in u_set:
+                # s[right]已经在u_set中,窗口区间[left,right]中存在重复的元素
+                # 移动left直到窗口区间[left,right]中不存在重复元素
+                u_set.remove(s[left])
+                left += 1
+                cur_window -= 1
+            u_set.add(s[right])
+            cur_window += 1
+            res = max(res, cur_window)
+            right += 1
+        return res
 ```
 
 ## 复杂度分析
