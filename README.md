@@ -27,7 +27,7 @@
 |[leetcode 53.最大子数组和](./leetcode%20blind75/数组/LeetCode%200053.%20%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C.md)| &#10004; | &#10004; | &#10004; | [最大子数组和](https://www.bilibili.com/video/BV17q421c7Gs/) |
 |[leetcode 121.买卖股票的最佳时机](./leetcode%20blind75/数组/LeetCode%200121.%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA.md)| &#10004; | &#10004; | &#10004; | [买卖股票的最佳时机](https://b23.tv/MDoza2J) |
 |[leetcode 152.乘积最大子数组](./leetcode%20blind75/数组/LeetCode%200152.%E4%B9%98%E7%A7%AF%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84.md)| &#10004; | &#10008; | &#10008; | [乘积最大子数组](https://www.bilibili.com/video/BV1qM4m1Q7nZ/) |
-|[leetcode 152.寻找旋转排序数组中的最小值](./leetcode%20blind75/数组/LeetCode%200153.%20寻找旋转排序数组中的最小值.md)| &#10004; | &#10008; | &#10008; | [寻找旋转排序数组中的最小值](https://www.bilibili.com/video/BV1VC41157ha/) |
+|[leetcode 153.寻找旋转排序数组中的最小值](./leetcode%20blind75/数组/LeetCode%200153.%20寻找旋转排序数组中的最小值.md)| &#10004; | &#10008; | &#10008; | [寻找旋转排序数组中的最小值](https://www.bilibili.com/video/BV1VC41157ha/) |
 |[leetcode 217.存在重复元素](./leetcode%20blind75/数组/LeetCode%200217.%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0.md)| &#10004; | &#10004; | &#10004; | [存在重复元素](https://b23.tv/OJoSzyx) |
 |[leetcode 238.除自身以外数组的乘积](./leetcode%20blind75/数组/LeetCode%200238.%20%E9%99%A4%E8%87%AA%E8%BA%AB%E4%BB%A5%E5%A4%96%E6%95%B0%E7%BB%84%E7%9A%84%E4%B9%98%E7%A7%AF.md)| &#10004; | &#10004; | &#10004; | [除自身以外数组的乘积](https://b23.tv/GEt0p50) |
 |[leetcode 3.无重复字符的最长子串](./leetcode%20blind75/字符串/LeetCode%200003.无重复字符的最长子串.md)| &#10004; | &#10008; | &#10008; | [无重复字符的最长子串](https://www.bilibili.com/video/BV17D421G7Nv/)|

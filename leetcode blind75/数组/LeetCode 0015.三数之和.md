@@ -51,11 +51,11 @@ public:
     vector<vector<int>> threeSum(vector<int>& nums) {
         vector<vector<int>> res;
         int nums_len = nums.size();
-        sort(nums.begin(),nums.end());
+        sort(nums.begin(), nums.end());
        
-        for(int i = 0; i< nums_len; ++i) {
+        for(int i = 0; i < nums_len; ++i) {
            //去重
-            if (i > 0 && nums[i]==nums[i-1])
+            if (i > 0 && nums[i] == nums[i-1])
                 continue;
 
             int left = i + 1, right = nums_len - 1;
@@ -66,7 +66,7 @@ public:
                     //去重 [-2,-2,0,0,2,2]
                     //      i     L     R
                     //避免[-2,0,2]多次被加到res中
-                    while(left < right && nums[left-1]==nums[left])
+                    while(left < right && nums[left-1] == nums[left])
                         ++left;
     
                 } else if (nums[i] + nums[left] + nums[right] < 0) {
