@@ -68,6 +68,60 @@ public:
 };
 ```
 
+## java代码
+
+```java
+class Solution {
+    public int countSubstrings(String s) {
+        int res = 0;
+        int sLen = s.length();
+        for (int i = 0; i < sLen; ++i) {
+            // 若回文串长度为奇数，以s[i]为中心向两边扩散寻找以s[i]为中心的所有回文子串
+            int left = i, right = i;
+            while (left >= 0 && right < sLen && s.charAt(left) == s.charAt(right)) {
+                ++res;
+                --left;
+                ++right;
+            }
+            // 若回文串长度为偶数，以s[i]s[i+1]为中心向两边扩散寻找以s[i]s[i+1]为中心的所有回文子串
+            left = i;
+            right = i + 1;
+            while (left >= 0 && right < sLen && s.charAt(left) == s.charAt(right)) {
+                ++res;
+                --left;
+                ++right;
+            }
+        }
+        return res;
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def countSubstrings(self, s: str) -> int:
+        res = 0
+        sLen = len(s)
+        for i in range(sLen):
+            # 若回文串长度为奇数，以s[i]为中心向两边扩散寻找以s[i]为中心的所有回文子串
+            left = i
+            right = i
+            while left >= 0 and right < sLen and s[left] == s[right]:
+                res += 1
+                left -= 1
+                right += 1
+            # 若回文串长度为偶数，以s[i]s[i+1]为中心向两边扩散寻找以s[i]s[i+1]为中心的所有回文子串
+            left = i
+            right = i + 1
+            while left >= 0 and right < sLen and s[left] == s[right]:
+                res += 1
+                left -= 1
+                right += 1
+        return res
+```
+
 ## 复杂度分析
 
 **时间复杂度：** 整个过程会遍历`s`中每个元素为中心的所有回文子串，所以时间复杂度是*O(n<sup>2</sup>)*，其中`n`是字符串`s`的长度。
