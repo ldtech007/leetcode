@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/reverse-linked-list/
+>
+> *视频题解：* https://www.bilibili.com/video/BV1gE421N7W2/
 
 # LeetCode 206. 反转链表
 
@@ -59,6 +61,59 @@ public:
 };
 ```
 
+## java代码
+
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode reverseList(ListNode head) {
+        if (head == null)
+            return head;
+        ListNode pre = null;
+        ListNode cur = head;
+        while (cur != null) {
+            ListNode tmpNext = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = tmpNext;
+        }
+        return pre;
+    }
+}
+```
+
+## python代码
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if not head:
+            return head
+        pre = None
+        cur = head
+        while cur:
+            tmpNext = cur.next
+            cur.next = pre
+            pre = cur
+            cur = tmpNext
+        return pre
+```
+
+
 ### 方法二 递归法
 
 递归的关键是**处理好边界条件**和**独立子问题的划分**。
@@ -105,6 +160,54 @@ public:
     }
 };
 ```
+## java代码
+
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode reverseList(ListNode head) {
+        if (head == null)
+            return head;
+        ListNode newHead = head;
+        if (head.next != null) {
+            newHead = reverseList(head.next);
+            head.next.next = head;
+            head.next = null;
+        }
+        return newHead;
+    }
+}
+```
+
+## python代码
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if not head:
+            return head 
+        newHead = head
+        if head.next:
+            newHead = self.reverseList(head.next)
+            head.next.next = head
+            head.next = None
+        return newHead
+```
+
 ## 复杂度分析
 
 **时间复杂度：** 两种方法的时间复杂度都是*O(n)*，其中`n`是链表的长度。
