@@ -48,7 +48,7 @@
 
 遍历完`s`以后，栈是空的，这就说明字符串`s`是合法的。
 
-## C++代码实现
+## C++代码
 
 ```cpp
 class Solution {
@@ -90,6 +90,80 @@ public:
     }
 };
 
+```
+
+## java代码
+
+```java
+class Solution {
+    //判断两个字符能否组成合法的括号
+    private boolean isMatch(char left, char right) {
+        if (left == '(' && right == ')') {
+            return true;
+        } else if (left == '{' && right == '}') {
+            return true;
+        } else if (left == '[' && right == ']') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    public boolean isValid(String s) {
+        Stack<Character> st_ch = new Stack<>();
+        int s_len = s.length();
+        //s的长度为奇数,一定是非法的
+        if (s_len % 2 != 0) {
+            return false;
+        } 
+        for (char ch : s.toCharArray()) {
+            //遇到'('、'{'、'['就压栈
+            if (ch == '(' || ch == '{' || ch == '[')
+                st_ch.push(ch);
+            //遇到')'、'}'、']'就和栈顶元素比较，能组成合法括号就弹出栈顶元素
+            //栈的操作一定要小心，不要对空栈进行pop操作
+            else if (!st_ch.empty() && isMatch(st_ch.peek(), ch))
+                st_ch.pop();
+            else 
+                return false;
+        }
+        return st_ch.empty();
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def isValid(self, s: str) -> bool:
+        st_ch = []
+        s_len = len(s)
+        #s的长度为奇数,一定是非法的
+        if s_len % 2 != 0:
+            return False
+        for ch in s:
+            #遇到'('、'{'、'['就压栈
+            if ch == '(' or ch == '{' or ch == '[':
+                st_ch.append(ch)
+            #遇到')'、'}'、']'就和栈顶元素比较，能组成合法括号就弹出栈顶元素
+            #栈的操作一定要小心，不要对空栈进行pop操作
+            elif st_ch and self.isMatch(st_ch[-1], ch):
+                st_ch.pop()
+            else:
+                return False
+        return not st_ch
+    
+    #判断两个字符能否组成合法的括号
+    def isMatch(self, left, right):
+        if left == '(' and right == ')':
+            return True
+        elif left == '{' and right == '}':
+            return True
+        elif left == '[' and right == ']':
+            return True
+        else:
+            return False
 ```
 
 ## 复杂度分析

@@ -32,7 +32,7 @@
 |[leetcode 238.除自身以外数组的乘积](./leetcode%20blind75/数组/LeetCode%200238.%20%E9%99%A4%E8%87%AA%E8%BA%AB%E4%BB%A5%E5%A4%96%E6%95%B0%E7%BB%84%E7%9A%84%E4%B9%98%E7%A7%AF.md)| &#10004; | &#10004; | &#10004; | [除自身以外数组的乘积](https://b23.tv/GEt0p50) |
 |[leetcode 3.无重复字符的最长子串](./leetcode%20blind75/字符串/LeetCode%200003.无重复字符的最长子串.md)| &#10004; | &#10004; | &#10004; | [无重复字符的最长子串](https://www.bilibili.com/video/BV17D421G7Nv/)|
 |[leetcode 5.最长回文子串](./leetcode%20blind75/字符串/LeetCode%200005.%20最长回文子串.md)| &#10004; | &#10004; | &#10004; | [最长回文子串](https://www.bilibili.com/video/BV1w7421Z798/) |
-|[leetcode 20.有效括号](./leetcode%20blind75/字符串/LeetCode%200020.有效括号.md)| &#10004; | &#10008; | &#10008; | [有效括号](https://www.bilibili.com/video/BV1hT421Q7g3/) |
+|[leetcode 20.有效括号](./leetcode%20blind75/字符串/LeetCode%200020.有效括号.md)| &#10004; | &#10004; | &#10004; | [有效括号](https://www.bilibili.com/video/BV1hT421Q7g3/) |
 |[leetcode 49.字母异位词分组](./leetcode%20blind75/字符串/LeetCode%200049.%20字母异位词分组.md)| &#10004; | &#10008; | &#10008; | [字母异位词分组](https://www.bilibili.com/video/BV1Fm42157HG/) |
 |[leetcode 76.最小覆盖子串](./leetcode%20blind75/字符串/LeetCode%200076.%20最小覆盖子串.md)| &#10004; | &#10008; | &#10008; | [最小覆盖子串](https://www.bilibili.com/video/BV1sJ4m1g727/) |
 |[leetcode 125.验证回文串](./leetcode%20blind75/字符串/LeetCode%200125.%20验证回文串.md)| &#10004; | &#10008; | &#10008; | [验证回文串](https://www.bilibili.com/video/BV1VH4y1P7Gk/) |
