@@ -35,7 +35,7 @@
 |[leetcode 20.有效括号](./leetcode%20blind75/字符串/LeetCode%200020.有效括号.md)| &#10004; | &#10004; | &#10004; | [有效括号](https://www.bilibili.com/video/BV1hT421Q7g3/) |
 |[leetcode 49.字母异位词分组](./leetcode%20blind75/字符串/LeetCode%200049.%20字母异位词分组.md)| &#10004; | &#10004; | &#10004; | [字母异位词分组](https://www.bilibili.com/video/BV1Fm42157HG/) |
 |[leetcode 76.最小覆盖子串](./leetcode%20blind75/字符串/LeetCode%200076.%20最小覆盖子串.md)| &#10004; | &#10004; | &#10004; | [最小覆盖子串](https://www.bilibili.com/video/BV1sJ4m1g727/) |
-|[leetcode 125.验证回文串](./leetcode%20blind75/字符串/LeetCode%200125.%20验证回文串.md)| &#10004; | &#10008; | &#10008; | [验证回文串](https://www.bilibili.com/video/BV1VH4y1P7Gk/) |
+|[leetcode 125.验证回文串](./leetcode%20blind75/字符串/LeetCode%200125.%20验证回文串.md)| &#10004; | &#10004; | &#10004; | [验证回文串](https://www.bilibili.com/video/BV1VH4y1P7Gk/) |
 |[leetcode 242.有效的字母异位词](./leetcode%20blind75/字符串/LeetCode%200242.%20有效的字母异位词.md)| &#10004; | &#10008; | &#10008; | [有效的字母异位词](https://www.bilibili.com/video/BV1db421J7qK/) |
 |[leetcode 424.替换后的最长重复字符](./leetcode%20blind75/字符串/LeetCode%200424.%20替换后的最长重复字符.md)| &#10004; | &#10008; | &#10008; | [替换后的最长重复字符](https://www.bilibili.com/video/BV1zf421d7Ui/) |
 |[leetcode 647.回文子串](./leetcode%20blind75/字符串/LeetCode%200647.%20回文子串.md)| &#10004; | &#10008; | &#10008; | [回文子串](https://www.bilibili.com/video/BV1Bs421w7iw/) |
