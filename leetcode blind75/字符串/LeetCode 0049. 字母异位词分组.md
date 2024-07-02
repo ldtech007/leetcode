@@ -52,6 +52,49 @@ public:
 };
 ```
 
+### java代码
+
+```java
+class Solution {
+    public List<List<String>> groupAnagrams(String[] strs) {
+        List<List<String>> res = new ArrayList<>();
+        Map<String, List<String>> u_mapRes = new HashMap<>();
+        for (String str : strs) {
+            //对副本进行排序
+            char[] charArray = str.toCharArray();
+            Arrays.sort(charArray);
+            String key = new String(charArray);
+            //存到哈希表中
+            if (!u_mapRes.containsKey(key)) {
+                u_mapRes.put(key, new ArrayList<>());
+            }
+            u_mapRes.get(key).add(str);
+        }
+        for (List<String> group : u_mapRes.values()) {
+            res.add(group);
+        }
+        return res;
+    }
+}
+```
+
+### python代码
+
+```python
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        res = []
+        u_mapRes = defaultdict(list)
+        for str in strs:
+            #对副本进行排序
+            key = ''.join(sorted(str))
+            #存到哈希表中
+            u_mapRes[key].append(str)
+        for group in u_mapRes.values():
+            res.append(group)
+        return res
+```
+
 ### 复杂度分析
 
 **时间复杂度：** 排序需要*O(nlogn)*，遍历数组需要*O(n)*，所以整体的时间复杂度为*O(nlogn)*，其中`n`是数组的长度。
@@ -60,13 +103,13 @@ public:
 
 ### 方法二 字母统计法
 
-方法一中对单词进行排序需要 *O(nlogn)* 的时间复杂度，这里我们可以通过**对单词中的字母进行统计替代排序**来优化。因为单词只包含小写字母，字母总共`26`个，可以采用一个**长为`26`的字符串**来统计每个单词中的字母数量，然后将这个字符串作为方法一中`hash`表的`key`。
+方法一中对单词进行排序需要 *O(nlogn)* 的时间复杂度，这里我们可以通过**对单词中的字母进行统计替代排序**来优化。因为单词只包含小写字母，字母总共`26`个，可以采用一个**由数字组成，长为`26`的字符串**来统计每个单词中的字母数量，然后将这个字符串作为方法一中`hash`表的`key`。
 
-字符串的索引和字母的对应关系如下图：
+可以通过任意小写字母字的assci码减去小写字母`a`的assci码，得到任意小写字母在字符串中的位置，字符串的索引和小写字母位置的对应关系如下图：
 
 ![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0049-02.png)
 
->思考：能否使用`vector`作为`hash`表的`key`？需要做哪些额外操作？
+>思考：能否使用哈希表或数组作为哈希表的`key`？需要做哪些额外操作？
 
 ### C++代码
 
@@ -91,6 +134,50 @@ public:
     }
 };
 ```
+
+### java代码
+
+```java
+class Solution {
+    public List<List<String>> groupAnagrams(String[] strs) {
+        List<List<String>> res = new ArrayList<>();
+        Map<String, List<String>> u_mapRes = new HashMap<>();
+        for (String str : strs) {
+            int[] count = new int[26];
+            for (char c : str.toCharArray()) {
+                count[c - 'a']++;
+            }
+            String key = Arrays.toString(count);
+            if (!u_mapRes.containsKey(key)) {
+                u_mapRes.put(key, new ArrayList<>());
+            }
+            u_mapRes.get(key).add(str);
+        }
+        for (List<String> group : u_mapRes.values()) {
+            res.add(group);
+        }
+        return res;
+    }
+}
+```
+
+### python代码
+
+```python
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        res = []
+        u_mapRes = defaultdict(list)
+        for str in strs:
+            count = [0] * 26
+            for c in str:
+                count[ord(c) - ord('a')] += 1
+            u_mapRes[tuple(count)].append(str)
+        for group in u_mapRes.values():
+            res.append(group)
+        return res
+```
+
 ### 复杂度分析
 
 **时间复杂度：** 只需要遍历一遍数组统计字符，所以时间复杂度为*O(n)*，其中`n`是数组的长度。
