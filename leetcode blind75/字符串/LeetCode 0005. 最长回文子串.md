@@ -72,6 +72,72 @@ public:
 };
 ```
 
+## java代码
+
+```java
+class Solution {
+    public String longestPalindrome(String s) {
+        int res_len = 0;
+        int res_start = 0;
+        int s_len = s.length();
+        for (int i = 0; i < s_len; ++i) {
+            //若回文串长度为奇数,以s[i]为中心向两边扩散寻找以s[i]为中心的最长回文子串
+            int left = i, right = i;
+            while (left >= 0 && right < s_len && s.charAt(left) == s.charAt(right)) {
+                if (right - left + 1 > res_len) {
+                    res_len = right - left + 1;
+                    res_start = left;
+                }
+                --left;
+                ++right;
+            }
+            //若回文串长度为偶数，以s[i]s[i+1]为中心向两边扩散寻找以s[i]s[i+1]为中心的最长回文子串
+            left = i;
+            right = i + 1;
+            while (left >= 0 && right < s_len && s.charAt(left) == s.charAt(right)) {
+                if (right - left + 1 > res_len) {
+                    res_len = right - left + 1;
+                    res_start = left;
+                }
+                --left;
+                ++right;
+            }
+        }
+        return s.substring(res_start, res_start + res_len);
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def longestPalindrome(self, s: str) -> str:
+        res_len = 0
+        res_start = 0
+        s_len = len(s)
+        for i in range(s_len):
+            #若回文串长度为奇数,以s[i]为中心向两边扩散寻找以s[i]为中心的最长回文子串
+            left = i
+            right = i
+            while left >= 0 and right < s_len and s[left] == s[right]:
+                if right - left + 1 > res_len:
+                    res_len = right - left + 1
+                    res_start = left
+                left -= 1
+                right += 1
+            #若回文串长度为偶数，以s[i]s[i+1]为中心向两边扩散寻找以s[i]s[i+1]为中心的最长回文子串
+            left = i
+            right = i + 1
+            while left >= 0 and right < s_len and s[left] == s[right]:
+                if right - left + 1 > res_len:
+                    res_len = right - left + 1
+                    res_start = left
+                left -= 1
+                right += 1
+        return s[res_start:res_start + res_len]
+```
+
 ## 复杂度分析
 
 **时间复杂度：** 整个过程会遍历`s`中每个元素为中心的最长回文子串，所以时间复杂度是*O(n<sup>2</sup>)*，其中`n`是字符串`s`的长度。
