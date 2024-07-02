@@ -64,15 +64,18 @@ public:
     int maxProduct(vector<int>& nums) {
         int nums_len = nums.size();
         int max_res = INT_MIN;
-        int cur_max = 1, cur_min = 1;
+        long long cur_max = 1, cur_min = 1;
         for (int i = 0; i < nums_len; ++i) {
            //提前保存一下cur_max和cur_min前一个状态，避免更新cur_min的时候用了最新状态的cur_max
-            int temp_max = cur_max, temp_min = cur_min;
+            long long temp_max = cur_max, temp_min = cur_min;
             //状态转移公式
-            cur_max = max(max(temp_max*nums[i], temp_min*nums[i]), nums[i]);
-            cur_min = min(min(temp_max*nums[i], temp_min*nums[i]), nums[i]);
+            cur_max = max(max(temp_max * nums[i], temp_min * nums[i]), (long long)nums[i]);
+            cur_min = min(min(temp_max * nums[i], temp_min * nums[i]), (long long)nums[i]);
+            if (cur_min < INT_MIN) {
+                cur_min = INT_MIN;
+            }
             //更新全局最大值
-            max_res = max(max_res, cur_max); 
+            max_res = max(max_res, (int)cur_max); 
         }
         return max_res;
     }
