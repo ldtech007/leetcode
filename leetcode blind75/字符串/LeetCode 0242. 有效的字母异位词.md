@@ -37,11 +37,34 @@ public:
 
 ```
 
+### java代码
+
+```java
+class Solution {
+    public boolean isAnagram(String s, String t) {
+        char[] sArray = s.toCharArray();
+        char[] tArray = t.toCharArray();
+        Arrays.sort(sArray);
+        Arrays.sort(tArray);
+        return Arrays.equals(sArray, tArray);
+    }
+}
+```
+
+### python代码
+
+```python
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        return sorted(s) == sorted(t)
+```
+
 ### 复杂度分析
 
 **时间复杂度：** 快排的时间复杂度是*O(nlogn)*，其中`n`是字符串的长度。
 
 **空间复杂度：** 快排的空间复杂度是*O(logn)*。
+
 
 ### 方法二 hash表
 
@@ -79,6 +102,56 @@ public:
         return true;
     }
 };
+```
+
+### java代码
+
+```java
+class Solution {
+    public boolean isAnagram(String s, String t) {
+        int s_len = s.length();
+        int t_len = t.length();
+        if (s_len != t_len)
+            return false;
+        //保存s中字符出现的次数
+        Map<Character, Integer> u_mapS = new HashMap<>();
+        //保存t中字符出现的次数
+        Map<Character, Integer> u_mapT = new HashMap<>();
+        for (int i = 0; i < s_len; ++i) {
+            u_mapS.put(s.charAt(i), u_mapS.getOrDefault(s.charAt(i), 0) + 1);
+            u_mapT.put(t.charAt(i), u_mapT.getOrDefault(t.charAt(i), 0) + 1);
+        }
+
+        for (int i = 0; i < s_len; ++i) {
+            if (!u_mapS.getOrDefault(s.charAt(i), 0).equals(u_mapT.getOrDefault(s.charAt(i), 0)))
+                return false;
+        }
+        return true;
+    }
+}
+```
+
+### python代码
+
+```python
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        s_len = len(s)
+        t_len = len(t)
+        if s_len != t_len:
+            return False
+        #保存s中字符出现的次数
+        u_mapS = defaultdict(int)
+        #保存t中字符出现的次数
+        u_mapT = defaultdict(int)
+        for i in range(s_len):
+            u_mapS[s[i]] += 1
+            u_mapT[t[i]] += 1
+
+        for i in range(s_len):
+            if u_mapS[s[i]] != u_mapT[s[i]]:
+                return False
+        return True
 ```
 
 ### 复杂度分析
