@@ -14,7 +14,7 @@
 
 ## 关于本仓库
 
-本仓库主要是**基于`blind 75`列表中的题目写的题解**和**技术面试逻辑思维相关的文章**，后面还会不断增加一些程序员求职面试相关的东西，主要目的是帮助大家提高准备面试的效率。题解使用的语言是`C++`，对应的`java`、`python`代码我也在持续的补充中，**也欢迎大家根据文中的思路提交不同语言的代码实现，在文中增加一个类似【C++代码】的标题填入代码即可**，鼓励大家提合并请求给我。
+本仓库主要是**基于`blind 75`列表中的题目写的题解**和**技术面试逻辑思维相关的文章**，后面还会不断增加**力扣hot100**和一些程序员求职面试相关的东西，主要目的是帮助大家提高准备面试的效率。题解使用的语言是`C++`，对应的`java`、`python`代码我也在持续的补充中，**也欢迎大家根据文中的思路提交不同语言的代码实现，在文中增加一个类似【C++代码】的标题填入代码即可**，鼓励大家提合并请求给我。
 
 **另外每道题对应的视频讲解也在持续更新中...**
 
@@ -33,8 +33,8 @@
 |[leetcode 3.无重复字符的最长子串](./leetcode%20blind75/字符串/LeetCode%200003.无重复字符的最长子串.md)| &#10004; | &#10004; | &#10004; | [无重复字符的最长子串](https://www.bilibili.com/video/BV17D421G7Nv/)|
 |[leetcode 5.最长回文子串](./leetcode%20blind75/字符串/LeetCode%200005.%20最长回文子串.md)| &#10004; | &#10004; | &#10004; | [最长回文子串](https://www.bilibili.com/video/BV1w7421Z798/) |
 |[leetcode 20.有效括号](./leetcode%20blind75/字符串/LeetCode%200020.有效括号.md)| &#10004; | &#10004; | &#10004; | [有效括号](https://www.bilibili.com/video/BV1hT421Q7g3/) |
-|[leetcode 49.字母异位词分组](./leetcode%20blind75/字符串/LeetCode%200049.%20字母异位词分组.md)| &#10004; | &#10008; | &#10008; | [字母异位词分组](https://www.bilibili.com/video/BV1Fm42157HG/) |
-|[leetcode 76.最小覆盖子串](./leetcode%20blind75/字符串/LeetCode%200076.%20最小覆盖子串.md)| &#10004; | &#10008; | &#10008; | [最小覆盖子串](https://www.bilibili.com/video/BV1sJ4m1g727/) |
+|[leetcode 49.字母异位词分组](./leetcode%20blind75/字符串/LeetCode%200049.%20字母异位词分组.md)| &#10004; | &#10004; | &#10004; | [字母异位词分组](https://www.bilibili.com/video/BV1Fm42157HG/) |
+|[leetcode 76.最小覆盖子串](./leetcode%20blind75/字符串/LeetCode%200076.%20最小覆盖子串.md)| &#10004; | &#10004; | &#10004; | [最小覆盖子串](https://www.bilibili.com/video/BV1sJ4m1g727/) |
 |[leetcode 125.验证回文串](./leetcode%20blind75/字符串/LeetCode%200125.%20验证回文串.md)| &#10004; | &#10008; | &#10008; | [验证回文串](https://www.bilibili.com/video/BV1VH4y1P7Gk/) |
 |[leetcode 242.有效的字母异位词](./leetcode%20blind75/字符串/LeetCode%200242.%20有效的字母异位词.md)| &#10004; | &#10008; | &#10008; | [有效的字母异位词](https://www.bilibili.com/video/BV1db421J7qK/) |
 |[leetcode 424.替换后的最长重复字符](./leetcode%20blind75/字符串/LeetCode%200424.%20替换后的最长重复字符.md)| &#10004; | &#10008; | &#10008; | [替换后的最长重复字符](https://www.bilibili.com/video/BV1zf421d7Ui/) |
