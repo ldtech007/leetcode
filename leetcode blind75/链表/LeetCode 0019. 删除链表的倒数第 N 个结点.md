@@ -71,6 +71,71 @@ public:
 };
 ```
 
+## java代码
+
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        // 创建虚拟节点
+        ListNode tempHead = new ListNode(0, head);
+        ListNode left = tempHead;
+        ListNode right = head;
+        // right先走n步
+        while (n > 0 && right != null) {
+            right = right.next;
+            n -= 1;
+        }
+        while (right != null) {
+            left = left.next;
+            right = right.next;
+        }
+        // 删除倒数第n个节点
+        ListNode temp = left.next;
+        left.next = left.next.next;
+        temp = null;
+        return tempHead.next;
+    }
+}
+```
+
+## python代码
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+        # 创建虚拟节点
+        tempHead = ListNode(0, head)
+        left = tempHead
+        right = head
+        # right先走n步
+        while n > 0 and right:
+            right = right.next
+            n -= 1
+        while right:
+            left = left.next
+            right = right.next
+        # 删除倒数第n个节点
+        temp = left.next
+        left.next = left.next.next
+        del temp
+        return tempHead.next
+```
+
 ## 复杂度分析
 
 **时间复杂度：** 只需要遍历一遍链表，所以时间复杂度为*O(n)*，其中`n`为链表的长度。
