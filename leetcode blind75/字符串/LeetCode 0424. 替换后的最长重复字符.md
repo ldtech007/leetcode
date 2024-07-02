@@ -25,7 +25,7 @@
 
 本题是一道比较经典的滑动窗口问题，目标是在字符串`s`中**找到最长的一个窗口**，满足**最多替换`k`个字母，窗口就可以变成所有字母都是相同的**，这个窗口的长度就是我们要找的答案。
 
-定义`left = 0`，`right = 0`来表示窗口的左右边界，`res`来保存结果，哈希表`u_charCount`保存当前窗口中所有字母出现的频率。窗口的长度为`right - left + 1`，窗口中字母出现的最高频率为`maxCount`。所以`right - left + 1 - maxCount`就是当前窗口最多要替换的字母数，`right - left + 1 - maxCount`小于等于`k`时`[left, right]`就是我们要找的一个候选窗口。
+定义`left = 0`，`right = 0`来表示窗口的左右边界，`res`来保存结果，哈希表`u_charCount`保存当前窗口中所有字母出现的频率。窗口的长度为`right - left + 1`，**窗口中字母出现的最高频率为`maxCount`。所以`right - left + 1 - maxCount`就是当前窗口最多要替换的字母数**，`right - left + 1 - maxCount`小于等于`k`时`[left, right]`就是我们要找的一个候选窗口。
 
 ![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0424-01.png)
 
@@ -36,11 +36,11 @@
 1. `right - left + 1 - maxCount <= k`时找到以当前`right`为右边界的候选窗口，更新结果`res = max(res, right - left + 1)`，`right`向右滑动并更新`hash`表`u_charCount[s[right]]++`和当前窗口中字母的最高频率`maxCount = max(maxCount, u_charCount[s[right]])`，直到`right - left + 1 - maxCount > k`。
 2. `right - left + 1 - maxCount > k`时未找到以当前`right`为右边界候选窗口，`left`向右滑动，更新`hash`表`u_charCount[s[left]]--`，直到`right - left + 1 - maxCount <= k`。
 
-根据上面的策略我们可以获得以`s`任意位置为右边界(枚举右边界)的所有候选窗口，只需要把其中最长的一个窗口的长度返回即可。
+根据上面的策略我们可以**获得以`s`任意位置为右边界(枚举右边界)的所有候选窗口**，只需要把其中最长的一个窗口的长度返回即可。
 
 有些同学会有疑问，为啥`left`向右滑动时只更新了`u_charCount`，却没有更新`maxCount`？
 
-这是因为`left`向右滑动时不会出现比当前`res`更长的候选窗口，并且此时`maxCount`不会增大。想获得比当前`res`更长的候选窗口，必须保证`right`和`maxCount`都是相比之前变大的，所以只有`right`右滑的时候才会有更长的候选窗口出现。`left`右滑的时候不会涉及到`res`的更新，即使`maxCount`未更新导致候选窗口没有严格的满足条件`right - left + 1 - maxCount <= k`，也是不影响结果`res`的，所以没必要更新`maxCount`。当然想更新也是可以的，多几行代码，只是没有必要。
+这是因为`left`向右滑动时不会出现比当前`res`更长的候选窗口，并且此时`maxCount`不会增大。想获得比当前`res`更长的候选窗口，必须保证`right`和`maxCount`都是相比之前变大的，只有`right`右滑的时候才会有更长的候选窗口出现，所以`left`向右滑动时没必要更新`maxCount`。当然想更新也是可以的，多几行代码，只是没有必要。
 
 ## C++代码
 
@@ -58,7 +58,7 @@ public:
         while (right < s_len) {
             u_charCount[s[right]] += 1;
             maxCount = max(maxCount, u_charCount[s[right]]);
-            //当最少的操作数大于k，改变左边界，寻找更优的窗口
+            //当最少的操作数大于k，改变左边界，寻找以当前right为右边界的窗口
             while (right - left + 1 - maxCount > k) {
                 u_charCount[s[left]] -= 1;
                 ++left;
@@ -72,8 +72,63 @@ public:
 };
 ```
 
+## java代码
+
+```java
+class Solution {
+    public int characterReplacement(String s, int k) {
+        // 统计滑动窗口中每个字符出现的次数
+        Map<Character, Integer> charCount = new HashMap<>();
+        int res = 0;
+        int left = 0, right = 0;
+        // 维护滑动窗口中字符出现的最大次数
+        int maxCount = 0;
+        int sLen = s.length();
+        while (right < sLen) {
+            charCount.put(s.charAt(right), charCount.getOrDefault(s.charAt(right), 0) + 1);
+            maxCount = Math.max(maxCount, charCount.get(s.charAt(right)));
+            // 当最少的操作数大于k，改变左边界，寻找以当前right为右边界的窗口
+            while (right - left + 1 - maxCount > k) {
+                charCount.put(s.charAt(left), charCount.get(s.charAt(left)) - 1);
+                left++;
+            }
+            // 更新满足条件的最大窗口
+            res = Math.max(res, right - left + 1);
+            right++;
+        }
+        return res;
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def characterReplacement(self, s: str, k: int) -> int:
+        # 统计滑动窗口中每个字符出现的次数
+        char_count = defaultdict(int)
+        res = 0
+        left = 0
+        right = 0
+        # 维护滑动窗口中字符出现的最大次数
+        max_count = 0
+        s_len = len(s)
+        while right < s_len:
+            char_count[s[right]] += 1
+            max_count = max(max_count, char_count[s[right]])
+            # 当最少的操作数大于k，改变左边界，寻找以当前right为右边界的窗口
+            while right - left + 1 - max_count > k:
+                char_count[s[left]] -= 1
+                left += 1
+            # 更新满足条件的最大窗口
+            res = max(res, right - left + 1)
+            right += 1
+        return res
+```
+
 ## 复杂度分析
 
 **时间复杂度：** `left`和`right`只需要遍历一遍字符串，对`u_charCount`的操作都是常量时间复杂度，所以整体的时间复杂度是*O(n)*，其中`n`是字符串的长度。
 
-**空间复杂度：** 需要使用一个`hash`表，所以空间复杂度是*O(26)*。
+**空间复杂度：** 需要使用一个`hash`表，所以空间复杂度是*O(26)*，即*O(1)*。
