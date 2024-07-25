@@ -62,6 +62,41 @@ public:
     }
 };
 ```
+
+### java代码
+
+```java
+public class Solution {
+    // you need treat n as an unsigned value
+    public int reverseBits(int n) {
+        int res = 0;
+        for (int i = 0; i < 32; ++i) {
+            // 原串的第i位
+            int bit = n & 1;
+            // 将原串的第i位放到res的第31-i位
+            res |= (bit << (31 - i));
+            n >>= 1;
+        }
+        return res;
+    }
+}
+```
+
+### python代码
+
+```python
+class Solution:
+    def reverseBits(self, n: int) -> int:
+        res = 0
+        for i in range(32):
+            # 原串的第i位
+            bit = n & 1
+            # 将原串的第i位放到res的第31-i位
+            res |= (bit << (31 - i))
+            n >>= 1
+        return res
+```
+
 ### 方法二 分治
 
 下面介绍另一种分治方法，对一些刚刷题的同学来说可能比较难理解。
@@ -106,6 +141,46 @@ public:
     }
 };
 ```
+
+### java代码
+
+```java
+public class Solution {
+    // you need treat n as an unsigned value
+    public int reverseBits(int n) {
+        // 左右16位交换
+        n = ((n >> 16) & 0x0000ffff) | ((n << 16) & 0xffff0000);
+        // 左右8位交换
+        n = ((n >> 8) & 0x00ff00ff) | ((n << 8) & 0xff00ff00);
+        // 左右4位交换
+        n = ((n >> 4) & 0x0f0f0f0f) | ((n << 4) & 0xf0f0f0f0);
+        // 左右2位交换
+        n = ((n >> 2) & 0x33333333) | ((n << 2) & 0xcccccccc);
+        // 左右1位交换
+        n = ((n >> 1) & 0x55555555) | ((n << 1) & 0xaaaaaaaa);
+        return n;
+    }
+}
+```
+
+### python代码
+
+```python
+class Solution:
+    def reverseBits(self, n: int) -> int:
+        # 左右16位交换
+        n = (n >> 16) | (n << 16)
+        # 左右8位交换
+        n = ((n & 0xff00ff00) >> 8) | ((n & 0x00ff00ff) << 8)
+        # 左右4位交换
+        n = ((n & 0xf0f0f0f0) >> 4) | ((n & 0x0f0f0f0f) << 4)
+        # 左右2位交换
+        n = ((n & 0xcccccccc) >> 2) | ((n & 0x33333333) << 2)
+        # 左右1位交换
+        n = ((n & 0xaaaaaaaa) >> 1) | ((n & 0x55555555) << 1)
+        return n
+```
+
 ## 复杂度分析
 
 **时间复杂度：** 两种方法都是 *O(1)*，最多处理`32`位，分治是`log32`位，都是常量时间。

@@ -47,6 +47,36 @@ public:
     }
 };
 ```
+
+### java代码
+
+```java
+class Solution {
+    public int missingNumber(int[] nums) {
+        int nums_len = nums.length;
+        int res = nums_len;
+        for (int i = 0; i < nums_len; ++i) {
+            //[0,n]和nums中的元素做异或操作
+            res ^= (i ^ nums[i]);
+        }
+        return res;
+    }
+}
+```
+
+### python 代码
+
+```python
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        nums_len = len(nums)
+        res = nums_len
+        for i in range(nums_len):
+            #[0,n]和nums中的元素做异或操作
+            res ^= (i ^ nums[i])
+        return res
+```
+
 ### 方法二 数学运算
 
 因为区间`[0, n]`上有`n + 1`个元素，数组`nums`中只有`n`个元素，假设缺失的元素为`X`，我们可以得到如下公式：
@@ -71,6 +101,35 @@ public:
         return res;
     }
 };
+```
+
+### java代码
+
+```java
+class Solution {
+    public int missingNumber(int[] nums) {
+        int nums_len = nums.length;
+        int res = nums_len;
+        for (int i = 0; i < nums_len; ++i) {
+            //[0,n]的和减去nums中所有元素的和
+            res += (i - nums[i]);
+        }
+        return res;
+    }
+}
+```
+
+### python代码
+
+```python
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        nums_len = len(nums)
+        res = nums_len
+        for i in range(nums_len):
+            #[0,n]的和减去nums中所有元素的和
+            res += (i - nums[i])
+        return res
 ```
 
 ## 复杂度分析

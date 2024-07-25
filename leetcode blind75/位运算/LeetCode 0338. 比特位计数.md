@@ -90,6 +90,42 @@ public:
 };
 ```
 
+### java代码
+
+```java
+class Solution {
+    public int[] countBits(int n) {
+        int[] dp = new int[n + 1];
+        for (int i = 1; i <= n; ++i) {
+            if (i % 2 == 0) {
+                // i为偶数
+                dp[i] = dp[i / 2];
+            } else {
+                // i为奇数
+                dp[i] = dp[i / 2] + 1;
+            }
+        }
+        return dp;
+    }
+}
+```
+
+### python代码
+
+```python
+class Solution:
+    def countBits(self, n: int) -> List[int]:
+        dp = [0] * (n + 1)
+        for i in range(1, n + 1):
+            if i % 2 == 0:
+                # i为偶数
+                dp[i] = dp[i // 2]
+            else:
+                # i为奇数
+                dp[i] = dp[i // 2] + 1
+        return dp
+```
+
 ### 方法二
 
 我们先介绍一个骚操作，对于一个整数`n`，`n & (n - 1)`可以将`n`的二进制最右边值为`1`的`bit位`置为`0`。
@@ -121,7 +157,32 @@ public:
     }   
 };
 ```
+### java代码
 
+```java
+class Solution {
+    public int[] countBits(int n) {
+        int[] dp = new int[n + 1];
+        for (int i = 1; i <= n; ++i) {
+            // 状态转移公式
+            dp[i] = dp[i & (i - 1)] + 1;
+        }
+        return dp;
+    }
+}
+```
+
+### python 代码
+
+```python
+class Solution:
+    def countBits(self, n: int) -> List[int]:
+        dp = [0] * (n + 1)
+        for i in range(1, n + 1):
+            # 状态转移公式
+            dp[i] = dp[i & (i - 1)] + 1
+        return dp
+```
 
 ## 复杂度分析
 
