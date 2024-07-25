@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/remove-nth-node-from-end-of-list/
+>
+>*视频题解：* https://www.bilibili.com/video/BV1hs421M7Ke/
 
 # LeetCode 19. 删除链表的倒数第 N 个结点
 

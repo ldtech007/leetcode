@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/reorder-list/
+>
+>*视频题解：* https://www.bilibili.com/video/BV1tx4y1t7YB/
 
 # LeetCode 143. 重排链表
 
@@ -99,6 +101,104 @@ public:
         return pre;
     }
 };
+```
+
+## java代码
+
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public void reorderList(ListNode head) {
+         ListNode slow = head;
+        ListNode fast = head.next;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        // 反转后半段链表
+        ListNode second = reverseList(slow.next);
+        slow.next = null;
+        ListNode first = head;
+        // 交替合并first和second
+        while (second != null) {
+            ListNode tmpNode1 = first.next;
+            ListNode tmpNode2 = second.next;
+            first.next = second;
+            second.next = tmpNode1;
+            first = tmpNode1;
+            second = tmpNode2;
+        }
+    }
+
+    private ListNode reverseList(ListNode head) {
+        if (head == null)
+            return head;
+
+        ListNode pre = null;
+        ListNode cur = head;
+        while (cur != null) {
+            ListNode tmpNext = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = tmpNext;
+        }
+        return pre;
+    }
+}
+```
+
+## python代码
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def reorderList(self, head: Optional[ListNode]) -> None:
+        """
+        Do not return anything, modify head in-place instead.
+        """
+        slow = head
+        fast = head.next
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        # 反转后半段链表
+        second = self.reverseList(slow.next)
+        slow.next = None
+        first = head
+        # 交替合并first和second
+        while second:
+            tmpNode1 = first.next
+            tmpNode2 = second.next
+            first.next = second
+            second.next = tmpNode1
+            first = tmpNode1
+            second = tmpNode2
+
+    def reverseList(self, head):
+        if not head:
+            return head
+
+        pre = None
+        cur = head
+        while cur:
+            tmpNext = cur.next
+            cur.next = pre
+            pre = cur
+            cur = tmpNext
+        return pre
 ```
 
 ## 复杂度分析
