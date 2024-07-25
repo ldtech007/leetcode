@@ -61,7 +61,7 @@ public:
 };
 ```
 
-## java代码
+### java代码
 
 ```java
 /**
@@ -91,7 +91,7 @@ class Solution {
 }
 ```
 
-## python代码
+### python代码
 
 ```python
 # Definition for singly-linked list.
@@ -160,7 +160,7 @@ public:
     }
 };
 ```
-## java代码
+### java代码
 
 ```java
 /**
@@ -188,7 +188,7 @@ class Solution {
 }
 ```
 
-## python代码
+### python代码
 
 ```python
 # Definition for singly-linked list.
