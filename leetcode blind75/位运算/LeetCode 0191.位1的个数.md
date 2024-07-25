@@ -48,6 +48,41 @@ public:
     } 
 };
 ```
+
+### java代码
+
+```java
+class Solution {
+    public int hammingWeight(int n) {
+        int res = 0;
+        while (n != 0) {
+            // 获取n对应二进制最右边一位
+            if (n % 2 == 1) {
+                res++;
+            }
+            // n对应的二进制右移一位
+            n = n / 2;
+        }
+        return res;
+    }
+}
+```
+
+### python代码
+
+```python
+class Solution:
+    def hammingWeight(self, n: int) -> int:
+        res = 0
+        while n:
+            # 获取n对应二进制最右边一位
+            if n % 2:
+                res += 1
+            # n对应的二进制右移一位
+            n = n // 2
+        return res
+```
+
 ### 方法二
 
 定义`res`保存`1`的个数。对于无符号整数`n`，统计其中`1`的个数步骤如下：
@@ -75,6 +110,35 @@ public:
         return res;
     } 
 };
+```
+
+### java代码
+
+```java
+class Solution {
+    public int hammingWeight(int n) {
+        int res = 0;
+        while (n != 0) {
+            res++;
+            // n对应二进制最右边不为零的bit位置为零
+            n = n & (n - 1);
+        }
+        return res;
+    }
+}
+```
+
+### python代码
+
+```python
+class Solution:
+    def hammingWeight(self, n: int) -> int:
+        res = 0
+        while n:
+            res += 1
+            # n对应二进制最右边不为零的bit位置为零
+            n = n & (n - 1)
+        return res
 ```
 
 ## 复杂度分析

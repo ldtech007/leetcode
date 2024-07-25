@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/merge-k-sorted-lists/
+>
+>*视频题解：* https://www.bilibili.com/video/BV136421f7hR/
 
 # LeetCode 23. 合并 K 个升序链表
 
@@ -100,6 +102,111 @@ public:
 };
 ```
 
+### java代码
+
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode mergeKLists(ListNode[] lists) {
+        if (lists.length == 0) {
+            return null;
+        }
+
+        List<ListNode> tempList = new ArrayList<>(Arrays.asList(lists));
+        while (tempList.size() > 1) {
+            List<ListNode> newTempList = new ArrayList<>();
+            for (int i = 0; i < tempList.size(); i += 2) {
+                ListNode l1 = tempList.get(i);
+                ListNode l2 = null;
+                if (i + 1 < tempList.size()) {
+                    l2 = tempList.get(i + 1);
+                }
+                newTempList.add(mergeTwoLists(l1, l2));
+            }
+            tempList = newTempList;
+        }
+        return tempList.get(0);
+    }
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+        ListNode newHead = new ListNode();
+        ListNode tail = newHead;
+        while (list1 != null && list2 != null) {
+            if (list1.val <= list2.val) {
+                tail.next = list1;
+                list1 = list1.next;
+            } else {
+                tail.next = list2;
+                list2 = list2.next;
+            }
+            tail = tail.next;
+        }
+        if (list1 != null) {
+            tail.next = list1;
+        } else if (list2 != null) {
+            tail.next = list2;
+        }
+        return newHead.next;
+    }
+
+}
+```
+
+### python代码
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
+        if len(lists) == 0:
+            return None
+
+        while len(lists) > 1:
+            tempList = []
+            for i in range(0, len(lists), 2):
+                # 每两个链表合并成一个
+                l1 = lists[i]
+                l2 = None
+                if i + 1 < len(lists):
+                    l2 = lists[i+1]
+                tempList.append(self.mergeTwoLists(l1, l2))
+            lists = tempList
+        return lists[0]
+
+    def mergeTwoLists(self, list1, list2):
+        # 创建一个虚拟的头节点方便后面操作
+        newHead = ListNode()
+        tail = newHead
+        while list1 and list2:
+            # 选取val较小的节点放到tail后面
+            if list1.val <= list2.val:
+                tail.next = list1
+                list1 = list1.next
+            else:
+                tail.next = list2
+                list2 = list2.next
+            # 保证tail一直指向新链表的最后一个节点
+            tail = tail.next
+        # 把剩下的有序节点挂到tail后面
+        if list1:
+            tail.next = list1
+        elif list2:
+            tail.next = list2
+        return newHead.next
+```
+
 ### 复杂度分析
 
 **时间复杂度：** *O(nlogk)*，其中`n`是合并后链表总的长度，`k`是链表的个数，两两合并总共需要合并*logk*次。
@@ -178,6 +285,87 @@ public:
        return head;
     }
 };
+```
+### java代码
+
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    private static class ListNodeComparator implements Comparator<ListNode> {
+        @Override
+        public int compare(ListNode left, ListNode right) {
+            // 表示根据节点的val值从左到右递减排序
+            // 用来实现小根堆
+            return left.val - right.val;
+        }
+    }
+
+    public ListNode mergeKLists(ListNode[] lists) {
+        PriorityQueue<ListNode> pq = new PriorityQueue<>(new ListNodeComparator());
+        // 把每个链表第一个节点放到队列中
+        for (ListNode list : lists) {
+            if (list != null) {
+                pq.offer(list);
+            }
+        }
+        ListNode head = null;
+        ListNode pIndex = null;
+        while (!pq.isEmpty()) {
+            if (head == null) {
+                head = pq.poll();
+                pIndex = head;
+            } else if (pIndex != null) {
+                pIndex.next = pq.poll();
+                pIndex = pIndex.next;
+            }
+            // 把链表中被合并节点的下一个节点放入队列
+            if (pIndex != null && pIndex.next != null) {
+                pq.offer(pIndex.next);
+            }
+        }
+        if (pIndex != null) {
+            pIndex.next = null;
+        }
+        return head;
+    }
+}
+
+```
+
+### python代码
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
+        q = []
+        # 把每个链表第一个节点放到队列中
+        for i in range(len(lists)):
+            if lists[i]:
+                heapq.heappush(q, (lists[i].val, i))
+        head = ListNode()
+        pIndex = head
+        while q:
+            _, i = heapq.heappop(q)
+            pIndex.next = lists[i]
+            pIndex = pIndex.next
+            if lists[i].next:
+                heapq.heappush(q, (lists[i].next.val, i))
+                lists[i] = lists[i].next
+        return head.next
 ```
 ### 复杂度分析
 

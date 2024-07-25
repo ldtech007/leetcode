@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/linked-list-cycle/
+>
+>*视频题解：* https://www.bilibili.com/video/BV18z421q78k/
 
 # LeetCode 141.环形链表
 
@@ -58,6 +60,64 @@ public:
 };
 ```
 
+### java代码
+
+```java
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+        if (head == null) 
+            return false;
+        Set<ListNode> visited = new HashSet<>();
+        ListNode cur = head;
+        while (cur != null) {
+            // 节点被访问过，说明有环
+            if (visited.contains(cur)) {
+                return true;
+            }
+            // 把节点存到visited
+            visited.add(cur);
+            cur = cur.next;
+        }
+        return false;
+    }
+}
+```
+
+### python代码
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def hasCycle(self, head: Optional[ListNode]) -> bool:
+        if not head:
+            return False
+        visited = set()
+        cur = head
+        while cur:
+            # 节点被访问过，说明有环
+            if cur in visited:
+                return True
+            # 把节点存到visited
+            visited.add(cur)
+            cur = cur.next
+        return False
+```
 
 ### 方法二 快慢指针
 
@@ -95,6 +155,59 @@ public:
         return false; 
     }
 };
+```
+
+### java代码
+
+```java
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+        ListNode slow = head;
+        ListNode fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            // 快指针和慢指针相遇说明有环
+            if (slow == fast) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+```
+
+### python代码
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def hasCycle(self, head: Optional[ListNode]) -> bool:
+        slow = head
+        fast = head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            # 快指针和慢指针相遇说明有环
+            if slow == fast:
+                return True
+        return False
 ```
 
 ## 复杂度分析

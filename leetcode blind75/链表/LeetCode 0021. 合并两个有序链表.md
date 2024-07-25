@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/merge-two-sorted-lists/
+>
+>*视频题解：* https://www.bilibili.com/video/BV17w4m1Y7CJ/
 
 # LeetCode 21. 合并两个有序链表
 
@@ -62,6 +64,78 @@ public:
         return newHead->next;
     }
 };
+```
+
+## java代码
+
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+        // 创建一个虚拟的头节点方便后面操作
+        ListNode newHead = new ListNode();
+        ListNode tail = newHead;
+        while (list1 != null && list2 != null) {
+            // 选取val较小的节点放到tail后面
+            if (list1.val <= list2.val) {
+                tail.next = list1;
+                list1 = list1.next;
+            } else {
+                tail.next = list2;
+                list2 = list2.next;
+            }
+            // 保证tail一直指向新链表的最后一个节点
+            tail = tail.next;
+        }
+        // 把剩下的有序节点挂到tail后面
+        if (list1 != null) {
+            tail.next = list1;
+        } else if (list2 != null) {
+            tail.next = list2;
+        }
+        return newHead.next;
+    }
+}
+```
+
+## python代码
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        # 创建一个虚拟的头节点方便后面操作
+        newHead = ListNode()
+        tail = newHead
+        while list1 and list2:
+            # 选取val较小的节点放到tail后面
+            if list1.val <= list2.val:
+                tail.next = list1
+                list1 = list1.next
+            else:
+                tail.next = list2
+                list2 = list2.next
+            # 保证tail一直指向新链表的最后一个节点
+            tail = tail.next
+        # 把剩下的有序节点挂到tail后面
+        if list1:
+            tail.next = list1
+        elif list2:
+            tail.next = list2
+        return newHead.next
 ```
 
 ## 复杂度分析

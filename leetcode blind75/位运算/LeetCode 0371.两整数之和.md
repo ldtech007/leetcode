@@ -92,6 +92,37 @@ public:
 };
 ```
 
+## java代码
+
+```java
+class Solution {
+    public int getSum(int a, int b) {
+        while (b != 0) {
+            int temp_add = a ^ b; // 不包含进位a、b每位的和
+            // a、b每位和的进位，左移有符号值会溢出，赋给无符号的会自动取模
+            int temp_carry = (a & b) << 1;
+            a = temp_add; // a、b每位的和赋值给a
+            b = temp_carry; // a、b每位的进位赋值给b
+        }
+        return a;
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def getSum(self, a: int, b: int) -> int:
+        while b:
+            temp_add = a ^ b  # 不包含进位a、b每位的和
+            # a、b每位和的进位，左移有符号值会溢出，赋给无符号的会自动取模
+            temp_carry = (a & b) << 1
+            a = temp_add  # a、b每位的和赋值给a
+            b = temp_carry  # a、b每位的进位赋值给b
+        return a
+```
+
 ## 复杂度分析
 
 **时间复杂度：** *O(1)*，因为整数在`32`位操作系统上占`32`位，最多计算`32`次`temp_carry`，故为常数的时间复杂度。
