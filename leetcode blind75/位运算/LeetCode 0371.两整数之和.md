@@ -1,5 +1,7 @@
 
 > *题目链接：* https://leetcode.cn/problems/sum-of-two-integers/
+>
+>*视频题解：* https://www.bilibili.com/video/BV1RZ421K7YF/
 
 # LeetCode 371.两整数之和
 

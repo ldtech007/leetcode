@@ -118,7 +118,7 @@ public:
  */
 class Solution {
     public void reorderList(ListNode head) {
-         ListNode slow = head;
+        ListNode slow = head;
         ListNode fast = head.next;
         while (fast != null && fast.next != null) {
             slow = slow.next;

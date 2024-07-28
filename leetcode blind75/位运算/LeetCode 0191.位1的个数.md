@@ -1,5 +1,7 @@
 
 > *题目链接：* https://leetcode.cn/problems/number-of-1-bits/
+>
+>*视频题解：* https://www.bilibili.com/video/BV1ir421M7XU/
 
 # LeetCode 191.位1的个数
 

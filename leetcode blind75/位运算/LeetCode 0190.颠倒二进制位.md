@@ -1,5 +1,7 @@
 
 > *题目链接：* https://leetcode.cn/problems/reverse-bits/
+>
+>*视频题解：* https://www.bilibili.com/video/BV1W2421Z7bi/
 
 # LeetCode 190.颠倒二进制位
 

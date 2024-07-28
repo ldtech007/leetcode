@@ -1,5 +1,7 @@
 
 > *题目链接：* https://leetcode.cn/problems/missing-number/
+>
+>*视频题解：* https://www.bilibili.com/video/BV1HS42197Hc/
 
 # LeetCode 268.丢失的数字
 
@@ -84,6 +86,7 @@ class Solution:
 ```
 0 + 1 +...+ n = nums[0] + nums[1] +...+ nums[n-1] + X 
 ```
+
 我们只需要用区间`[0, n]`所有元素的和减去`nums`中所有元素的和就得到最终的结果`X`。
 
 ### C++代码
@@ -137,5 +140,3 @@ class Solution:
 **时间复杂度：** 两种方法的整个过程都是只遍历了一遍数组，所以时间复杂度为*O(n)*，`n`为数组`nums`的长度。
 
 **空间复杂度：** 两种方法都只使用了几个整型变量，所以空间复杂度都是*O(1)*。
-
-

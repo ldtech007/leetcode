@@ -1,5 +1,7 @@
 
 > *题目链接：* https://leetcode.cn/problems/counting-bits/
+>
+>*视频题解：* https://www.bilibili.com/video/BV1RE421w7C7/
 
 # LeetCode 338. 比特位计数
 
@@ -189,5 +191,3 @@ class Solution:
 **时间复杂度：** 两种方法都是*O(n)*，因为只遍历一遍区间`[0, n]`。
 
 **空间复杂度：** 两种方法都是*O(n)*，只用到一个长度为`n+1`的数组`dp`。
-
-

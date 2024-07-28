@@ -41,11 +41,17 @@
 |[leetcode 647.回文子串](./leetcode%20blind75/字符串/LeetCode%200647.%20回文子串.md)| &#10004; | &#10004; | &#10004; | [回文子串](https://www.bilibili.com/video/BV1Bs421w7iw/) |
 |[leetcode 19.删除链表的倒数第N个结点](./leetcode%20blind75/链表/LeetCode%200019.%20删除链表的倒数第%20N%20个结点.md)| &#10004; | &#10004; | &#10004; | [删除链表的倒数第N个结点](https://www.bilibili.com/video/BV1hs421M7Ke/) |
 |[leetcode 21.合并两个有序链表](./leetcode%20blind75/链表/LeetCode%200021.%20%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8.md)| &#10004; | &#10004; | &#10004; | [合并两个有序链表](https://www.bilibili.com/video/BV17w4m1Y7CJ/) |
-|[leetcode 23.合并 K 个升序链表](./leetcode%20blind75/链表/LeetCode%200023.%20%E5%90%88%E5%B9%B6%20K%20%E4%B8%AA%E5%8D%87%E5%BA%8F%E9%93%BE%E8%A1%A8.md)| &#10004; | &#10004; | &#10004; | [合并 K 个升序链表](https://www.bilibili.com/video/BV136421f7hR/)] |
+|[leetcode 23.合并 K 个升序链表](./leetcode%20blind75/链表/LeetCode%200023.%20%E5%90%88%E5%B9%B6%20K%20%E4%B8%AA%E5%8D%87%E5%BA%8F%E9%93%BE%E8%A1%A8.md)| &#10004; | &#10004; | &#10004; | [合并 K 个升序链表](https://www.bilibili.com/video/BV136421f7hR/) |
 |[leetcode 141.环形链表](./leetcode%20blind75/链表/LeetCode%200141.%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8.md)| &#10004; | &#10004; | &#10004; | [环形链表](https://www.bilibili.com/video/BV18z421q78k/) |
 |[leetcode 143.重排链表](./leetcode%20blind75/链表/LeetCode%200143.%20%E9%87%8D%E6%8E%92%E9%93%BE%E8%A1%A8.md)| &#10004; | &#10004; | &#10004; | [重排链表](https://www.bilibili.com/video/BV1tx4y1t7YB/) |
 |[leetcode 206.反转链表](./leetcode%20blind75/链表/LeetCode%200206.%20%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8.md)| &#10004; | &#10004; | &#10004; | [反转链表](https://www.bilibili.com/video/BV1gE421N7W2/) |
-|[leetcode 190.颠倒二进制位](./leetcode%20blind75/%E4%BD%8D%E8%BF%90%E7%AE%97/LeetCode%200190.%E9%A2%A0%E5%80%92%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BD%8D.md)| &#10004; | &#10008; | &#10008; | 录制中 |
+|[leetcode 190.颠倒二进制位](./leetcode%20blind75/%E4%BD%8D%E8%BF%90%E7%AE%97/LeetCode%200190.%E9%A2%A0%E5%80%92%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BD%8D.md)| &#10004; | &#10004; | &#10004; | [颠倒二进制位](https://www.bilibili.com/video/BV1W2421Z7bi/) |
+|[leetcode 191.位1的个数](./leetcode%20blind75/%E4%BD%8D%E8%BF%90%E7%AE%97/LeetCode%200191.位1的个数.md)| &#10004; | &#10004; | &#10004; | [位1的个数](https://www.bilibili.com/video/BV1ir421M7XU/) |
+|[leetcode 268.丢失的数字](./leetcode%20blind75/%E4%BD%8D%E8%BF%90%E7%AE%97/LeetCode%200268.丢失的数字.md)| &#10004; | &#10004; | &#10004; | [丢失的数字](https://www.bilibili.com/video/BV1HS42197Hc/) |
+|[leetcode 338.比特位计数](./leetcode%20blind75/%E4%BD%8D%E8%BF%90%E7%AE%97/LeetCode%200338.%20比特位计数.md)| &#10004; | &#10004; | &#10004; | [比特位计数](https://www.bilibili.com/video/BV1RE421w7C7/) |
+|[leetcode 371.两整数之和](./leetcode%20blind75/%E4%BD%8D%E8%BF%90%E7%AE%97/LeetCode%200371.两整数之和.md)| &#10004; | &#10004; | &#10004; | [两整数之和](https://www.bilibili.com/video/BV1RZ421K7YF/) |
+|[leetcode 39.组合总数](./leetcode%20blind75/动态规划/LeetCode%200039.%20组合总和.md)| &#10004; | &#10008; | &#10008; | 录制中 |
+
 
 所有的文章都是我利用工作之余的时间写的，尽可能使用最简洁易懂的方式，由浅入深，还画了一些帮助理解的图片。每写完一篇我都会以小白的姿态去反复阅读，反复修改。 也获得了一些同学的认可，还有一些同学在力扣的题解评论区给我提建议，我也会根据同学们的建议去不断调整。我始终认为个人的思路是有局限性的，因为每个人对基础知识的掌握程度是不一样的，一个人认为理所当然的结论，另一个人可能想破脑袋都不理解，所以需要我们共同去不断完善。非常欢迎大家通过力扣评论、公众号「编程网事」后台给我提建议，或者直接提给我你的合并请求。
 
