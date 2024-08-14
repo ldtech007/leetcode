@@ -1,5 +1,7 @@
 
 > *题目链接：* https://leetcode.cn/problems/jump-game/
+>
+>*视频题解：* https://www.bilibili.com/video/BV1gwYKekEVN/
 
 # LeetCode 55. 跳跃游戏
 
@@ -57,6 +59,47 @@ public:
         return false;
     }
 };
+```
+
+## java代码
+
+```java
+class Solution {
+    public boolean canJump(int[] nums) {
+        int nums_len = nums.length;
+        // 初始化目标值
+        int target = nums_len - 1;
+        for (int i = nums_len - 1; i >= 0; --i) {
+            // 当前目标可达，更新目标
+            if (i + nums[i] >= target) {
+                target = i;
+            }
+        }
+
+        if (target == 0) {
+            return true;
+        }
+        return false;
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def canJump(self, nums: List[int]) -> bool:
+        nums_len = len(nums)
+        # 初始化目标值
+        target = nums_len - 1
+        for i in range(nums_len - 1, -1, -1):
+            # 当前目标可达，更新目标
+            if i + nums[i] >= target:
+                target = i
+
+        if target == 0:
+            return True
+        return False
 ```
 
 ## 复杂度分析

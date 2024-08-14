@@ -1,5 +1,7 @@
 
 > *题目链接：* https://leetcode.cn/problems/climbing-stairs/
+>
+>*视频题解：* https://www.bilibili.com/video/BV1h1421t7W3/
 
 # LeetCode 70.爬楼梯
 

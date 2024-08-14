@@ -1,5 +1,7 @@
 
 > *题目链接：* https://leetcode.cn/problems/longest-increasing-subsequence/
+>
+>*视频题解：* https://www.bilibili.com/video/BV1RRvheFEog/
 
 # LeetCode 300. 最长递增子序列
 

@@ -50,7 +50,18 @@
 |[leetcode 268.丢失的数字](./leetcode%20blind75/%E4%BD%8D%E8%BF%90%E7%AE%97/LeetCode%200268.丢失的数字.md)| &#10004; | &#10004; | &#10004; | [丢失的数字](https://www.bilibili.com/video/BV1HS42197Hc/) |
 |[leetcode 338.比特位计数](./leetcode%20blind75/%E4%BD%8D%E8%BF%90%E7%AE%97/LeetCode%200338.%20比特位计数.md)| &#10004; | &#10004; | &#10004; | [比特位计数](https://www.bilibili.com/video/BV1RE421w7C7/) |
 |[leetcode 371.两整数之和](./leetcode%20blind75/%E4%BD%8D%E8%BF%90%E7%AE%97/LeetCode%200371.两整数之和.md)| &#10004; | &#10004; | &#10004; | [两整数之和](https://www.bilibili.com/video/BV1RZ421K7YF/) |
-|[leetcode 39.组合总数](./leetcode%20blind75/动态规划/LeetCode%200039.%20组合总和.md)| &#10004; | &#10008; | &#10008; | 录制中 |
+|[leetcode 39.组合总数](./leetcode%20blind75/动态规划/LeetCode%200039.%20组合总和.md)| &#10004; | &#10004; | &#10004; | [组合总数](https://www.bilibili.com/video/BV1xyiueHEb4/) |
+|[leetcode 55.跳跃游戏](./leetcode%20blind75/动态规划/LeetCode%200055.%20跳跃游戏.md)| &#10004; | &#10004; | &#10004; | [跳跃游戏](https://www.bilibili.com/video/BV1gwYKekEVN/) |
+|[leetcode 62.不同路径](./leetcode%20blind75/动态规划/LeetCode%200062.%20不同路径.md)| &#10004; | &#10008; | &#10008; | [不同路径](https://www.bilibili.com/video/BV1rJYKeFESo/) |
+|[leetcode 70.爬楼梯](./leetcode%20blind75/动态规划/LeetCode%200070.爬楼梯.md)| &#10004; | &#10008; | &#10008; | [爬楼梯](https://www.bilibili.com/video/BV1h1421t7W3/) |
+|[leetcode 91.解码方法](./leetcode%20blind75/动态规划/LeetCode%200091.%20解码方法.md)| &#10004; | &#10008; | &#10008; | [解码方法](https://www.bilibili.com/video/BV181YKeGE3E/) |
+|[leetcode 139.单词拆分](./leetcode%20blind75/动态规划/LeetCode%200139.%20单词拆分.md)| &#10004; | &#10008; | &#10008; | [单词拆分](https://www.bilibili.com/video/BV1ZSvheYEsk/) |
+|[leetcode 198.打家劫舍](./leetcode%20blind75/动态规划/LeetCode%200198.%20打家劫舍.md)| &#10004; | &#10008; | &#10008; | [打家劫舍](https://www.bilibili.com/video/BV1RwvoeaENG/) |
+|[leetcode 213.打家劫舍II](./leetcode%20blind75/动态规划/LeetCode%200213.%20打家劫舍%20II.md)| &#10004; | &#10008; | &#10008; | [打家劫舍II](https://www.bilibili.com/video/BV1WRYKeKEQE/) |
+|[leetcode 300.最长递增子序列](./leetcode%20blind75/动态规划/LeetCode%200300.%20最长递增子序列.md)| &#10004; | &#10008; | &#10008; | [最长递增子序列](https://www.bilibili.com/video/BV1RRvheFEog/) |
+|[leetcode 322.零钱兑换](./leetcode%20blind75/动态规划/LeetCode%200322.零钱兑换.md)| &#10004; | &#10008; | &#10008; | [零钱兑换](https://www.bilibili.com/video/BV1qsvDeHEkg/) |
+|[leetcode 1143.最长公共子序列](./leetcode%20blind75/动态规划/LeetCode%201143.%20最长公共子序列.md)| &#10004; | &#10004; | &#10004; | [最长公共子序列](https://www.bilibili.com/video/BV1RovheZEHf/) |
+|[leetcode 98.验证二叉搜索树](./leetcode%20blind75/树/LeetCode%200098.%20验证二叉搜索树.md)| &#10004; | &#10008; | &#10008; | 录制中 |
 
 
 所有的文章都是我利用工作之余的时间写的，尽可能使用最简洁易懂的方式，由浅入深，还画了一些帮助理解的图片。每写完一篇我都会以小白的姿态去反复阅读，反复修改。 也获得了一些同学的认可，还有一些同学在力扣的题解评论区给我提建议，我也会根据同学们的建议去不断调整。我始终认为个人的思路是有局限性的，因为每个人对基础知识的掌握程度是不一样的，一个人认为理所当然的结论，另一个人可能想破脑袋都不理解，所以需要我们共同去不断完善。非常欢迎大家通过力扣评论、公众号「编程网事」后台给我提建议，或者直接提给我你的合并请求。

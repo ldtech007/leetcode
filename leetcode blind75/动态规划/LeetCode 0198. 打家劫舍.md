@@ -1,5 +1,7 @@
 
 > *题目链接：* https://leetcode.cn/problems/house-robber/
+>
+>*视频题解：* https://www.bilibili.com/video/BV1RwvoeaENG/
 
 # LeetCode 198. 打家劫舍
 

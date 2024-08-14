@@ -1,5 +1,7 @@
 
 > *题目链接：* https://leetcode.cn/problems/word-break/
+>
+>*视频题解：* https://www.bilibili.com/video/BV1ZSvheYEsk/
 
 # LeetCode 139. 单词拆分
 

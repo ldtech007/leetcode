@@ -1,5 +1,7 @@
 
 > *题目链接：* https://leetcode.cn/problems/decode-ways/
+>
+>*视频题解：* https://www.bilibili.com/video/BV181YKeGE3E/
 
 # LeetCode 91. 解码方法
 
