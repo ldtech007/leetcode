@@ -69,6 +69,42 @@ public:
 };
 ```
 
+## java代码
+
+```java
+class Solution {
+    public int uniquePaths(int m, int n) {
+        // 定义dp并做边界初始化
+        int[][] dp = new int[m][n];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i == 0 || j == 0) {
+                    dp[i][j] = 1;
+                } else {
+                    // 状态转移公式
+                    dp[i][j] = dp[i-1][j] + dp[i][j-1];
+                }
+            }
+        }
+        return dp[m-1][n-1];
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def uniquePaths(self, m: int, n: int) -> int:
+        # 定义dp并做边界初始化
+        dp = [[1] * n for _ in range(m)]
+        for i in range(1, m):
+            for j in range(1, n):
+                # 状态转移公式
+                dp[i][j] = dp[i-1][j] + dp[i][j-1]
+        return dp[m-1][n-1]
+```
+
 ## 复杂度分析
 
 **时间复杂度：** *O(mn)*，遍历完`m x n`的网格。

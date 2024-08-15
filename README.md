@@ -52,8 +52,8 @@
 |[leetcode 371.两整数之和](./leetcode%20blind75/%E4%BD%8D%E8%BF%90%E7%AE%97/LeetCode%200371.两整数之和.md)| &#10004; | &#10004; | &#10004; | [两整数之和](https://www.bilibili.com/video/BV1RZ421K7YF/) |
 |[leetcode 39.组合总数](./leetcode%20blind75/动态规划/LeetCode%200039.%20组合总和.md)| &#10004; | &#10004; | &#10004; | [组合总数](https://www.bilibili.com/video/BV1xyiueHEb4/) |
 |[leetcode 55.跳跃游戏](./leetcode%20blind75/动态规划/LeetCode%200055.%20跳跃游戏.md)| &#10004; | &#10004; | &#10004; | [跳跃游戏](https://www.bilibili.com/video/BV1gwYKekEVN/) |
-|[leetcode 62.不同路径](./leetcode%20blind75/动态规划/LeetCode%200062.%20不同路径.md)| &#10004; | &#10008; | &#10008; | [不同路径](https://www.bilibili.com/video/BV1rJYKeFESo/) |
-|[leetcode 70.爬楼梯](./leetcode%20blind75/动态规划/LeetCode%200070.爬楼梯.md)| &#10004; | &#10008; | &#10008; | [爬楼梯](https://www.bilibili.com/video/BV1h1421t7W3/) |
+|[leetcode 62.不同路径](./leetcode%20blind75/动态规划/LeetCode%200062.%20不同路径.md)| &#10004; | &#10004; | &#10004; | [不同路径](https://www.bilibili.com/video/BV1rJYKeFESo/) |
+|[leetcode 70.爬楼梯](./leetcode%20blind75/动态规划/LeetCode%200070.爬楼梯.md)| &#10004; | &#10004; | &#10004; | [爬楼梯](https://www.bilibili.com/video/BV1h1421t7W3/) |
 |[leetcode 91.解码方法](./leetcode%20blind75/动态规划/LeetCode%200091.%20解码方法.md)| &#10004; | &#10008; | &#10008; | [解码方法](https://www.bilibili.com/video/BV181YKeGE3E/) |
 |[leetcode 139.单词拆分](./leetcode%20blind75/动态规划/LeetCode%200139.%20单词拆分.md)| &#10004; | &#10008; | &#10008; | [单词拆分](https://www.bilibili.com/video/BV1ZSvheYEsk/) |
 |[leetcode 198.打家劫舍](./leetcode%20blind75/动态规划/LeetCode%200198.%20打家劫舍.md)| &#10004; | &#10008; | &#10008; | [打家劫舍](https://www.bilibili.com/video/BV1RwvoeaENG/) |

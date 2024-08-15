@@ -68,11 +68,46 @@ public:
 };
 ```
 
+## java代码
+
+```java
+class Solution {
+    public int climbStairs(int n) {
+        // 因为有n阶台阶，台阶从0开始计算，所以定义n+1个元素
+        int[] dp = new int[n + 1];
+        // 定义边界dp[0]=1
+        dp[0] = 1;
+        dp[1] = 1;
+        for (int i = 2; i <= n; ++i) {
+            // 状态转移公式
+            dp[i] = dp[i-1] + dp[i-2];
+        }
+        return dp[n];
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        # 因为有n阶台阶，台阶从0开始计算，所以定义n+1个元素
+        dp = [0] * (n + 1)
+        # 定义边界dp[0]=1
+        dp[0] = 1
+        dp[1] = 1
+        for i in range(2, n + 1):
+            # 状态转移公式
+            dp[i] = dp[i-1] + dp[i-2]
+        return dp[n]
+```
+
 上面的代码实现使用了一个长为`n+1`的`dp`数组，我们观察状态转移公式的规律，其实并不需要保存每个台阶数为`i`的爬楼梯方法，可以通过两个整型变量来优化上面的实现。
 
 ![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-0070-03.png)
 
-## 代码优化
+## c++代码
 
 ```cpp
 class Solution {
@@ -88,6 +123,37 @@ public:
         return next;
     }
 };
+```
+
+## java代码
+
+```java
+class Solution {
+    public int climbStairs(int n) {
+        int pre = 1;
+        int next = 1;
+        for (int i = 2; i <= n; ++i) {
+            int temp = next;
+            next = pre + next;
+            pre = temp;
+        }
+        return next;
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        pre = 1
+        next = 1
+        for i in range(2, n + 1):
+            temp = next
+            next = pre + next
+            pre = temp
+        return next
 ```
 
 ## 复杂度分析
