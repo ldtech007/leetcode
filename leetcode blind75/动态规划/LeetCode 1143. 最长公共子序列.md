@@ -29,11 +29,10 @@
 
 ## 思路解析
 
-本题是经典的二维动态规划问题，要找到解决动态规划问题的两个突破点：**推导出状态转移公式**和**边界条件处理**。
-
 首先定义`dp[i][j]`为`text1`的`[0, i)`区间和`text2`的`[0, j)`区间的最长公共子序列。`[0, i)`区间的长度为`i`，`[0, j)`区间的长度为`j`。
 
 接下来我们来看两种情况下的**子问题分解**：
+
 1. `text1[i-1] == text2[j-1]`，这个时候`text1`的`[0, i)`区间和`text2`的`[0, j)`区间上的最长公共子序列就变成了 ***`text1`的`[0, i-1)`区间和`text2`的`[0, j-1)`区间上的最长公共子序列加`1`*** 。即`dp[i][j] = dp[i-1][j-1] + 1`。
 
 ![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-1143-01.png)
@@ -42,9 +41,11 @@
 
 ![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-1143-02.png)
 
-由于整个推导过程是**自下而上**的，在求`dp[i][j]`的时候`dp[i-1][j-1]`，`dp[i][j-1]`，`dp[i-1][j]`都是已经推出结果的。
+通过上面分析知`dp[i][j]`依赖子问题`dp[i-1][j-1]`，`dp[i][j-1]`，`dp[i-1][j]`的结果，同样的`dp[i][j-1]`依赖子问题`dp[i-1][j-2]`，`dp[i][j-2]`，`dp[i-1][j-1]`的结果，这里会涉及到重复子问题`dp[i-1][j-1]`。该问题存在递归结构，并且存在大量子问题可以记忆化保存，所以可以通过动态规划来实现。
 
-所以**状态转移公式**为：
+本题是经典的二维动态规划问题，要找到解决动态规划问题的两个突破点：**推导出状态转移公式**和**边界条件处理**。
+
+根据上面的分析**状态转移公式**为：
 
 ![](https://gitee.com/ldtech007/picture/raw/master/pic/lc-1143-03.png)
 
@@ -85,6 +86,59 @@ public:
 };
 
 ```
+
+## java代码
+
+```java
+class Solution {
+    public int longestCommonSubsequence(String text1, String text2) {
+        int text1_len = text1.length();
+        int text2_len = text2.length();
+        // 定义二维dp数组，并初始化，dp[i][0]=0 dp[0][j]=0
+        int[][] dp = new int[text1_len + 1][text2_len + 1];
+
+        for (int i = 0; i < text1_len; ++i) {
+            for (int j = 0; j < text2_len; ++j) {
+                // text1[i] == text2[j]
+                if (text1.charAt(i) == text2.charAt(j)) {
+                    // 状态转移公式
+                    dp[i+1][j+1] = dp[i][j] + 1;
+                // text1[i] != text2[j]
+                } else {
+                    // 状态转移公式
+                    dp[i+1][j+1] = Math.max(dp[i+1][j], dp[i][j+1]);
+                }
+            }
+        }
+        return dp[text1_len][text2_len];
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def longestCommonSubsequence(self, text1: str, text2: str) -> int:
+        text1_len = len(text1)
+        text2_len = len(text2)
+        # 定义二维dp数组，并初始化，dp[i][0]=0 dp[0][j]=0
+        dp = [[0] * (text2_len + 1) for _ in range(text1_len + 1)]
+
+        for i in range(text1_len):
+            for j in range(text2_len):
+                # text1[i] == text2[j]
+                if text1[i] == text2[j]:
+                    # 状态转移公式
+                    dp[i+1][j+1] = dp[i][j] + 1
+                # text1[i] != text2[j]
+                else:
+                    # 状态转移公式
+                    dp[i+1][j+1] = max(dp[i+1][j], dp[i][j+1])
+
+        return dp[text1_len][text2_len]
+```
+
 ## 复杂度分析
 
 **时间复杂度：** *O(mn)* ，其中`m`为`text1`的长度，`n`为`text2`的长度。
