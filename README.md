@@ -54,7 +54,7 @@
 |[leetcode 55.跳跃游戏](./leetcode%20blind75/动态规划/LeetCode%200055.%20跳跃游戏.md)| &#10004; | &#10004; | &#10004; | [跳跃游戏](https://www.bilibili.com/video/BV1gwYKekEVN/) | 动态规划 
 |[leetcode 62.不同路径](./leetcode%20blind75/动态规划/LeetCode%200062.%20不同路径.md)| &#10004; | &#10004; | &#10004; | [不同路径](https://www.bilibili.com/video/BV1rJYKeFESo/) | 动态规划 
 |[leetcode 70.爬楼梯](./leetcode%20blind75/动态规划/LeetCode%200070.爬楼梯.md)| &#10004; | &#10004; | &#10004; | [爬楼梯](https://www.bilibili.com/video/BV1h1421t7W3/) | 动态规划 
-|[leetcode 91.解码方法](./leetcode%20blind75/动态规划/LeetCode%200091.%20解码方法.md)| &#10004; | &#10008; | &#10008; | [解码方法](https://www.bilibili.com/video/BV181YKeGE3E/) | 动态规划 
+|[leetcode 91.解码方法](./leetcode%20blind75/动态规划/LeetCode%200091.%20解码方法.md)| &#10004; | &#10004; | &#10004; | [解码方法](https://www.bilibili.com/video/BV181YKeGE3E/) | 动态规划 
 |[leetcode 139.单词拆分](./leetcode%20blind75/动态规划/LeetCode%200139.%20单词拆分.md)| &#10004; | &#10008; | &#10008; | [单词拆分](https://www.bilibili.com/video/BV1ZSvheYEsk/) | 动态规划 
 |[leetcode 198.打家劫舍](./leetcode%20blind75/动态规划/LeetCode%200198.%20打家劫舍.md)| &#10004; | &#10008; | &#10008; | [打家劫舍](https://www.bilibili.com/video/BV1RwvoeaENG/) | 动态规划 
 |[leetcode 213.打家劫舍II](./leetcode%20blind75/动态规划/LeetCode%200213.%20打家劫舍%20II.md)| &#10004; | &#10008; | &#10008; | [打家劫舍II](https://www.bilibili.com/video/BV1WRYKeKEQE/) | 动态规划 

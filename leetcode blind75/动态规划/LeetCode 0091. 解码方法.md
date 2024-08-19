@@ -87,6 +87,64 @@ public:
 };
 ```
 
+### java代码
+
+```java
+class Solution {
+    public int numDecodings(String s) {
+        Map<Integer, Integer> count = new HashMap<>();
+        count.put(s.length(), 1);
+        return dfs(s, count, 0);
+    }
+    public int dfs(String s, Map<Integer, Integer> count, int i) {
+        // 跳出递归条件
+        if (count.containsKey(i)) {
+            return count.get(i);
+        }
+        // 跳出递归条件
+        if (s.charAt(i) == '0') {
+            return 0;
+        }
+        // 子问题处理
+        int res = dfs(s, count, i + 1);
+        if (i + 1 < s.length() && (s.charAt(i) == '1' || (s.charAt(i) == '2' && s.charAt(i + 1) >= '0' && s.charAt(i + 1) <= '6'))) {
+            // 子问题处理
+            res += dfs(s, count, i + 2);
+        }
+        // 更新备忘录
+        count.put(i, res);
+        return res;
+    }
+
+}
+
+```
+
+### python代码
+
+```python
+class Solution:
+    def numDecodings(self, s: str) -> int:
+        count = {len(s): 1}
+        return self.dfs(s, count, 0)
+
+    def dfs(self, s, count, i):
+        # 跳出递归条件
+        if i in count:
+            return count[i]
+        # 跳出递归条件
+        if s[i] == '0':
+            return 0
+        # 子问题处理
+        res = self.dfs(s, count, i + 1)
+        if i + 1 < len(s) and (s[i] == '1' or (s[i] == '2' and s[i + 1] >= '0' and s[i + 1] <= '6')):
+            # 子问题处理
+            res += self.dfs(s, count, i + 2)
+        # 更新备忘录
+        count[i] = res
+        return res
+```
+
 ### 复杂度分析
 
 **时间复杂度：** *O(n)*，`n`为`s`的长度。
@@ -136,6 +194,48 @@ public:
     }
 
 };
+```
+
+### java代码
+
+```java
+class Solution {
+    public int numDecodings(String s) {
+        int sLen = s.length();
+        int[] dp = new int[sLen + 1];
+        // 边界条件处理
+        dp[0] = 1;
+        for (int i = 1; i <= sLen; ++i) {
+            // 状态转移公式
+            if (s.charAt(i - 1) != '0') dp[i] = dp[i - 1];
+            if (i - 1 > 0 && ((s.charAt(i - 2) == '1') || (s.charAt(i - 2) == '2' && s.charAt(i - 1) >= '0' && s.charAt(i - 1) <= '6'))) {
+                // 状态转移公式
+                dp[i] += dp[i - 2];
+            }
+        }
+        return dp[sLen];
+
+    }
+}
+```
+
+### python代码
+
+```python
+class Solution:
+    def numDecodings(self, s: str) -> int:
+        s_len = len(s)
+        dp = [0] * (s_len + 1)
+        # 边界条件处理
+        dp[0] = 1
+        for i in range(1, s_len + 1):
+            # 状态转移公式
+            if s[i - 1] != '0':
+                dp[i] = dp[i - 1]
+            if i - 1 > 0 and (s[i - 2] == '1' or (s[i - 2] == '2' and '0' <= s[i - 1] <= '6')):
+                # 状态转移公式
+                dp[i] += dp[i - 2]
+        return dp[s_len]
 ```
 
 ### 复杂度分析
