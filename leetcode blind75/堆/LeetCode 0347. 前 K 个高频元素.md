@@ -63,6 +63,73 @@ public:
 };
 ```
 
+### java代码
+
+```java
+class Solution {
+    public int[] topKFrequent(int[] nums, int k) {
+         int[] res = new int[k];
+        Map<Integer, Integer> u_mapCount = new HashMap<>();
+        List<List<Integer>> Freq = new ArrayList<>(nums.length + 1);
+
+        // 初始化每个频率对应的数组
+        for (int i = 0; i <= nums.length; ++i) {
+            Freq.add(new ArrayList<>());
+        }
+
+        // 统计每个元素的频率
+        for (int num : nums) {
+            u_mapCount.put(num, u_mapCount.getOrDefault(num, 0) + 1);
+        }
+
+        // 元素的频率作为数组的索引，相同频率元素组成的数组作为数组的元素
+        for (Map.Entry<Integer, Integer> entry : u_mapCount.entrySet()) {
+            Freq.get(entry.getValue()).add(entry.getKey());
+        }
+
+        // 逆序获取k个最高频的元素
+        int index = 0;
+        for (int i = Freq.size() - 1; i >= 0; --i) {
+            for (int num : Freq.get(i)) {
+                res[index++] = num;
+                if (index == k) {
+                    return res;
+                }
+            }
+        }
+
+        return res;
+    }
+}
+```
+
+### python代码
+
+```python
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        res = []
+        u_map_count = defaultdict(int)
+        Freq = [[] for _ in range(len(nums) + 1)]
+        
+        # 统计每个元素的频率
+        for num in nums:
+            u_map_count[num] += 1
+        
+        # 元素的频率作为数组的索引，相同频率元素组成的数组作为数组的元素
+        for num, freq in u_map_count.items():
+            Freq[freq].append(num)
+        
+        # 逆序获取k个最高频的元素
+        for i in range(len(Freq) - 1, -1, -1):
+            for num in Freq[i]:
+                res.append(num)
+                if len(res) == k:
+                    return res
+        
+        return res
+```
+
 ### 复杂度分析
 
 **时间复杂度：** 构造`hash`表需要遍历一遍数组`nums`，然后构造频率表需要遍历一遍`hash`表，总的时间复杂度为*O(n)*，其中`n`为数组`nums`的长度。
@@ -135,6 +202,81 @@ public:
         return res;
     }
 };
+```
+
+### java代码
+
+```java
+class Solution {
+    public int[] topKFrequent(int[] nums, int k) {
+        int[] res = new int[k];
+        Map<Integer, Integer> u_mapCount = new HashMap<>();
+        
+        // 统计每个元素的频率
+        for (int num : nums) {
+            u_mapCount.put(num, u_mapCount.getOrDefault(num, 0) + 1);
+        }
+
+        // 小根堆，堆中元素是Map.Entry类型的，Entry为上面hash表u_mapCount中的一个对象
+        PriorityQueue<Map.Entry<Integer, Integer>> q = new PriorityQueue<>(k, new Comparator<Map.Entry<Integer, Integer>>() {
+            public int compare(Map.Entry<Integer, Integer> a, Map.Entry<Integer, Integer> b) {
+                return a.getValue() - b.getValue();  // 比较频率，构造小根堆
+            }
+        });
+
+        for (Map.Entry<Integer, Integer> item : u_mapCount.entrySet()) {
+            if (q.size() < k) {
+                q.offer(item);
+            } else {
+                // item的频率比小根堆中最小的值大，则替换它，保持小根堆中不超过k个元素
+                if (q.peek().getValue() < item.getValue()) {
+                    q.poll();
+                    q.offer(item);
+                }
+            }
+        }
+
+        // 从小根堆中获取结果
+        int index = 0;
+        while (!q.isEmpty()) {
+            res[index++] = q.poll().getKey();
+        }
+
+        return res;
+
+    }
+}
+```
+
+### python代码
+
+```python
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        res = []
+        u_map_count = defaultdict(int)
+        
+        # 统计每个元素的频率
+        for num in nums:
+            u_map_count[num] += 1
+
+        # 小根堆，堆中元素是元组 (频率, 元素)，使用 heapq 实现
+        q = []
+
+        for num, freq in u_map_count.items():
+            if len(q) < k:
+                heapq.heappush(q, (freq, num))
+            else:
+                # item的频率比小根堆中最小的值大，则替换它，保持小根堆中不超过k个元素
+                if q[0][0] < freq:
+                    heapq.heappop(q)
+                    heapq.heappush(q, (freq, num))
+
+        # 从小根堆中获取结果
+        while q:
+            res.append(heapq.heappop(q)[1])
+
+        return res
 ```
 
 ### 复杂度分析
