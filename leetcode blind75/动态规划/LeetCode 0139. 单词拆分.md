@@ -67,6 +67,52 @@ public:
 };
 ```
 
+## java代码
+
+```java
+class Solution {
+    public boolean wordBreak(String s, List<String> wordDict) {
+        int s_len = s.length();
+        // 定义 dp
+        boolean[] dp = new boolean[s_len + 1];
+        // 边界条件
+        dp[0] = true;
+
+        for (int i = 0; i < s_len; ++i) {
+            for (String word : wordDict) {
+                int word_len = word.length();
+                if (dp[i] && (i + word_len <= s_len) && s.substring(i, i + word_len).equals(word)) {
+                    // 状态转移公式
+                    dp[i + word_len] = dp[i];
+                }
+            }
+        }
+        return dp[s_len];
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+        s_len = len(s)
+        # 定义 dp
+        dp = [False] * (s_len + 1)
+        # 边界条件
+        dp[0] = True
+
+        for i in range(s_len):
+            for word in wordDict:
+                word_len = len(word)
+                if dp[i] and (i + word_len <= s_len) and s[i:i + word_len] == word:
+                    # 状态转移公式
+                    dp[i + word_len] = dp[i]
+
+        return dp[s_len]
+```
+
 ## 复杂度分析
 
 **时间复杂度：** *O(mn)*，其中`m`为`s`的长度，`n`为`wordDict`的长度。

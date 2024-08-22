@@ -80,6 +80,53 @@ public:
   }
 };
 ```
+## java代码
+
+```java
+class Solution {
+    public int lengthOfLIS(int[] nums) {
+        int nums_len = nums.length;
+        int max_res = 0;
+        // 边界条件初始化
+        int[] dp = new int[nums_len];
+        for (int i = 0; i < nums_len; ++i) {
+            dp[i] = 1;
+            max_res = Math.max(max_res, dp[i]);
+        }
+
+        for (int i = 0; i < nums_len; ++i) {
+            for (int j = 0; j < i; ++j) {
+                // 状态转移公式
+                if (nums[i] > nums[j]) {
+                    dp[i] = Math.max(dp[i], dp[j] + 1);
+                    max_res = Math.max(max_res, dp[i]);
+                }
+            }
+        }
+
+        return max_res;
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def lengthOfLIS(self, nums: List[int]) -> int:
+        nums_len = len(nums)
+        # 边界条件初始化
+        dp = [1] * nums_len
+
+        for i in range(nums_len):
+            for j in range(i):
+                # 状态转移公式
+                if nums[i] > nums[j]:
+                    dp[i] = max(dp[i], dp[j] + 1)
+
+        return max(dp)
+```
+
 ## 复杂度分析
 
 **时间复杂度:** *O(n<sup>2</sup>)*，其中`n`为`nums`的长度。

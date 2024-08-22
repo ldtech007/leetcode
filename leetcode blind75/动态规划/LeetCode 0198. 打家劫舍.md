@@ -79,6 +79,55 @@ public:
 
 ```
 
+## java代码
+
+```java
+class Solution {
+    public int rob(int[] nums) {
+        int nums_len = nums.length;
+        int[] dp = new int[nums_len + 1];
+        
+        if (nums_len > 0) {
+            // 边界条件
+            dp[1] = nums[0];
+        }
+        if (nums_len > 1) {
+            // 边界条件
+            dp[2] = Math.max(nums[0], nums[1]);
+        }
+        
+        for (int i = 3; i < nums_len + 1; ++i) {
+            // 状态转移公式
+            dp[i] = Math.max(dp[i-1], dp[i-2] + nums[i-1]);
+        }
+        
+        return dp[nums_len];
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def rob(self, nums: List[int]) -> int:
+        nums_len = len(nums)
+        dp = [0] * (nums_len + 1)
+        
+        if nums_len > 0:
+            # 边界条件
+            dp[1] = nums[0]
+        if nums_len > 1:
+            # 边界条件
+            dp[2] = max(nums[0], nums[1])
+        
+        for i in range(3, nums_len + 1):
+            # 状态转移公式
+            dp[i] = max(dp[i-1], dp[i-2] + nums[i-1])
+        
+        return dp[nums_len]
+```
+
 ## 复杂度分析
 
 **时间复杂度：** 只需要遍历一遍数组`nums`，所以时间复杂度为*O(n)*，`n`为`nums`的长度。
