@@ -367,6 +367,7 @@ class Solution:
                 lists[i] = lists[i].next
         return head.next
 ```
+
 ### 复杂度分析
 
 **时间复杂度：** *O(nlogk)*，其中`n`是合并后链表总的长度，`k`是链表的个数，优先队列中节点插入的时间复杂度为*O(logk)*。
