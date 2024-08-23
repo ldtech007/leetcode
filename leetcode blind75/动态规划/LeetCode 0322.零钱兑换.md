@@ -49,11 +49,11 @@
 class Solution {
 public:
   int coinChange(vector<int> &coins, int amount) {
-  //定义备忘录
-	vector<int> count(amount + 1, INT_MAX);
-	count[0] = 0;
-  int res = help(coins, count, amount);
-	return res;
+    //定义备忘录
+    vector<int> count(amount + 1, INT_MAX);
+    count[0] = 0;
+    int res = help(coins, count, amount);
+    return res;
 }
 
 int help(vector<int> &coins, vector<int>& count, int amount) {
@@ -81,6 +81,73 @@ int help(vector<int> &coins, vector<int>& count, int amount) {
 
 };
 ```
+### java代码
+
+```java
+class Solution {
+    public int coinChange(int[] coins, int amount) {
+         // 定义备忘录
+        int[] count = new int[amount + 1];
+        Arrays.fill(count, Integer.MAX_VALUE);
+        count[0] = 0;
+        int res = help(coins, count, amount);
+        return res;
+    }
+
+    private int help(int[] coins, int[] count, int amount) {
+        // 如果备忘录中已经保存结果
+        if (count[amount] < Integer.MAX_VALUE - 1) {
+            // 直接返回
+            return count[amount];
+        }
+        int min_res = Integer.MAX_VALUE;
+        for (int coin : coins) {
+            if (amount - coin >= 0) {
+                // 递归遍历（DFS）所有的可能性
+                int res = help(coins, count, amount - coin);
+                if (res >= 0 && res < min_res) {
+                    min_res = res + 1;
+                }
+            }
+        }
+        // 更新备忘录
+        count[amount] = (min_res == Integer.MAX_VALUE) ? -1 : min_res;
+        // 返回结果
+        return count[amount];
+
+    }
+}
+```
+
+### python代码
+
+```python
+class Solution:
+    def coinChange(self, coins: List[int], amount: int) -> int:
+        # 定义备忘录
+        count = [float('inf')] * (amount + 1)
+        count[0] = 0
+        res = self.help(coins, count, amount)
+        return res
+
+    def help(self, coins, count, amount):
+        # 如果备忘录中已经保存结果
+        if count[amount] < float('inf') - 1:
+            # 直接返回
+            return count[amount]
+        min_res = float('inf')
+        for coin in coins:
+            if amount - coin >= 0:
+                # 递归遍历（DFS）所有的可能性
+                res = self.help(coins, count, amount - coin)
+                if res >= 0 and res < min_res:
+                    min_res = res + 1
+        # 更新备忘录
+        count[amount] = -1 if min_res == float('inf') else min_res
+        # 返回结果
+        return count[amount]
+```
+
 ### 复杂度分析
 
 **时间复杂度：** 时间复杂度为*O(mn)*，其中`m`为`coins`中元素的个数，`n`为要兑换的总金额。  
@@ -134,6 +201,50 @@ public:
   }
 };
 ```
+### java代码
+
+```java
+class Solution {
+    public int coinChange(int[] coins, int amount) {
+        int coins_len = coins.length;
+        // 因为dp是从0开始，要兑换总金额为amount，所以要申请amount+1个元素
+        int[] dp = new int[amount + 1];
+        Arrays.fill(dp, amount + 1);
+        // 边界处理
+        dp[0] = 0;
+        for (int i = 1; i <= amount; i++) {
+            for (int j = 0; j < coins_len; j++) {
+                // 剪掉节点为负的情况
+                if (i - coins[j] >= 0) {
+                    // 状态转移公式
+                    dp[i] = Math.min(dp[i], dp[i - coins[j]] + 1);
+                }
+            }
+        }
+        return dp[amount] == amount + 1 ? -1 : dp[amount];
+    }
+}
+```
+
+### python代码
+
+```python
+class Solution:
+    def coinChange(self, coins: List[int], amount: int) -> int:
+        coins_len = len(coins)
+        # 因为dp是从0开始，要兑换总金额为amount，所以要申请amount+1个元素
+        dp = [amount + 1] * (amount + 1)
+        # 边界处理
+        dp[0] = 0
+        for i in range(1, amount + 1):
+            for j in range(coins_len):
+                # 剪掉节点为负的情况
+                if i - coins[j] >= 0:
+                    # 状态转移公式
+                    dp[i] = min(dp[i], dp[i - coins[j]] + 1)
+        return -1 if dp[amount] == amount + 1 else dp[amount]
+```
+
 ### 复杂度分析
 
 **时间复杂度：** 时间复杂度为*O(m\*n)*，其中`m`为`coins`中元素的个数，`n`为要兑换的总金额。  
