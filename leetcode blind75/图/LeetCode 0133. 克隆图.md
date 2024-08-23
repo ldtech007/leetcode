@@ -86,6 +86,86 @@ private:
 
 ```
 
+## java代码
+
+```java
+/*
+// Definition for a Node.
+class Node {
+    public int val;
+    public List<Node> neighbors;
+    public Node() {
+        val = 0;
+        neighbors = new ArrayList<Node>();
+    }
+    public Node(int _val) {
+        val = _val;
+        neighbors = new ArrayList<Node>();
+    }
+    public Node(int _val, ArrayList<Node> _neighbors) {
+        val = _val;
+        neighbors = _neighbors;
+    }
+}
+*/
+
+class Solution {
+    private Map<Node, Node> m_old2new = new HashMap<>();
+
+    public Node cloneGraph(Node node) {
+        if (node == null) return null;
+        return dfs(node);
+    }
+
+    private Node dfs(Node node) {
+        // 如果当前节点已经被克隆过直接返回
+        if (m_old2new.containsKey(node)) {
+            return m_old2new.get(node);
+        }
+        // 克隆当前节点并存到hash表中
+        Node node_copy = new Node(node.val);
+        m_old2new.put(node, node_copy);
+        for (Node neighbor : node.neighbors) {
+            // 克隆邻居节点
+            node_copy.neighbors.add(dfs(neighbor));
+        }
+        return node_copy;
+    }
+}
+```
+
+## python代码
+
+```python
+"""
+# Definition for a Node.
+class Node:
+    def __init__(self, val = 0, neighbors = None):
+        self.val = val
+        self.neighbors = neighbors if neighbors is not None else []
+"""
+
+from typing import Optional
+class Solution:
+    def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
+        self.m_old2new = {}
+        if not node:
+            return None
+        return self.dfs(node)
+
+    def dfs(self, node: Optional['Node']) -> Optional['Node']:
+        # 如果当前节点已经被克隆过直接返回
+        if node in self.m_old2new:
+            return self.m_old2new[node]
+        # 克隆当前节点并存到hash表中
+        node_copy = Node(node.val)
+        self.m_old2new[node] = node_copy
+        for neighbor in node.neighbors:
+            # 克隆邻居节点
+            node_copy.neighbors.append(self.dfs(neighbor))
+        return node_copy   
+```
+
 ## 复杂度分析
 
 **时间复杂度：** *O(n)*，`n`为原图的节点数。
