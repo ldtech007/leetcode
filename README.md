@@ -4,7 +4,7 @@
 </p>
 
 
-网络慢？ 点击 **[gitee 同步仓库](https://gitee.com/ldtech007/leetcode)：** 
+网络慢？ 访问 **[gitee 仓库](https://gitee.com/ldtech007/leetcode)：** 
 
 >https://gitee.com/ldtech007/leetcode
 
