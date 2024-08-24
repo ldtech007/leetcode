@@ -90,6 +90,66 @@ public:
     }
 };
 ```
+## java代码
+
+```java
+class Solution {
+    public int rob(int[] nums) {
+        int nums_len = nums.length;
+        if (nums_len == 0) return 0;
+        if (nums_len == 1) return nums[0];
+        return Math.max(help(nums, 0, nums_len - 1), help(nums, 1, nums_len - 1));
+    }
+
+    public int help(int[] nums, int start, int len) {
+        if (len == 0) {
+            return 0;
+        }
+        if (len == 1) {
+            return nums[start];
+        }
+        int[] dp = new int[len + 1];
+        // 边界条件
+        dp[1] = nums[start];
+        dp[2] = Math.max(nums[start], nums[start + 1]);
+
+        for (int i = start + 3; i < start + len + 1; ++i) {
+            // 状态转移公式
+            dp[i - start] = Math.max(dp[i - start - 1], dp[i - start - 2] + nums[i - 1]);
+        }
+        return dp[len];
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def rob(self, nums: List[int]) -> int:
+        nums_len = len(nums)
+        if nums_len == 0:
+            return 0
+        if nums_len == 1:
+            return nums[0]
+        return max(self.help(nums, 0, nums_len - 1), self.help(nums, 1, nums_len - 1))
+    
+    def help(self, nums: List[int], start: int, length: int) -> int:
+        if length == 0:
+            return 0
+        if length == 1:
+            return nums[start]
+        dp = [0] * (length + 1)
+        # 边界条件
+        dp[1] = nums[start]
+        dp[2] = max(nums[start], nums[start + 1])
+
+        for i in range(start + 3, start + length + 1):
+            # 状态转移公式
+            dp[i - start] = max(dp[i - start - 1], dp[i - start - 2] + nums[i - 1])
+        
+        return dp[length]
+```
 
 ## 复杂度分析
 
@@ -99,7 +159,9 @@ public:
 
 ## 实现优化
 
-上面的空间复杂度是*O(n)*，其实根据状态转移公式的特点，我们可以使用两个整型变量`pre`和`next`来实现`help`函数。
+上面的空间复杂度是*O(n)*，其实根据状态转移公式的特点，**当前的状态只依赖前面的两个状态**，我们可以不使用数组保存所有的状态，使用两个整型变量`pre`和`next`来实现`help`函数。
+
+## c++代码
 
 ```cpp
 class Solution {
@@ -132,6 +194,66 @@ public:
         return next;
     }
 };
+```
+## java代码
+
+```java
+class Solution {
+    public int rob(int[] nums) {
+        int nums_len = nums.length;
+        if (nums_len == 0) return 0;
+        if (nums_len == 1) return nums[0];
+        return Math.max(help(nums, 0, nums_len - 1), help(nums, 1, nums_len - 1));
+    }
+    public int help(int[] nums, int start, int len) {
+        if (len == 0) {
+            return 0;
+        }
+        if (len == 1) {
+            return nums[start];
+        }
+        // 边界条件
+        int pre = nums[start];
+        int next = Math.max(nums[start], nums[start + 1]);
+
+        for (int i = start + 2; i < start + len; ++i) {
+            // 状态转移公式
+            int temp = next;
+            next = Math.max(pre + nums[i], next);
+            pre = temp;
+        }
+        return next;
+    }
+}
+```
+## python代码
+
+```python
+class Solution:
+    def rob(self, nums: List[int]) -> int:
+        nums_len = len(nums)
+        if nums_len == 0:
+            return 0
+        if nums_len == 1:
+            return nums[0]
+        return max(self.help(nums, 0, nums_len - 1), self.help(nums, 1, nums_len - 1))
+    
+    def help(self, nums: List[int], start: int, length: int) -> int:
+        if length == 0:
+            return 0
+        if length == 1:
+            return nums[start]
+        # 边界条件
+        pre = nums[start]
+        next = max(nums[start], nums[start + 1])
+
+        for i in range(start + 2, start + length):
+            # 状态转移公式
+            temp = next
+            next = max(pre + nums[i], next)
+            pre = temp
+        
+        return next
 ```
 
 ## 优化后复杂度分析
