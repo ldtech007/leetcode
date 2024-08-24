@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/same-tree/
+>
+> *视频题解：* https://www.bilibili.com/video/BV163Ype6E2L/
 
 # LeetCode 100. 相同的树
 

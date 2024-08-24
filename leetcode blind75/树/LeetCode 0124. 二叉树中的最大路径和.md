@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/binary-tree-maximum-path-sum/
+>
+> *视频题解：* https://www.bilibili.com/video/BV12FYee2Eg6/
 
 # LeetCode 124. 二叉树中的最大路径和
 

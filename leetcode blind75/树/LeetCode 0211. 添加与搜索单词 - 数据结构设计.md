@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/design-add-and-search-words-data-structure/
+>
+> *视频题解：* https://www.bilibili.com/video/BV1rUp1e7E6h/
 
 # LeetCode 211. 添加与搜索单词 - 数据结构设计
 

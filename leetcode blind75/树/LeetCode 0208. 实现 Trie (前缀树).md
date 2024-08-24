@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/implement-trie-prefix-tree/
+>
+> *视频题解：* https://www.bilibili.com/video/BV1dFpZeBE2u/
 
 # LeetCode 208. 实现 Trie (前缀树)
 

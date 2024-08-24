@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/invert-binary-tree/
+>
+> *视频题解：* https://www.bilibili.com/video/BV1N7YheBE8H/
 
 # LeetCode 226. 翻转二叉树
 

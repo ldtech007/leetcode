@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/subtree-of-another-tree/
+>
+> *视频题解：* https://www.bilibili.com/video/BV1BseceLE6R/
 
 # LeetCode 572. 另一棵树的子树
 

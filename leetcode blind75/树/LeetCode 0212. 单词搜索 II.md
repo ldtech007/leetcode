@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/word-search-ii/
+>
+> *视频题解：* https://www.bilibili.com/video/BV1rvWpeDEEn/
 
 # LeetCode 212. 单词搜索 II
 

@@ -119,20 +119,20 @@
 |[leetcode 125.验证回文串](./leetcode%20blind75/字符串/LeetCode%200125.%20验证回文串.md)| &#10004; | &#10004; | &#10004; | [验证回文串](https://www.bilibili.com/video/BV1VH4y1P7Gk/) | 字符串 
 |[leetcode 5.最长回文子串](./leetcode%20blind75/字符串/LeetCode%200005.%20最长回文子串.md)| &#10004; | &#10004; | &#10004; | [最长回文子串](https://www.bilibili.com/video/BV1w7421Z798/) | 字符串 
 |[leetcode 647.回文子串](./leetcode%20blind75/字符串/LeetCode%200647.%20回文子串.md)| &#10004; | &#10004; | &#10004; | [回文子串](https://www.bilibili.com/video/BV1Bs421w7iw/) | 字符串 
-|[leetcode 104.二叉树的最大深度](./leetcode%20blind75/树/LeetCode%200104.%20二叉树的最大深度.md)| &#10004; | &#10008; | &#10008; |  | 树
-|[leetcode 100.相同的树](./leetcode%20blind75/树/LeetCode%200100.%20相同的树.md) | &#10004; | &#10008; | &#10008; |  | 树
-|[leetcode 226.翻转二叉树](./leetcode%20blind75/树/LeetCode%200226.%20翻转二叉树.md) | &#10004; | &#10008; | &#10008; |  | 树
-|[leetcode 124.二叉树中的最大路径和](./leetcode%20blind75/树/LeetCode%200124.%20二叉树中的最大路径和.md) | &#10004; | &#10008; | &#10008; |  | 树
-|[leetcode 102.二叉树的层序遍历](./leetcode%20blind75/树/LeetCode%200102.%20二叉树的层序遍历.md) | &#10004; | &#10008; | &#10008; |  | 树
-|[leetcode 297.二叉树的序列化与反序列化](./leetcode%20blind75/树/LeetCode%200297.%20二叉树的序列化与反序列化.md) | &#10004; | &#10008; | &#10008; |  | 树
-|[leetcode 572.另一棵树的子树](./leetcode%20blind75/树/LeetCode%200572.%20另一棵树的子树.md) | &#10004; | &#10008; | &#10008; |  | 树
-|[leetcode 105.从前序与中序遍历序列构造二叉树](./leetcode%20blind75/树/LeetCode%200105.%20从前序与中序遍历序列构造二叉树.md) | &#10004; | &#10008; | &#10008; |  | 树
-|[leetcode 98.验证二叉搜索树](./leetcode%20blind75/树/LeetCode%200098.%20验证二叉搜索树.md) | &#10004; | &#10008; | &#10008; |  | 树
-|[leetcode 230.二叉搜索树中第K小的元素](./leetcode%20blind75/树/LeetCode%200230.%20二叉搜索树中第K小的元素.md) | &#10004; | &#10008; | &#10008; |  | 树
-|[leetcode 235.二叉搜索树的最近公共祖先](./leetcode%20blind75/树/LeetCode%200235.%20二叉搜索树的最近公共祖先.md) | &#10004; | &#10008; | &#10008; |  | 树
-|[leetcode 208.实现 Trie (前缀树)](./leetcode%20blind75/树/LeetCode%200208.%20实现%20Trie%20(前缀树).md) | &#10004; | &#10008; | &#10008; |  | 树
-|[leetcode 211.添加与搜索单词 - 数据结构设计](./leetcode%20blind75/树/LeetCode%200211.%20添加与搜索单词%20-%20数据结构设计.md) | &#10004; | &#10008; | &#10008; |  | 树
-|[leetcode 212.单词搜索 II](./leetcode%20blind75/树/LeetCode%200212.%20单词搜索%20II.md) | &#10004; | &#10008; | &#10008; |  | 树
+|[leetcode 104.二叉树的最大深度](./leetcode%20blind75/树/LeetCode%200104.%20二叉树的最大深度.md)| &#10004; | &#10008; | &#10008; | [二叉树的最大深度](https://www.bilibili.com/video/BV1MRYHeHEeP/) | 树
+|[leetcode 100.相同的树](./leetcode%20blind75/树/LeetCode%200100.%20相同的树.md) | &#10004; | &#10008; | &#10008; | [相同的树](https://www.bilibili.com/video/BV163Ype6E2L/) | 树
+|[leetcode 226.翻转二叉树](./leetcode%20blind75/树/LeetCode%200226.%20翻转二叉树.md) | &#10004; | &#10008; | &#10008; | [翻转二叉树](https://www.bilibili.com/video/BV1N7YheBE8H/) | 树
+|[leetcode 124.二叉树中的最大路径和](./leetcode%20blind75/树/LeetCode%200124.%20二叉树中的最大路径和.md) | &#10004; | &#10008; | &#10008; | [二叉树中的最大路径和](https://www.bilibili.com/video/BV12FYee2Eg6/) | 树
+|[leetcode 102.二叉树的层序遍历](./leetcode%20blind75/树/LeetCode%200102.%20二叉树的层序遍历.md) | &#10004; | &#10008; | &#10008; | [二叉树的层序遍历](https://www.bilibili.com/video/BV1MNeceFE1h/) | 树
+|[leetcode 297.二叉树的序列化与反序列化](./leetcode%20blind75/树/LeetCode%200297.%20二叉树的序列化与反序列化.md) | &#10004; | &#10008; | &#10008; | [二叉树的序列化与反序列化](https://www.bilibili.com/video/BV1TTeceoECg/) | 树
+|[leetcode 572.另一棵树的子树](./leetcode%20blind75/树/LeetCode%200572.%20另一棵树的子树.md) | &#10004; | &#10008; | &#10008; | [另一棵树的子树](https://www.bilibili.com/video/BV1BseceLE6R/) | 树
+|[leetcode 105.从前序与中序遍历序列构造二叉树](./leetcode%20blind75/树/LeetCode%200105.%20从前序与中序遍历序列构造二叉树.md) | &#10004; | &#10008; | &#10008; | [从前序与中序遍历序列构造二叉树](https://www.bilibili.com/video/BV1XAYke2ETp/) | 树
+|[leetcode 98.验证二叉搜索树](./leetcode%20blind75/树/LeetCode%200098.%20验证二叉搜索树.md) | &#10004; | &#10008; | &#10008; | [验证二叉搜索树](https://www.bilibili.com/video/BV1zVe7eoEiu/) | 树
+|[leetcode 230.二叉搜索树中第K小的元素](./leetcode%20blind75/树/LeetCode%200230.%20二叉搜索树中第K小的元素.md) | &#10004; | &#10008; | &#10008; | [二叉搜索树中第K小的元素]( https://www.bilibili.com/video/BV1DseseYE38/) | 树
+|[leetcode 235.二叉搜索树的最近公共祖先](./leetcode%20blind75/树/LeetCode%200235.%20二叉搜索树的最近公共祖先.md) | &#10004; | &#10008; | &#10008; | [二叉搜索树的最近公共祖先](https://www.bilibili.com/video/BV14ieKeGERA/) | 树
+|[leetcode 208.实现 Trie (前缀树)](./leetcode%20blind75/树/LeetCode%200208.%20实现%20Trie%20(前缀树).md) | &#10004; | &#10008; | &#10008; | [实现 Trie (前缀树)](https://www.bilibili.com/video/BV1dFpZeBE2u/) | 树
+|[leetcode 211.添加与搜索单词 - 数据结构设计](./leetcode%20blind75/树/LeetCode%200211.%20添加与搜索单词%20-%20数据结构设计.md) | &#10004; | &#10008; | &#10008; | [添加与搜索单词 - 数据结构设计](https://www.bilibili.com/video/BV1rUp1e7E6h/) | 树
+|[leetcode 212.单词搜索 II](./leetcode%20blind75/树/LeetCode%200212.%20单词搜索%20II.md) | &#10004; | &#10008; | &#10008; | [单词搜索 II](https://www.bilibili.com/video/BV1rvWpeDEEn/) | 树
 |[leetcode 23.合并 K 个升序链表](./leetcode%20blind75/堆/LeetCode%200023.%20合并%20K%20个升序链表.md) | &#10004; | &#10004; | &#10004; |  | 堆
 |[leetcode 347.前 K 个高频元素](./leetcode%20blind75/堆/LeetCode%200347.%20前%20K%20个高频元素.md) | &#10004; | &#10004; | &#10004; |  | 堆
 |[leetcode 295.数据流的中位数](./leetcode%20blind75/堆/LeetCode%200295.%20数据流的中位数.md) | &#10004; | &#10004; | &#10004; |  | 堆

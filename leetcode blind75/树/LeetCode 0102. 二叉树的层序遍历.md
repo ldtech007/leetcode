@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/binary-tree-level-order-traversal/
+>
+> *视频题解：* https://www.bilibili.com/video/BV1MNeceFE1h/
 
 # LeetCode 102. 二叉树的层序遍历
 

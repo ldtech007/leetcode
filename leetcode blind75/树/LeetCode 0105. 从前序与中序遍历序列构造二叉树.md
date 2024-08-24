@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
+>
+> *视频题解：* https://www.bilibili.com/video/BV1XAYke2ETp/
 
 # LeetCode 105. 从前序与中序遍历序列构造二叉树
 

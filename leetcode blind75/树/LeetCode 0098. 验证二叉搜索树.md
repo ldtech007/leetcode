@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/validate-binary-search-tree/
+>
+> *视频题解：* https://www.bilibili.com/video/BV1zVe7eoEiu/
 
 # LeetCode 98. 验证二叉搜索树
 
