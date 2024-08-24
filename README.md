@@ -128,12 +128,12 @@
 |[leetcode 572.另一棵树的子树](./leetcode%20blind75/树/LeetCode%200572.%20另一棵树的子树.md) | &#10004; | &#10008; | &#10008; | [另一棵树的子树](https://www.bilibili.com/video/BV1BseceLE6R/) | 树
 |[leetcode 105.从前序与中序遍历序列构造二叉树](./leetcode%20blind75/树/LeetCode%200105.%20从前序与中序遍历序列构造二叉树.md) | &#10004; | &#10008; | &#10008; | [从前序与中序遍历序列构造二叉树](https://www.bilibili.com/video/BV1XAYke2ETp/) | 树
 |[leetcode 98.验证二叉搜索树](./leetcode%20blind75/树/LeetCode%200098.%20验证二叉搜索树.md) | &#10004; | &#10008; | &#10008; | [验证二叉搜索树](https://www.bilibili.com/video/BV1zVe7eoEiu/) | 树
-|[leetcode 230.二叉搜索树中第K小的元素](./leetcode%20blind75/树/LeetCode%200230.%20二叉搜索树中第K小的元素.md) | &#10004; | &#10008; | &#10008; | [二叉搜索树中第K小的元素]( https://www.bilibili.com/video/BV1DseseYE38/) | 树
+|[leetcode 230.二叉搜索树中第K小的元素](./leetcode%20blind75/树/LeetCode%200230.%20二叉搜索树中第K小的元素.md) | &#10004; | &#10008; | &#10008; | [二叉搜索树中第K小的元素](https://www.bilibili.com/video/BV1DseseYE38/) | 树
 |[leetcode 235.二叉搜索树的最近公共祖先](./leetcode%20blind75/树/LeetCode%200235.%20二叉搜索树的最近公共祖先.md) | &#10004; | &#10008; | &#10008; | [二叉搜索树的最近公共祖先](https://www.bilibili.com/video/BV14ieKeGERA/) | 树
 |[leetcode 208.实现 Trie (前缀树)](./leetcode%20blind75/树/LeetCode%200208.%20实现%20Trie%20(前缀树).md) | &#10004; | &#10008; | &#10008; | [实现 Trie (前缀树)](https://www.bilibili.com/video/BV1dFpZeBE2u/) | 树
 |[leetcode 211.添加与搜索单词 - 数据结构设计](./leetcode%20blind75/树/LeetCode%200211.%20添加与搜索单词%20-%20数据结构设计.md) | &#10004; | &#10008; | &#10008; | [添加与搜索单词 - 数据结构设计](https://www.bilibili.com/video/BV1rUp1e7E6h/) | 树
 |[leetcode 212.单词搜索 II](./leetcode%20blind75/树/LeetCode%200212.%20单词搜索%20II.md) | &#10004; | &#10008; | &#10008; | [单词搜索 II](https://www.bilibili.com/video/BV1rvWpeDEEn/) | 树
-|[leetcode 23.合并 K 个升序链表](./leetcode%20blind75/堆/LeetCode%200023.%20合并%20K%20个升序链表.md) | &#10004; | &#10004; | &#10004; |  | 堆
+|[leetcode 23.合并 K 个升序链表](./leetcode%20blind75/堆/LeetCode%200023.%20合并%20K%20个升序链表.md) | &#10004; | &#10004; | &#10004; | [合并 K 个升序链表](https://www.bilibili.com/video/BV136421f7hR/) | 堆
 |[leetcode 347.前 K 个高频元素](./leetcode%20blind75/堆/LeetCode%200347.%20前%20K%20个高频元素.md) | &#10004; | &#10004; | &#10004; |  | 堆
 |[leetcode 295.数据流的中位数](./leetcode%20blind75/堆/LeetCode%200295.%20数据流的中位数.md) | &#10004; | &#10004; | &#10004; |  | 堆
 
