@@ -106,6 +106,85 @@ public:
 };
 ```
 
+### java代码
+
+```java
+class Solution {
+    public boolean canFinish(int numCourses, int[][] prerequisites) {
+         // 所有课程的入度
+        int[] ingree = new int[numCourses];
+        // 保存课程和先修课程之间的关系
+        Map<Integer, List<Integer>> preCourse = new HashMap<>();
+        for (int i = 0; i < prerequisites.length; ++i) {
+            preCourse.computeIfAbsent(prerequisites[i][0], k -> new ArrayList<>()).add(prerequisites[i][1]);
+            ingree[prerequisites[i][1]]++;
+        }
+       
+        Queue<Integer> zero_ingree = new LinkedList<>();
+        int count = 0;
+        for (int i = 0; i < numCourses; ++i) {
+            // 所有入度为0的课程入队列
+            if (ingree[i] == 0) {
+                zero_ingree.add(i);
+                ++count;
+            } 
+        }
+
+        while (!zero_ingree.isEmpty()) {
+            int cur_course = zero_ingree.poll();
+            if (preCourse.containsKey(cur_course)) {
+                for (int nextCourse : preCourse.get(cur_course)) {
+                    // 当前入度为0的课程对应的先修课程入度减1
+                    ingree[nextCourse]--;
+                    if (ingree[nextCourse] == 0) {
+                        // 入度为0的课程入队列
+                        zero_ingree.add(nextCourse);
+                        ++count;
+                    }
+                }
+            }
+        }
+        // 所有课程的入度减为0，说明课程可以修完
+        return count == numCourses;
+    }
+}
+```
+
+### python代码
+
+```python
+class Solution:
+    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+         # 所有课程的入度
+        ingree = [0] * numCourses
+        # 保存课程和先修课程之间的关系
+        preCourse = defaultdict(list)
+        for i in range(len(prerequisites)):
+            preCourse[prerequisites[i][0]].append(prerequisites[i][1])
+            ingree[prerequisites[i][1]] += 1
+       
+        zero_ingree = deque()
+        count = 0
+        for i in range(numCourses):
+            # 所有入度为0的课程入队列
+            if ingree[i] == 0:
+                zero_ingree.append(i)
+                count += 1
+
+        while zero_ingree:
+            cur_course = zero_ingree.popleft()
+            for nextCourse in preCourse[cur_course]:
+                # 当前入度为0的课程对应的先修课程入度减1
+                ingree[nextCourse] -= 1
+                if ingree[nextCourse] == 0:
+                    # 入度为0的课程入队列
+                    zero_ingree.append(nextCourse)
+                    count += 1
+                    
+        # 所有课程的入度减为0，说明课程可以修完
+        return count == numCourses
+```
+
 ### 复杂度分析
 
 **时间复杂度：** *O(m+n)*，其中`m`是课程组成有向图的顶点数，`n`是课程组成有向图的边的个数。
@@ -175,6 +254,92 @@ private:
     unordered_map<int, vector<int>> m_preCourse;
     unordered_map<int, bool> m_Visit;
 };
+```
+
+### java代码
+
+```java
+class Solution {
+    private Map<Integer, List<Integer>> m_preCourse = new HashMap<>();
+    private Map<Integer, Boolean> m_Visit = new HashMap<>();
+    public boolean canFinish(int numCourses, int[][] prerequisites) {
+        // 初始化先修课程列表
+        for (int i = 0; i < prerequisites.length; ++i) {
+            m_preCourse.computeIfAbsent(prerequisites[i][0], k -> new ArrayList<>()).add(prerequisites[i][1]);
+        }
+        // 所有课程初始化没有被访问过
+        for (int i = 0; i < numCourses; ++i) {
+            m_Visit.put(i, false);
+        }
+        // 所有课程进行dfs
+        for (int i = 0; i < numCourses; ++i) {
+            if (!dfs(i)) return false;
+        }
+        // 所有课程都能完成
+        return true;
+    }
+
+    private boolean dfs(int cur_course) {
+        // cur_course已被访问过，说明存在环
+        if (m_Visit.get(cur_course)) {
+            return false;
+        }
+        // cur_course先修课程列表为空说明此课程能完成
+        if (!m_preCourse.containsKey(cur_course) || m_preCourse.get(cur_course).isEmpty()) {
+            return true;
+        }
+        // 保存状态
+        m_Visit.put(cur_course, true);
+        // 对所有的先修课程进行dfs
+        for (int pre_course : m_preCourse.get(cur_course)) {
+            if (!dfs(pre_course)) return false;
+        }
+        // 恢复状态
+        m_Visit.put(cur_course, false);
+        // 所有的先修课程能完成，所以cur_course也能完成，把先修课程列表置为空
+        m_preCourse.put(cur_course, new ArrayList<>());
+        return true;
+    }
+}
+```
+### python代码
+
+```python
+class Solution:
+    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+        self.m_preCourse = defaultdict(list)
+        self.m_Visit = {}
+        # 初始化先修课程列表
+        for prereq in prerequisites:
+            self.m_preCourse[prereq[0]].append(prereq[1])
+        # 所有课程初始化没有被访问过
+        for i in range(numCourses):
+            self.m_Visit[i] = False
+        # 所有课程进行dfs
+        for i in range(numCourses):
+            if not self.dfs(i):
+                return False
+        # 所有课程都能完成
+        return True
+
+    def dfs(self, cur_course: int) -> bool:
+        # cur_course已被访问过，说明存在环
+        if self.m_Visit[cur_course]:
+            return False
+        # cur_course先修课程列表为空说明此课程能完成
+        if not self.m_preCourse[cur_course]:
+            return True
+        # 保存状态
+        self.m_Visit[cur_course] = True
+        # 对所有的先修课程进行dfs
+        for pre_course in self.m_preCourse[cur_course]:
+            if not self.dfs(pre_course):
+                return False
+        # 恢复状态
+        self.m_Visit[cur_course] = False
+        # 所有的先修课程能完成，所以cur_course也能完成，把先修课程列表置为空
+        self.m_preCourse[cur_course] = []
+        return True
 ```
 
 ### 复杂度分析
