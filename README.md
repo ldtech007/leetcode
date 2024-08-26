@@ -134,8 +134,8 @@
 |[leetcode 211.添加与搜索单词 - 数据结构设计](./leetcode%20blind75/树/LeetCode%200211.%20添加与搜索单词%20-%20数据结构设计.md) | &#10004; | &#10008; | &#10008; | [添加与搜索单词 - 数据结构设计](https://www.bilibili.com/video/BV1rUp1e7E6h/) | 树
 |[leetcode 212.单词搜索 II](./leetcode%20blind75/树/LeetCode%200212.%20单词搜索%20II.md) | &#10004; | &#10008; | &#10008; | [单词搜索 II](https://www.bilibili.com/video/BV1rvWpeDEEn/) | 树
 |[leetcode 23.合并 K 个升序链表](./leetcode%20blind75/堆/LeetCode%200023.%20合并%20K%20个升序链表.md) | &#10004; | &#10004; | &#10004; | [合并 K 个升序链表](https://www.bilibili.com/video/BV136421f7hR/) | 堆
-|[leetcode 347.前 K 个高频元素](./leetcode%20blind75/堆/LeetCode%200347.%20前%20K%20个高频元素.md) | &#10004; | &#10004; | &#10004; |  | 堆
-|[leetcode 295.数据流的中位数](./leetcode%20blind75/堆/LeetCode%200295.%20数据流的中位数.md) | &#10004; | &#10004; | &#10004; |  | 堆
+|[leetcode 347.前 K 个高频元素](./leetcode%20blind75/堆/LeetCode%200347.%20前%20K%20个高频元素.md) | &#10004; | &#10004; | &#10004; | [前 K 个高频元素](https://www.bilibili.com/video/BV1aNW8esE9V/) | 堆
+|[leetcode 295.数据流的中位数](./leetcode%20blind75/堆/LeetCode%200295.%20数据流的中位数.md) | &#10004; | &#10004; | &#10004; | [数据流的中位数](https://www.bilibili.com/video/BV1a7WVeGEyG/) | 堆
 
 
 ## 在线文档

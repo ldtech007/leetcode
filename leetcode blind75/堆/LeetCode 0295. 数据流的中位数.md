@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/find-median-from-data-stream/
+>
+>*视频题解：* https://www.bilibili.com/video/BV1a7WVeGEyG/
 
 # LeetCode 295. 数据流的中位数
 

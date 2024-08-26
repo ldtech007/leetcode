@@ -1,4 +1,6 @@
 *题目链接：* https://leetcode.cn/problems/top-k-frequent-elements/
+>
+>*视频题解：* https://www.bilibili.com/video/BV1aNW8esE9V/
 
 # LeetCode 347. 前 K 个高频元素
 
