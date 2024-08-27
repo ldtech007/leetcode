@@ -102,6 +102,113 @@ public:
 
 ```
 
+## java代码
+
+```java
+class Solution {
+    public List<List<Integer>> pacificAtlantic(int[][] heights) {
+        // 保存结果
+        List<List<Integer>> res = new ArrayList<>();
+        int rows_cnt = heights.length;
+        int cols_cnt = heights[0].length;
+        // 能流向太平洋的坐标
+        boolean[][] pac_visit = new boolean[rows_cnt][cols_cnt];
+        // 能流向大西洋的坐标
+        boolean[][] atl_visit = new boolean[rows_cnt][cols_cnt];
+
+        for (int i = 0; i < cols_cnt; i++) {
+            // 对矩阵的上边每个毗邻太平洋的坐标进行dfs
+            dfs(heights, 0, i, pac_visit, heights[0][i]);
+            // 对矩阵下边每个毗邻大西洋的坐标进行dfs
+            dfs(heights, rows_cnt - 1, i, atl_visit, heights[rows_cnt - 1][i]);
+        }
+
+        for (int i = 0; i < rows_cnt; i++) {
+            // 对矩阵左边每个毗邻太平洋的坐标进行dfs
+            dfs(heights, i, 0, pac_visit, heights[i][0]);
+            // 对矩阵右边每个毗邻大西洋的坐标进行dfs
+            dfs(heights, i, cols_cnt - 1, atl_visit, heights[i][cols_cnt - 1]);
+        }
+
+        for (int i = 0; i < rows_cnt; i++) {
+            for (int j = 0; j < cols_cnt; j++) {
+                if (pac_visit[i][j] && atl_visit[i][j]) {
+                    // 保存既可以流向大西洋又可以流向太平洋的坐标点
+                    res.add(List.of(i, j));
+                }
+            }
+        }
+
+        return res;
+    }
+
+    private void dfs(int[][] heights, int row, int col, boolean[][] visit, int prevHeight) {
+        // 递归的返回条件，当前坐标超出矩阵范围 或 当前坐标对应的高度小于上一个坐标对应的高度 或 当前坐标已经被标记过
+        if (row < 0 || col < 0 || row == heights.length || col == heights[0].length || heights[row][col] < prevHeight || visit[row][col]) {
+            return;
+        }
+        visit[row][col] = true;
+        // 对当前坐标的右边坐标进行dfs
+        dfs(heights, row + 1, col, visit, heights[row][col]);
+        // 对当前坐标的左边坐标进行dfs
+        dfs(heights, row - 1, col, visit, heights[row][col]);
+        // 对当前坐标的下面坐标进行dfs
+        dfs(heights, row, col + 1, visit, heights[row][col]);
+        // 对当前坐标的上面坐标进行dfs
+        dfs(heights, row, col - 1, visit, heights[row][col]);
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
+        # 保存结果
+        res = []
+        rows_cnt = len(heights)
+        cols_cnt = len(heights[0])
+        # 能流向太平洋的坐标
+        pac_visit = [[False] * cols_cnt for _ in range(rows_cnt)]
+        # 能流向大西洋的坐标
+        atl_visit = [[False] * cols_cnt for _ in range(rows_cnt)]
+        
+        for i in range(cols_cnt):
+            # 对矩阵的上边每个毗邻太平洋的坐标进行dfs
+            self.dfs(heights, 0, i, pac_visit, heights[0][i])
+            # 对矩阵下边每个毗邻大西洋的坐标进行dfs
+            self.dfs(heights, rows_cnt - 1, i, atl_visit, heights[rows_cnt - 1][i])
+        
+        for i in range(rows_cnt):
+            # 对矩阵左边每个毗邻太平洋的坐标进行dfs
+            self.dfs(heights, i, 0, pac_visit, heights[i][0])
+            # 对矩阵右边每个毗邻大西洋的坐标进行dfs
+            self.dfs(heights, i, cols_cnt - 1, atl_visit, heights[i][cols_cnt - 1])
+        
+        for i in range(rows_cnt):
+            for j in range(cols_cnt):
+                if pac_visit[i][j] and atl_visit[i][j]:
+                    # 保存既可以流向大西洋又可以流向太平洋的坐标点
+                    res.append([i, j])
+        
+        return res
+    
+    def dfs(self, heights: List[List[int]], row: int, col: int, visit: List[List[bool]], prevHeight: int):
+        # 递归的返回条件，当前坐标超出矩阵范围 或 当前坐标对应的高度小于上一个坐标对应的高度 或 当前坐标已经被标记过
+        if row < 0 or col < 0 or row == len(heights) or col == len(heights[0]) or heights[row][col] < prevHeight or visit[row][col]:
+            return
+        visit[row][col] = True
+        # 对当前坐标的右边坐标进行dfs
+        self.dfs(heights, row + 1, col, visit, heights[row][col])
+        # 对当前坐标的左边坐标进行dfs
+        self.dfs(heights, row - 1, col, visit, heights[row][col])
+        # 对当前坐标的下面坐标进行dfs
+        self.dfs(heights, row, col + 1, visit, heights[row][col])
+        # 对当前坐标的上面坐标进行dfs
+        self.dfs(heights, row, col - 1, visit, heights[row][col])
+```
+
 ## 复杂度分析
 
 **时间复杂度：** *O(n)*， `n`为坐标的总数。
