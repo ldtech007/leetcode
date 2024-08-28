@@ -90,6 +90,87 @@ public:
 };
 ```
 
+## java代码
+
+```java
+class Solution {
+    public int numIslands(char[][] grid) {
+        int nums = 0;
+        int rows = grid.length;
+        if (rows == 0) return nums;
+        int cols = grid[0].length;
+        boolean[][] visit = new boolean[rows][cols];
+        // 对所有没有被访问过且对应矩阵中的值为1的坐标进行广搜
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                if (grid[row][col] == '1' && !visit[row][col]) {
+                    bfs(grid, row, col, visit);
+                    nums++;
+                }
+            }
+        }
+        return nums;
+    }
+
+    private void bfs(char[][] grid, int row, int col, boolean[][] visit) {
+        Queue<int[]> q = new LinkedList<>();
+        visit[row][col] = true;
+        q.offer(new int[]{row, col});
+
+        while (!q.isEmpty()) {
+            int[] temp = q.poll();
+            // 保存当前坐标的下、上、右、左四个方向
+            int[][] directions = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+            for (int i = 0; i < directions.length; i++) {
+                int newRow = temp[0] + directions[i][0];
+                int newCol = temp[1] + directions[i][1];
+                // 新坐标在grid中，并且新坐标对应的值为1，并且新坐标没有被访问过，就把新坐标压入队列并打上已访问标记
+                if (newRow >= 0 && newRow < grid.length && newCol >= 0 && newCol < grid[0].length && grid[newRow][newCol] == '1' && !visit[newRow][newCol]) {
+                    q.offer(new int[]{newRow, newCol});
+                    visit[newRow][newCol] = true;
+                }
+            }
+        }
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def numIslands(self, grid: List[List[str]]) -> int:
+        nums = 0
+        rows = len(grid)
+        if not rows:
+            return nums
+        cols = len(grid[0])
+        visit = [[False] * cols for _ in range(rows)]
+        # 对所有没有被访问过且对应矩阵中的值为1的坐标进行广搜
+        for row in range(rows):
+            for col in range(cols):
+                if grid[row][col] == '1' and not visit[row][col]:
+                    self.bfs(grid, row, col, visit)
+                    nums += 1
+        return nums
+
+    def bfs(self, grid: list[list[str]], row: int, col: int, visit: list[list[bool]]):
+        q = deque([(row, col)])
+        visit[row][col] = True
+
+        while q:
+            temp = q.popleft()
+            # 保存当前坐标的下、上、右、左四个方向
+            directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
+            for direction in directions:
+                new_row = temp[0] + direction[0]
+                new_col = temp[1] + direction[1]
+                # 新坐标在grid中，并且新坐标对应的值为1，并且新坐标没有被访问过，就把新坐标压入队列并打上已访问标记
+                if 0 <= new_row < len(grid) and 0 <= new_col < len(grid[0]) and grid[new_row][new_col] == '1' and not visit[new_row][new_col]:
+                    q.append((new_row, new_col))
+                    visit[new_row][new_col] = True
+```
+
 ## 复杂度分析
 
 **时间复杂度：** *O(n)*，`n`为网格中元素的总数量。

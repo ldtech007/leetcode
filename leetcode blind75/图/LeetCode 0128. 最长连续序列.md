@@ -55,6 +55,55 @@ public:
 };
 ```
 
+## java代码
+
+```java
+class Solution {
+    public int longestConsecutive(int[] nums) {
+        int maxLen = 0;
+        Set<Long> numsSet = new HashSet<>();
+        int numsLen = nums.length;
+        // 把所有的元素保存在set中
+        for (int i = 0; i < numsLen; i++) {
+            numsSet.add((long) nums[i]);
+        }
+
+        for (int num : nums) {
+            // num-1不在set中 保证num是连续序列的起始元素
+            if (!numsSet.contains((long) num - 1)) {
+                int len = 0;
+                // num+len在set中 说明num～num+len是连续的
+                while (numsSet.contains((long) num + len)) {
+                    len++;
+                    maxLen = Math.max(len, maxLen);
+                }
+            }
+        }
+        return maxLen;
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def longestConsecutive(self, nums: List[int]) -> int:
+        max_len = 0
+        nums_set = set(nums)
+        nums_len = len(nums)
+        # 把所有的元素保存在set中
+        for num in nums:
+            # num-1不在set中 保证num是连续序列的起始元素
+            if num - 1 not in nums_set:
+                length = 0
+                # num+len在set中 说明num～num+len是连续的
+                while num + length in nums_set:
+                    length += 1
+                max_len = max(length, max_len)
+        return max_len
+```
+
 ## 复杂度分析
 
 **时间复杂度：** *O(n)*，只需要遍历一遍数组，其中`n`为数组的大小。
