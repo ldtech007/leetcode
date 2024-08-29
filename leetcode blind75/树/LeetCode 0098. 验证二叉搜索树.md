@@ -81,6 +81,78 @@ public:
 };
 ```
 
+## java代码
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    private long pre_val = Long.MIN_VALUE;
+    public boolean isValidBST(TreeNode root) {
+        return isValidBST_help(root);
+    }
+
+    private boolean isValidBST_help(TreeNode root) {
+        if (root == null) return true;
+        // 左子树不满足二叉搜索树
+        if (!isValidBST_help(root.left)) return false;
+        // 根节点和上一个被访问的节点的值比较
+        if (root.val <= pre_val) return false;
+        // 中序遍历更新pre_val
+        pre_val = root.val;
+        // 右子树不满足二叉搜索树
+        if (!isValidBST_help(root.right)) return false;
+        // 整棵树满足二叉搜索树
+        return true;
+    }
+}
+```
+
+## python代码
+
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def isValidBST(self, root: Optional[TreeNode]) -> bool:
+        self.pre_val = float('-inf')
+        return self.isValidBST_help(root)
+    
+    def isValidBST_help(self, root: TreeNode) -> bool:
+        if not root:
+            return True
+        # 左子树不满足二叉搜索树
+        if not self.isValidBST_help(root.left):
+            return False
+        # 根节点和上一个被访问的节点的值比较
+        if root.val <= self.pre_val:
+            return False
+        # 中序遍历更新pre_val
+        self.pre_val = root.val
+        # 右子树不满足二叉搜索树
+        if not self.isValidBST_help(root.right):
+            return False
+        # 整棵树满足二叉搜索树
+        return True
+```
+
 ## 复杂度分析
 
 **时间复杂度：** 需要遍历整棵数，所以时间复杂度跟二叉树的总节点数相关。

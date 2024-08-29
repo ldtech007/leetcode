@@ -87,6 +87,88 @@ public:
 };
 ```
 
+## java代码
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        List<List<Integer>> res = new ArrayList<>();
+        Queue<TreeNode> q = new LinkedList<>();
+        if (root != null)
+            q.add(root);
+        while (!q.isEmpty()) {
+            // 队列中元素的个数
+            int q_len = q.size();
+            List<Integer> tmp_vec = new ArrayList<>();
+            // 从队列中取出q_len在同一层的元素
+            for (int i = 0; i < q_len; ++i) {
+                TreeNode node = q.poll();
+                tmp_vec.add(node.val);
+
+                // 把左右孩子放入队列中，左孩子先入队列
+                if (node.left != null)
+                    q.add(node.left);
+                if (node.right != null)
+                    q.add(node.right);
+            }
+            if (q_len > 0) {
+                res.add(tmp_vec);
+            }
+        }
+        return res;
+    }
+}
+```
+
+## python代码
+
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+        res = []
+        q = deque()
+        if root:
+            q.append(root)
+        while q:
+            # 队列中元素的个数
+            q_len = len(q)
+            tmp_vec = []
+            # 从队列中取出q_len在同一层的元素
+            for i in range(q_len):
+                node = q.popleft()
+                tmp_vec.append(node.val)
+
+                # 把左右孩子放入队列中，左孩子先入队列
+                if node.left:
+                    q.append(node.left)
+                if node.right:
+                    q.append(node.right)
+            if q_len > 0:
+                res.append(tmp_vec)
+        return res
+```
+
 ## 复杂度分析
 
 **时间复杂度：** 需要遍历整棵树，所以时间复杂度和树的总节点数相关。

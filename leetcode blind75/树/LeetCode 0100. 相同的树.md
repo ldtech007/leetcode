@@ -64,6 +64,61 @@ public:
 };
 ```
 
+## java代码
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public boolean isSameTree(TreeNode p, TreeNode q) {
+         // 函数出栈的条件
+        if (p == null && q == null) {
+            return true;
+        }
+        // 函数出栈的条件
+        if (p == null || q == null || p.val != q.val) {
+            return false;
+        }
+        // 子问题
+        return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+    }
+}
+```
+
+## python代码
+
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+        # 函数出栈的条件
+        if not p and not q:
+            return True
+        # 函数出栈的条件
+        if not p or not q or p.val != q.val:
+            return False
+        # 子问题
+        return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
+```
+
 ## 复杂度分析
 
 **时间复杂度：**  因为需要遍历两棵树所有的节点，所以时间复杂度跟两棵树的总节点数相关。
