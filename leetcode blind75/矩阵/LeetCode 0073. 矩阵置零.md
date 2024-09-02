@@ -79,6 +79,92 @@ public:
 };
 ```
 
+## java代码
+
+```java
+class Solution {
+    public void setZeroes(int[][] matrix) {
+        int cols = matrix[0].length, rows = matrix.length;
+        // 保存第一行的状态，1表示第一行不置为0
+        int zeroRow = 1;
+        for (int row = 0; row < rows; ++row) {
+            for (int col = 0; col < cols; ++col) {
+                if (matrix[row][col] == 0) {
+                    // matrix第0行保存第col列是否置为0
+                    matrix[0][col] = 0;
+
+                    if (row > 0) {
+                        // matrix第0列保存第row行（除第0行）是否置为0
+                        matrix[row][0] = 0;
+                    } else {
+                        // 第0行是否置为0单独保存
+                        zeroRow = 0;
+                    }
+
+                }
+            } 
+        }
+        for (int row = 1; row < rows; ++row) {
+            for (int col = 1; col < cols; ++col) {
+                if (matrix[row][0] == 0 || matrix[0][col] == 0) {
+                    matrix[row][col] = 0;
+                } 
+            }
+        }
+        // 第0列置为0
+        if (matrix[0][0] == 0) {
+            for (int row = 1; row < rows; ++row) {
+                matrix[row][0] = 0;
+            }
+        }
+        // 第0行置为0
+        if (zeroRow == 0) {
+            for (int col = 0; col < cols; ++col) {
+                matrix[0][col] = 0;
+            }
+        }
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def setZeroes(self, matrix: List[List[int]]) -> None:
+        cols = len(matrix[0])
+        rows = len(matrix)
+        # 保存第一行的状态，1表示第一行不置为0
+        zeroRow = 1
+        for row in range(rows):
+            for col in range(cols):
+                if matrix[row][col] == 0:
+                    # matrix第0行保存第col列是否置为0
+                    matrix[0][col] = 0
+
+                    if row > 0:
+                        # matrix第0列保存第row行（除第0行）是否置为0
+                        matrix[row][0] = 0
+                    else:
+                        # 第0行是否置为0单独保存
+                        zeroRow = 0
+
+        for row in range(1, rows):
+            for col in range(1, cols):
+                if matrix[row][0] == 0 or matrix[0][col] == 0:
+                    matrix[row][col] = 0
+
+        # 第0列置为0
+        if matrix[0][0] == 0:
+            for row in range(1, rows):
+                matrix[row][0] = 0
+
+        # 第0行置为0
+        if zeroRow == 0:
+            for col in range(cols):
+                matrix[0][col] = 0
+```
+
 ## 复杂度分析
 
 **时间复杂度：** 需要遍历一遍矩阵所以时间复杂度为*O(mn)*，其中`m`是矩阵的行数，`n`是矩阵的列数。

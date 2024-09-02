@@ -106,8 +106,8 @@
 |[leetcode 23.合并 K 个升序链表](./leetcode%20blind75/链表/LeetCode%200023.%20%E5%90%88%E5%B9%B6%20K%20%E4%B8%AA%E5%8D%87%E5%BA%8F%E9%93%BE%E8%A1%A8.md)| &#10004; | &#10004; | &#10004; | [合并 K 个升序链表](https://www.bilibili.com/video/BV136421f7hR/) | 链表 
 |[leetcode 19.删除链表的倒数第N个结点](./leetcode%20blind75/链表/LeetCode%200019.%20删除链表的倒数第%20N%20个结点.md)| &#10004; | &#10004; | &#10004; | [删除链表的倒数第N个结点](https://www.bilibili.com/video/BV1hs421M7Ke/) | 链表 
 |[leetcode 143.重排链表](./leetcode%20blind75/链表/LeetCode%200143.%20%E9%87%8D%E6%8E%92%E9%93%BE%E8%A1%A8.md)| &#10004; | &#10004; | &#10004; | [重排链表](https://www.bilibili.com/video/BV1tx4y1t7YB/) | 链表 
-[leetcode 73.矩阵置零](./leetcode%20blind75/矩阵/LeetCode%200073.%20矩阵置零.md) | &#10004; | &#10008; | &#10008; |  | 矩阵
-[leetcode 54.螺旋矩阵](./leetcode%20blind75/矩阵/LeetCode%200054.%20螺旋矩阵.md) | &#10004; | &#10008; | &#10008; |  | 矩阵
+[leetcode 73.矩阵置零](./leetcode%20blind75/矩阵/LeetCode%200073.%20矩阵置零.md) | &#10004; | &#10004; | &#10004; |  | 矩阵
+[leetcode 54.螺旋矩阵](./leetcode%20blind75/矩阵/LeetCode%200054.%20螺旋矩阵.md) | &#10004; | &#10004; | &#10004; |  | 矩阵
 [leetcode 48.旋转图像](./leetcode%20blind75/矩阵/LeetCode%200048.%20旋转图像.md) | &#10004; | &#10008; | &#10008; |  | 矩阵
 [leetcode 79.单词搜索](./leetcode%20blind75/矩阵/LeetCode%200079.%20单词搜索.md) | &#10004; | &#10008; | &#10008; |  | 矩阵
 |[leetcode 3.无重复字符的最长子串](./leetcode%20blind75/字符串/LeetCode%200003.无重复字符的最长子串.md)| &#10004; | &#10004; | &#10004; | [无重复字符的最长子串](https://www.bilibili.com/video/BV17D421G7Nv/)| 字符串 

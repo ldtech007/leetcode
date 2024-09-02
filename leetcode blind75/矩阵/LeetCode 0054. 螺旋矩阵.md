@@ -71,13 +71,100 @@ public:
                 res.push_back(matrix[l][left]);
             }
             ++left;
-             if (left >= right) {
-                break;
-            }
         }
         return res;
     }
 };
+```
+
+## java代码
+
+```java
+class Solution {
+    public List<Integer> spiralOrder(int[][] matrix) {
+        List<Integer> res = new ArrayList<>();
+        // 初始化matrix的四个边界left right top bottom
+        int left = 0, right = matrix[0].length, top = 0, bottom = matrix.length;
+        
+        while (left < right && top < bottom) {
+            // 从左到右遍历最上面一行
+            for (int i = left; i < right; ++i) {
+                res.add(matrix[top][i]);
+            }
+            // 最上面一行遍历完修改matrix的top边界
+            ++top;
+            if (top >= bottom) {
+                break;
+            }
+            // 从上到下遍历最右边一列
+            for (int j = top; j < bottom; ++j) {
+                res.add(matrix[j][right - 1]);
+            }
+            // 最右边一列遍历完修改matrix的right边界
+            --right;
+            // 如果已经遍历完matrix就结束，防止matrix只有一行或只有一列，走到下面逻辑重复遍历
+            if (left >= right) {
+                break;
+            }
+            // 从右到左遍历最下面一行
+            for (int k = right - 1; k >= left; --k) {
+                res.add(matrix[bottom - 1][k]);
+            }
+            // 最下面一行遍历完修改matrix的bottom边界
+            --bottom;
+            if (top >= bottom) {
+                break;
+            }
+            // 从下到上遍历最左边一列
+            for (int l = bottom - 1; l >= top; --l) {
+                res.add(matrix[l][left]);
+            }
+            ++left;
+        }
+
+        return res;
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
+        res = []
+        # 初始化matrix的四个边界left right top bottom
+        left, right, top, bottom = 0, len(matrix[0]), 0, len(matrix)
+
+        while left < right and top < bottom:
+            # 从左到右遍历最上面一行
+            for i in range(left, right):
+                res.append(matrix[top][i])
+            # 最上面一行遍历完修改matrix的top边界
+            top += 1
+            if top >= bottom:
+                break
+            # 从上到下遍历最右边一列
+            for j in range(top, bottom):
+                res.append(matrix[j][right - 1])
+            # 最右边一列遍历完修改matrix的right边界
+            right -= 1
+            # 如果已经遍历完matrix就结束，防止matrix只有一行或只有一列，走到下面逻辑重复遍历
+            if left >= right:
+                break
+            # 从右到左遍历最下面一行
+            for k in range(right - 1, left - 1, -1):
+                res.append(matrix[bottom - 1][k])
+            # 最下面一行遍历完修改matrix的bottom边界
+            bottom -= 1
+            if top >= bottom:
+                break
+            # 从下到上遍历最左边一列
+            for l in range(bottom - 1, top - 1, -1):
+                res.append(matrix[l][left])
+            left += 1
+
+        return res
 ```
 
 ## 复杂度分析
