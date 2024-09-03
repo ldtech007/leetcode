@@ -60,6 +60,58 @@ public:
 };
 ```
 
+## java代码
+
+```java
+class Solution {
+    public void rotate(int[][] matrix) {
+        int left = 0, right = matrix.length - 1;
+        while (left < right) {
+            for (int i = 0; i < right - left; ++i) {
+                // 因为矩阵是正方形的
+                int top = left, bottom = right;
+                // 保存左上角的元素
+                int topleft = matrix[top][left + i];
+                // 左下角旋转到左上角
+                matrix[top][left + i] = matrix[bottom - i][left];
+                // 右下角旋转到左下角
+                matrix[bottom - i][left] = matrix[bottom][right - i];
+                // 右上角旋转到右下角
+                matrix[bottom][right - i] = matrix[top + i][right];
+                // 左上角旋转到右上角
+                matrix[top + i][right] = topleft;
+            }
+            ++left;
+            --right;
+        }
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def rotate(self, matrix: List[List[int]]) -> None:
+        left, right = 0, len(matrix) - 1
+        while left < right:
+            for i in range(right - left):
+                # 因为矩阵是正方形的
+                top, bottom = left, right
+                # 保存左上角的元素
+                topleft = matrix[top][left + i]
+                # 左下角旋转到左上角
+                matrix[top][left + i] = matrix[bottom - i][left]
+                # 右下角旋转到左下角
+                matrix[bottom - i][left] = matrix[bottom][right - i]
+                # 右上角旋转到右下角
+                matrix[bottom][right - i] = matrix[top + i][right]
+                # 左上角旋转到右上角
+                matrix[top + i][right] = topleft
+            left += 1
+            right -= 1
+```
+
 ## 复杂度分析
 
 **时间复杂度：** 需要遍历一遍矩阵`matrix`，所以时间复杂度是*O(mn)*，其中`m`是矩阵的行数，`n`是矩阵的列数。
