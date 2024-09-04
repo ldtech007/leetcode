@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/pacific-atlantic-water-flow/
+>
+> *视频题解：* https://www.bilibili.com/video/BV1xdspecEtN/
 
 # LeetCode 417.太平洋大西洋水流问题
 

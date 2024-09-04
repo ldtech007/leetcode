@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/number-of-islands/
+>
+> *视频题解：* https://www.bilibili.com/video/BV1LUsMezEtq/
 
 # LeetCode 200.岛屿的数量
 

@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/set-matrix-zeroes/
+>
+> *视频题解：* https://www.bilibili.com/video/BV1WKHEeMEug/
 
 # LeetCode 73. 矩阵置零
 

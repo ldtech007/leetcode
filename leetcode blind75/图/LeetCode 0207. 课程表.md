@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/course-schedule/
+>
+> *视频题解：* https://www.bilibili.com/video/BV1xUsEeJEzr/
 
 # LeetCode 207. 课程表
 

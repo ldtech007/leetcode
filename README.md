@@ -92,11 +92,11 @@
 |[leetcode 91.解码方法](./leetcode%20blind75/动态规划/LeetCode%200091.%20解码方法.md)| &#10004; | &#10004; | &#10004; | [解码方法](https://www.bilibili.com/video/BV181YKeGE3E/) | 动态规划 
 |[leetcode 62.不同路径](./leetcode%20blind75/动态规划/LeetCode%200062.%20不同路径.md)| &#10004; | &#10004; | &#10004; | [不同路径](https://www.bilibili.com/video/BV1rJYKeFESo/) | 动态规划 
 |[leetcode 55.跳跃游戏](./leetcode%20blind75/动态规划/LeetCode%200055.%20跳跃游戏.md)| &#10004; | &#10004; | &#10004; | [跳跃游戏](https://www.bilibili.com/video/BV1gwYKekEVN/) | 动态规划 
-|[leetcode 133.克隆图](./leetcode%20blind75/图/LeetCode%200133.%20克隆图.md)| &#10004; | &#10004; | &#10004; |  | 图 
-|[leetcode 207.课程表](./leetcode%20blind75/图/LeetCode%200207.%20课程表.md)| &#10004; | &#10004; | &#10004; |  | 图 
-|[leetcode 417.太平洋大西洋水流问题](./leetcode%20blind75/图/LeetCode%200417.太平洋大西洋水流问题.md)| &#10004; | &#10004; | &#10004; |  | 图 
-|[leetcode 200.岛屿数量](./leetcode%20blind75/图/LeetCode%200200.岛屿的数量.md)| &#10004; | &#10004; | &#10004; |  | 图 
-|[leetcode 128.最长连续序列](./leetcode%20blind75/图/LeetCode%200128.%20最长连续序列.md)| &#10004; | &#10004; | &#10004; |  | 图 
+|[leetcode 133.克隆图](./leetcode%20blind75/图/LeetCode%200133.%20克隆图.md)| &#10004; | &#10004; | &#10004; | [克隆图](https://www.bilibili.com/video/BV123WUeAErR/) | 图 
+|[leetcode 207.课程表](./leetcode%20blind75/图/LeetCode%200207.%20课程表.md)| &#10004; | &#10004; | &#10004; | [课程表](https://www.bilibili.com/video/BV1xUsEeJEzr/) | 图 
+|[leetcode 417.太平洋大西洋水流问题](./leetcode%20blind75/图/LeetCode%200417.太平洋大西洋水流问题.md)| &#10004; | &#10004; | &#10004; | [太平洋大西洋水流问题](https://www.bilibili.com/video/BV1xdspecEtN/) | 图 
+|[leetcode 200.岛屿数量](./leetcode%20blind75/图/LeetCode%200200.岛屿的数量.md)| &#10004; | &#10004; | &#10004; | [岛屿数量](https://www.bilibili.com/video/BV1LUsMezEtq/) | 图 
+|[leetcode 128.最长连续序列](./leetcode%20blind75/图/LeetCode%200128.%20最长连续序列.md)| &#10004; | &#10004; | &#10004; | [最长连续序列](https://www.bilibili.com/video/BV1qqHKetETN/) | 图 
 |[leetcode 57.插入区间](./leetcode%20blind75/区间/LeetCode%200057.插入区间.md)| &#10004; | &#10008; | &#10008; |  | 区间
 |[leetcode 56.合并区间](./leetcode%20blind75/区间/LeetCode%200056.%20合并区间.md)| &#10004; | &#10008; | &#10008; |  | 区间
 |[leetcode 435.无重叠区间](./leetcode%20blind75/区间/LeetCode%200435.%20无重叠区间.md)| &#10004; | &#10008; | &#10008; |  | 区间
@@ -106,10 +106,10 @@
 |[leetcode 23.合并 K 个升序链表](./leetcode%20blind75/链表/LeetCode%200023.%20%E5%90%88%E5%B9%B6%20K%20%E4%B8%AA%E5%8D%87%E5%BA%8F%E9%93%BE%E8%A1%A8.md)| &#10004; | &#10004; | &#10004; | [合并 K 个升序链表](https://www.bilibili.com/video/BV136421f7hR/) | 链表 
 |[leetcode 19.删除链表的倒数第N个结点](./leetcode%20blind75/链表/LeetCode%200019.%20删除链表的倒数第%20N%20个结点.md)| &#10004; | &#10004; | &#10004; | [删除链表的倒数第N个结点](https://www.bilibili.com/video/BV1hs421M7Ke/) | 链表 
 |[leetcode 143.重排链表](./leetcode%20blind75/链表/LeetCode%200143.%20%E9%87%8D%E6%8E%92%E9%93%BE%E8%A1%A8.md)| &#10004; | &#10004; | &#10004; | [重排链表](https://www.bilibili.com/video/BV1tx4y1t7YB/) | 链表 
-[leetcode 73.矩阵置零](./leetcode%20blind75/矩阵/LeetCode%200073.%20矩阵置零.md) | &#10004; | &#10004; | &#10004; |  | 矩阵
-[leetcode 54.螺旋矩阵](./leetcode%20blind75/矩阵/LeetCode%200054.%20螺旋矩阵.md) | &#10004; | &#10004; | &#10004; |  | 矩阵
-[leetcode 48.旋转图像](./leetcode%20blind75/矩阵/LeetCode%200048.%20旋转图像.md) | &#10004; | &#10004; | &#10004; |  | 矩阵
-[leetcode 79.单词搜索](./leetcode%20blind75/矩阵/LeetCode%200079.%20单词搜索.md) | &#10004; | &#10008; | &#10008; |  | 矩阵
+[leetcode 73.矩阵置零](./leetcode%20blind75/矩阵/LeetCode%200073.%20矩阵置零.md) | &#10004; | &#10004; | &#10004; | [矩阵置零](https://www.bilibili.com/video/BV1WKHEeMEug/) | 矩阵
+[leetcode 54.螺旋矩阵](./leetcode%20blind75/矩阵/LeetCode%200054.%20螺旋矩阵.md) | &#10004; | &#10004; | &#10004; | [螺旋矩阵](https://www.bilibili.com/video/BV17JHreoETn/) | 矩阵
+[leetcode 48.旋转图像](./leetcode%20blind75/矩阵/LeetCode%200048.%20旋转图像.md) | &#10004; | &#10004; | &#10004; | [旋转图像](https://www.bilibili.com/video/BV1FaHbecE9V/) | 矩阵
+[leetcode 79.单词搜索](./leetcode%20blind75/矩阵/LeetCode%200079.%20单词搜索.md) | &#10004; | &#10004; | &#10004; |  | 矩阵
 |[leetcode 3.无重复字符的最长子串](./leetcode%20blind75/字符串/LeetCode%200003.无重复字符的最长子串.md)| &#10004; | &#10004; | &#10004; | [无重复字符的最长子串](https://www.bilibili.com/video/BV17D421G7Nv/)| 字符串 
 |[leetcode 424.替换后的最长重复字符](./leetcode%20blind75/字符串/LeetCode%200424.%20替换后的最长重复字符.md)| &#10004; | &#10004; | &#10004; | [替换后的最长重复字符](https://www.bilibili.com/video/BV1zf421d7Ui/) | 字符串 
 |[leetcode 76.最小覆盖子串](./leetcode%20blind75/字符串/LeetCode%200076.%20最小覆盖子串.md)| &#10004; | &#10004; | &#10004; | [最小覆盖子串](https://www.bilibili.com/video/BV1sJ4m1g727/) | 字符串 

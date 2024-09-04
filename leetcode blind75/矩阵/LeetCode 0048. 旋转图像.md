@@ -1,4 +1,6 @@
 > *题目链接：* https://leetcode.cn/problems/rotate-image/
+>
+> *视频题解：* https://www.bilibili.com/video/BV1FaHbecE9V/
 
 # LeetCode 48. 旋转图像
 
