@@ -109,7 +109,7 @@
 [leetcode 73.矩阵置零](./leetcode%20blind75/矩阵/LeetCode%200073.%20矩阵置零.md) | &#10004; | &#10004; | &#10004; | [矩阵置零](https://www.bilibili.com/video/BV1WKHEeMEug/) | 矩阵
 [leetcode 54.螺旋矩阵](./leetcode%20blind75/矩阵/LeetCode%200054.%20螺旋矩阵.md) | &#10004; | &#10004; | &#10004; | [螺旋矩阵](https://www.bilibili.com/video/BV17JHreoETn/) | 矩阵
 [leetcode 48.旋转图像](./leetcode%20blind75/矩阵/LeetCode%200048.%20旋转图像.md) | &#10004; | &#10004; | &#10004; | [旋转图像](https://www.bilibili.com/video/BV1FaHbecE9V/) | 矩阵
-[leetcode 79.单词搜索](./leetcode%20blind75/矩阵/LeetCode%200079.%20单词搜索.md) | &#10004; | &#10004; | &#10004; |  | 矩阵
+[leetcode 79.单词搜索](./leetcode%20blind75/矩阵/LeetCode%200079.%20单词搜索.md) | &#10004; | &#10004; | &#10004; | [单词搜索](https://www.bilibili.com/video/BV1HBpTe6EvS/) | 矩阵
 |[leetcode 3.无重复字符的最长子串](./leetcode%20blind75/字符串/LeetCode%200003.无重复字符的最长子串.md)| &#10004; | &#10004; | &#10004; | [无重复字符的最长子串](https://www.bilibili.com/video/BV17D421G7Nv/)| 字符串 
 |[leetcode 424.替换后的最长重复字符](./leetcode%20blind75/字符串/LeetCode%200424.%20替换后的最长重复字符.md)| &#10004; | &#10004; | &#10004; | [替换后的最长重复字符](https://www.bilibili.com/video/BV1zf421d7Ui/) | 字符串 
 |[leetcode 76.最小覆盖子串](./leetcode%20blind75/字符串/LeetCode%200076.%20最小覆盖子串.md)| &#10004; | &#10004; | &#10004; | [最小覆盖子串](https://www.bilibili.com/video/BV1sJ4m1g727/) | 字符串 
@@ -119,7 +119,7 @@
 |[leetcode 125.验证回文串](./leetcode%20blind75/字符串/LeetCode%200125.%20验证回文串.md)| &#10004; | &#10004; | &#10004; | [验证回文串](https://www.bilibili.com/video/BV1VH4y1P7Gk/) | 字符串 
 |[leetcode 5.最长回文子串](./leetcode%20blind75/字符串/LeetCode%200005.%20最长回文子串.md)| &#10004; | &#10004; | &#10004; | [最长回文子串](https://www.bilibili.com/video/BV1w7421Z798/) | 字符串 
 |[leetcode 647.回文子串](./leetcode%20blind75/字符串/LeetCode%200647.%20回文子串.md)| &#10004; | &#10004; | &#10004; | [回文子串](https://www.bilibili.com/video/BV1Bs421w7iw/) | 字符串 
-|[leetcode 104.二叉树的最大深度](./leetcode%20blind75/树/LeetCode%200104.%20二叉树的最大深度.md)| &#10004; | &#10008; | &#10008; | [二叉树的最大深度](https://www.bilibili.com/video/BV1MRYHeHEeP/) | 树
+|[leetcode 104.二叉树的最大深度](./leetcode%20blind75/树/LeetCode%200104.%20二叉树的最大深度.md)| &#10004; | &#10004; | &#10004; | [二叉树的最大深度](https://www.bilibili.com/video/BV1MRYHeHEeP/) | 树
 |[leetcode 100.相同的树](./leetcode%20blind75/树/LeetCode%200100.%20相同的树.md) | &#10004; | &#10004; | &#10004; | [相同的树](https://www.bilibili.com/video/BV163Ype6E2L/) | 树
 |[leetcode 226.翻转二叉树](./leetcode%20blind75/树/LeetCode%200226.%20翻转二叉树.md) | &#10004; | &#10008; | &#10008; | [翻转二叉树](https://www.bilibili.com/video/BV1N7YheBE8H/) | 树
 |[leetcode 124.二叉树中的最大路径和](./leetcode%20blind75/树/LeetCode%200124.%20二叉树中的最大路径和.md) | &#10004; | &#10008; | &#10008; | [二叉树中的最大路径和](https://www.bilibili.com/video/BV12FYee2Eg6/) | 树
@@ -132,7 +132,7 @@
 |[leetcode 235.二叉搜索树的最近公共祖先](./leetcode%20blind75/树/LeetCode%200235.%20二叉搜索树的最近公共祖先.md) | &#10004; | &#10008; | &#10008; | [二叉搜索树的最近公共祖先](https://www.bilibili.com/video/BV14ieKeGERA/) | 树
 |[leetcode 208.实现 Trie (前缀树)](./leetcode%20blind75/树/LeetCode%200208.%20实现%20Trie%20(前缀树).md) | &#10004; | &#10008; | &#10008; | [实现 Trie (前缀树)](https://www.bilibili.com/video/BV1dFpZeBE2u/) | 树
 |[leetcode 211.添加与搜索单词 - 数据结构设计](./leetcode%20blind75/树/LeetCode%200211.%20添加与搜索单词%20-%20数据结构设计.md) | &#10004; | &#10008; | &#10008; | [添加与搜索单词 - 数据结构设计](https://www.bilibili.com/video/BV1rUp1e7E6h/) | 树
-|[leetcode 212.单词搜索 II](./leetcode%20blind75/树/LeetCode%200212.%20单词搜索%20II.md) | &#10004; | &#10008; | &#10008; | [单词搜索 II](https://www.bilibili.com/video/BV1rvWpeDEEn/) | 树
+|[leetcode 212.单词搜索 II](./leetcode%20blind75/树/LeetCode%200212.%20单词搜索%20II.md) | &#10004; | &#10004; | &#10004; | [单词搜索 II](https://www.bilibili.com/video/BV1rvWpeDEEn/) | 树
 |[leetcode 23.合并 K 个升序链表](./leetcode%20blind75/堆/LeetCode%200023.%20合并%20K%20个升序链表.md) | &#10004; | &#10004; | &#10004; | [合并 K 个升序链表](https://www.bilibili.com/video/BV136421f7hR/) | 堆
 |[leetcode 347.前 K 个高频元素](./leetcode%20blind75/堆/LeetCode%200347.%20前%20K%20个高频元素.md) | &#10004; | &#10004; | &#10004; | [前 K 个高频元素](https://www.bilibili.com/video/BV1aNW8esE9V/) | 堆
 |[leetcode 295.数据流的中位数](./leetcode%20blind75/堆/LeetCode%200295.%20数据流的中位数.md) | &#10004; | &#10004; | &#10004; | [数据流的中位数](https://www.bilibili.com/video/BV1a7WVeGEyG/) | 堆

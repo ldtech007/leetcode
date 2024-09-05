@@ -64,6 +64,55 @@ public:
     }
 };
 ```
+### java代码
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public int maxDepth(TreeNode root) {
+         // 如果当前节点为空，返回深度0
+        if (root == null) {
+            return 0;
+        }
+
+        // 递归地计算左子树和右子树的深度，取较大的值加1
+        return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
+    }
+}
+```
+
+### python代码
+
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def maxDepth(self, root: Optional[TreeNode]) -> int:
+         # 如果当前节点为空，返回深度0
+        if not root:
+            return 0
+
+        # 递归地计算左子树和右子树的深度，取较大的值加1
+        return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
+```
 
 ### 复杂度分析
 
@@ -116,6 +165,90 @@ public:
         return depth;
     }
 };
+```
+
+### java代码
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public int maxDepth(TreeNode root) {
+        // 如果当前节点为空，返回深度0
+        if (root == null) {
+            return 0;
+        }
+
+        int depth = 0;
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(root);  // 将根节点加入队列
+
+        // 进行层序遍历，每遍历一层深度加1
+        while (!q.isEmpty()) {
+            int levelSize = q.size();  // 当前层的节点个数
+            for (int i = 0; i < levelSize; i++) {
+                TreeNode node = q.poll();
+                // 将下一层的子节点加入队列
+                if (node.left != null) {
+                    q.add(node.left);
+                }
+                if (node.right != null) {
+                    q.add(node.right);
+                }
+            }
+            depth++;  // 每遍历完一层，深度加1
+        }
+
+        return depth;  // 返回最终的深度
+    }
+}
+```
+
+### python代码
+
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def maxDepth(self, root: Optional[TreeNode]) -> int:
+        # 如果当前节点为空，返回深度0
+        if not root:
+            return 0
+
+        depth = 0
+        # 使用队列进行广度优先搜索，队列中存储节点和当前节点的深度
+        q = deque([(root, 1)])  # 将根节点和初始深度1加入队列
+
+        while q:
+            node, current_depth = q.popleft()
+            depth = max(depth, current_depth)  # 更新最大深度
+
+            # 如果当前节点有左孩子，则将左孩子和对应的深度加入队列
+            if node.left:
+                q.append((node.left, current_depth + 1))
+
+            # 如果当前节点有右孩子，则将右孩子和对应的深度加入队列
+            if node.right:
+                q.append((node.right, current_depth + 1))
+
+        return depth  # 返回最大深度
 ```
 
 ### 复杂度分析
@@ -172,6 +305,104 @@ public:
     }
 };
 ```
+
+### java代码
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public int maxDepth(TreeNode root) {
+       // 如果当前节点为空，返回深度0
+        if (root == null) {
+            return 0;
+        }
+
+        int depth = 0;
+        // 使用栈进行深度优先搜索，栈中存储节点和当前节点的深度
+        Stack<NodeDepthPair> stack = new Stack<>();
+        stack.push(new NodeDepthPair(root, 1));  // 将根节点和初始深度1压入栈
+
+        while (!stack.isEmpty()) {
+            NodeDepthPair temp = stack.pop();
+            TreeNode node = temp.node;
+            int currentDepth = temp.depth;
+            depth = Math.max(depth, currentDepth);  // 更新最大深度
+
+            // 如果当前节点有左孩子，将左孩子和对应的深度压入栈
+            if (node.left != null) {
+                stack.push(new NodeDepthPair(node.left, currentDepth + 1));
+            }
+
+            // 如果当前节点有右孩子，将右孩子和对应的深度压入栈
+            if (node.right != null) {
+                stack.push(new NodeDepthPair(node.right, currentDepth + 1));
+            }
+        }
+
+        return depth;  // 返回最大深度
+    }
+
+    // 自定义内部类，用于存储树节点及其对应的深度
+    static class NodeDepthPair {
+        TreeNode node;
+        int depth;
+
+        NodeDepthPair(TreeNode node, int depth) {
+            this.node = node;
+            this.depth = depth;
+        }
+    }
+}
+```
+
+### python代码
+
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def maxDepth(self, root: Optional[TreeNode]) -> int:
+        # 如果当前节点为空，返回深度0
+        if not root:
+            return 0
+
+        depth = 0
+        # 使用栈进行深度优先搜索，栈中存储节点和当前节点的深度
+        stack = [(root, 1)]  # 将根节点和初始深度1压入栈
+
+        while stack:
+            node, current_depth = stack.pop()
+            depth = max(depth, current_depth)  # 更新最大深度
+
+            # 如果当前节点有左孩子，将左孩子和对应的深度压入栈
+            if node.left:
+                stack.append((node.left, current_depth + 1))
+
+            # 如果当前节点有右孩子，将右孩子和对应的深度压入栈
+            if node.right:
+                stack.append((node.right, current_depth + 1))
+
+        return depth  # 返回最大深度
+```
+
 ### 复杂度分析
 
 **时间复杂度：** 深度优先需要遍历整棵树所以时间复杂度和树的总节点数相关。
