@@ -1,4 +1,7 @@
 > *题目链接：* https://leetcode.cn/problems/insert-interval/
+>
+>*视频题解：* https://www.bilibili.com/video/BV1VHHUezEw7/
+
 
 # LeetCode 57.插入区间
 
@@ -67,6 +70,73 @@ public:
     }
 };
 
+```
+
+## java代码
+
+```java
+class Solution {
+    public int[][] insert(int[][] intervals, int[] newInterval) {
+        List<int[]> resList = new ArrayList<>();
+        int intervals_len = intervals.length;
+
+        for (int i = 0; i < intervals_len; i++) {
+            // newInterval在intervals[i]的左边
+            if (newInterval[1] < intervals[i][0]) {
+                // resList中保存newInterval
+                resList.add(newInterval);
+                for (int j = i; j < intervals_len; j++) {
+                    resList.add(intervals[j]);
+                }
+                // 将List转换为二维数组返回
+                return resList.toArray(new int[resList.size()][]);
+            // newInterval在intervals[i]的右边
+            } else if (newInterval[0] > intervals[i][1]) {
+                // resList中保存intervals[i]
+                resList.add(intervals[i]);
+            // newInterval和intervals[i]重叠
+            } else {
+                // 更新newInterval
+                newInterval[0] = Math.min(newInterval[0], intervals[i][0]);
+                newInterval[1] = Math.max(newInterval[1], intervals[i][1]);
+            }
+        }
+
+        resList.add(newInterval);
+        // 将List转换为二维数组返回
+        return resList.toArray(new int[resList.size()][]);
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
+        res = []
+        intervals_len = len(intervals)
+
+        for i in range(intervals_len):
+            # newInterval在intervals[i]的左边
+            if newInterval[1] < intervals[i][0]:
+                # res中保存newInterval
+                res.append(newInterval)
+                for j in range(i, intervals_len):
+                    res.append(intervals[j])
+                return res
+            # newInterval在intervals[i]的右边
+            elif newInterval[0] > intervals[i][1]:
+                # res中保存intervals[i]
+                res.append(intervals[i])
+            # newInterval和intervals[i]重叠
+            else:
+                # 更新newInterval
+                newInterval[0] = min(newInterval[0], intervals[i][0])
+                newInterval[1] = max(newInterval[1], intervals[i][1])
+
+        res.append(newInterval)
+        return res
 ```
 
 ## 复杂度分析

@@ -63,6 +63,81 @@ public:
 };
 ```
 
+## java代码
+
+```java
+class Solution {
+    public int[][] merge(int[][] intervals) {
+        if (intervals.length == 0) {
+            return new int[0][];
+        }
+        
+        // interval的第一个元素作为key排序
+        Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
+        
+        // 临时保存结果的二维数组，最大长度不会超过原数组的长度
+        int[][] tempRes = new int[intervals.length][2];
+        int index = 0; // 记录tempRes的有效长度
+        
+        int tempStart = intervals[0][0];
+        int tempEnd = intervals[0][1];
+        
+        for (int i = 0; i < intervals.length; i++) {
+            // 两个区间有重合
+            if (intervals[i][0] <= tempEnd) {
+                tempEnd = Math.max(tempEnd, intervals[i][1]);
+            // 两个区间没有重合
+            } else {
+                // 保存前面的区间到tempRes
+                tempRes[index][0] = tempStart;
+                tempRes[index][1] = tempEnd;
+                index++;
+                tempStart = intervals[i][0];
+                tempEnd = intervals[i][1];
+            }
+        }
+        
+        // 边界情况，保存最后一个区间
+        tempRes[index][0] = tempStart;
+        tempRes[index][1] = tempEnd;
+        index++;
+        
+        // 将有效结果复制到最终返回的数组
+        return Arrays.copyOf(tempRes, index);
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+        res = []
+        if len(intervals) == 0:
+            return res
+        
+        # interval的第一个元素作为key排序
+        intervals.sort(key=lambda x: x[0])
+        
+        tempStart = intervals[0][0]
+        tempEnd = intervals[0][1]
+        for i in range(len(intervals)):
+            # 两个区间有重合
+            if intervals[i][0] <= tempEnd:
+                tempEnd = max(tempEnd, intervals[i][1])
+            # 两个区间没有重合
+            else:
+                # 保存前面的区间
+                res.append([tempStart, tempEnd])
+                tempStart = intervals[i][0]
+                tempEnd = intervals[i][1]
+        
+        # 边界情况，保存最后一个区间
+        res.append([tempStart, tempEnd])
+        return res
+```
+
 ## 复杂度分析
 
 **时间复杂度：** 只需要遍历一遍`intervals`，所以时间复杂度为*O(n)*，其中`n`为`intervals`的大小。

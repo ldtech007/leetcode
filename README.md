@@ -97,9 +97,9 @@
 |[leetcode 417.太平洋大西洋水流问题](./leetcode%20blind75/图/LeetCode%200417.太平洋大西洋水流问题.md)| &#10004; | &#10004; | &#10004; | [太平洋大西洋水流问题](https://www.bilibili.com/video/BV1xdspecEtN/) | 图 
 |[leetcode 200.岛屿数量](./leetcode%20blind75/图/LeetCode%200200.岛屿的数量.md)| &#10004; | &#10004; | &#10004; | [岛屿数量](https://www.bilibili.com/video/BV1LUsMezEtq/) | 图 
 |[leetcode 128.最长连续序列](./leetcode%20blind75/图/LeetCode%200128.%20最长连续序列.md)| &#10004; | &#10004; | &#10004; | [最长连续序列](https://www.bilibili.com/video/BV1qqHKetETN/) | 图 
-|[leetcode 57.插入区间](./leetcode%20blind75/区间/LeetCode%200057.插入区间.md)| &#10004; | &#10008; | &#10008; |  | 区间
-|[leetcode 56.合并区间](./leetcode%20blind75/区间/LeetCode%200056.%20合并区间.md)| &#10004; | &#10008; | &#10008; |  | 区间
-|[leetcode 435.无重叠区间](./leetcode%20blind75/区间/LeetCode%200435.%20无重叠区间.md)| &#10004; | &#10008; | &#10008; |  | 区间
+|[leetcode 57.插入区间](./leetcode%20blind75/区间/LeetCode%200057.插入区间.md)| &#10004; | &#10004; | &#10004; | [插入区间](https://www.bilibili.com/video/BV1VHHUezEw7/) | 区间
+|[leetcode 56.合并区间](./leetcode%20blind75/区间/LeetCode%200056.%20合并区间.md)| &#10004; | &#10004; | &#10004; |  | 区间
+|[leetcode 435.无重叠区间](./leetcode%20blind75/区间/LeetCode%200435.%20无重叠区间.md)| &#10004; | &#10004; | &#10004; |  | 区间
 |[leetcode 206.反转链表](./leetcode%20blind75/链表/LeetCode%200206.%20%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8.md)| &#10004; | &#10004; | &#10004; | [反转链表](https://www.bilibili.com/video/BV1gE421N7W2/) | 链表 
 |[leetcode 141.环形链表](./leetcode%20blind75/链表/LeetCode%200141.%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8.md)| &#10004; | &#10004; | &#10004; | [环形链表](https://www.bilibili.com/video/BV18z421q78k/) | 链表 
 |[leetcode 21.合并两个有序链表](./leetcode%20blind75/链表/LeetCode%200021.%20%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8.md)| &#10004; | &#10004; | &#10004; | [合并两个有序链表](https://www.bilibili.com/video/BV17w4m1Y7CJ/) | 链表 

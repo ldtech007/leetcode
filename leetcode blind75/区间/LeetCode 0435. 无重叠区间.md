@@ -59,6 +59,64 @@ public:
 };
 ```
 
+## java代码
+
+```java
+class Solution {
+    public int eraseOverlapIntervals(int[][] intervals) {
+        int intervals_len = intervals.length;
+        if (intervals_len == 0) {
+            return 0;
+        }
+
+        // interval的第一个元素作为key排序
+        Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
+
+        int res = 0;
+        int tmpEnd = intervals[0][1];
+        for (int i = 1; i < intervals_len; i++) {
+            // 没有重叠
+            if (intervals[i][0] >= tmpEnd) {
+                tmpEnd = intervals[i][1];
+            // 有重叠
+            } else {
+                // 移除重叠区间[start1，end1]和[start2, end2]中end1、end2值较大的那个区间。
+                tmpEnd = Math.min(tmpEnd, intervals[i][1]);
+                res++;
+            }
+        }
+        return res;
+    }
+}
+```
+
+## python代码
+
+```python
+class Solution:
+    def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
+        intervals_len = len(intervals)
+        if intervals_len == 0:
+            return 0
+
+        # interval的第一个元素作为key排序
+        intervals.sort(key=lambda x: x[0])
+
+        res = 0
+        tmpEnd = intervals[0][1]
+        for i in range(1, intervals_len):
+            # 没有重叠
+            if intervals[i][0] >= tmpEnd:
+                tmpEnd = intervals[i][1]
+            # 有重叠
+            else:
+                # 移除重叠区间[start1，end1]和[start2, end2]中end1、end2值较大的那个区间。
+                tmpEnd = min(tmpEnd, intervals[i][1])
+                res += 1
+
+        return res
+```
+
 ## 复杂度分析
 
 **时间复杂度：** 首先排序的时间复杂度是*O(nlogn)*，遍历一遍数组`intervals`需要*O(n)*，总的时间复杂度是*O(nlogn)*。其中`n`为`intervals`的长度。
