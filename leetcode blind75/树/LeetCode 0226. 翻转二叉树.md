@@ -62,6 +62,69 @@ public:
     }
 };
 ```
+## java代码
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public TreeNode invertTree(TreeNode root) {
+        if (root == null) {  // 如果节点为空，返回该节点
+            return root;
+        }
+
+        // 递归地翻转左子树和右子树
+        root.left = invertTree(root.left);
+        root.right = invertTree(root.right);
+
+        // 交换左子树和右子树
+        TreeNode tmp = root.left;
+        root.left = root.right;
+        root.right = tmp;
+
+        return root;
+    }
+}
+```
+
+## python代码
+
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        if not root:  # 如果节点为空，返回该节点
+            return root
+
+        # 递归地翻转左子树和右子树
+        root.left = self.invertTree(root.left)
+        root.right = self.invertTree(root.right)
+
+        # 交换左子树和右子树
+        tmp = root.left
+        root.left = root.right
+        root.right = tmp
+        
+        return root
+```
 
 ## 复杂度分析
 

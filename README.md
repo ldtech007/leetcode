@@ -98,8 +98,8 @@
 |[leetcode 200.岛屿数量](./leetcode%20blind75/图/LeetCode%200200.岛屿的数量.md)| &#10004; | &#10004; | &#10004; | [岛屿数量](https://www.bilibili.com/video/BV1LUsMezEtq/) | 图 
 |[leetcode 128.最长连续序列](./leetcode%20blind75/图/LeetCode%200128.%20最长连续序列.md)| &#10004; | &#10004; | &#10004; | [最长连续序列](https://www.bilibili.com/video/BV1qqHKetETN/) | 图 
 |[leetcode 57.插入区间](./leetcode%20blind75/区间/LeetCode%200057.插入区间.md)| &#10004; | &#10004; | &#10004; | [插入区间](https://www.bilibili.com/video/BV1VHHUezEw7/) | 区间
-|[leetcode 56.合并区间](./leetcode%20blind75/区间/LeetCode%200056.%20合并区间.md)| &#10004; | &#10004; | &#10004; |  | 区间
-|[leetcode 435.无重叠区间](./leetcode%20blind75/区间/LeetCode%200435.%20无重叠区间.md)| &#10004; | &#10004; | &#10004; |  | 区间
+|[leetcode 56.合并区间](./leetcode%20blind75/区间/LeetCode%200056.%20合并区间.md)| &#10004; | &#10004; | &#10004; | [合并区间](https://www.bilibili.com/video/BV1nVHXehEBC/) | 区间
+|[leetcode 435.无重叠区间](./leetcode%20blind75/区间/LeetCode%200435.%20无重叠区间.md)| &#10004; | &#10004; | &#10004; | [无重叠区间](https://www.bilibili.com/video/BV1N2pLeTEUM/) | 区间
 |[leetcode 206.反转链表](./leetcode%20blind75/链表/LeetCode%200206.%20%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8.md)| &#10004; | &#10004; | &#10004; | [反转链表](https://www.bilibili.com/video/BV1gE421N7W2/) | 链表 
 |[leetcode 141.环形链表](./leetcode%20blind75/链表/LeetCode%200141.%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8.md)| &#10004; | &#10004; | &#10004; | [环形链表](https://www.bilibili.com/video/BV18z421q78k/) | 链表 
 |[leetcode 21.合并两个有序链表](./leetcode%20blind75/链表/LeetCode%200021.%20%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8.md)| &#10004; | &#10004; | &#10004; | [合并两个有序链表](https://www.bilibili.com/video/BV17w4m1Y7CJ/) | 链表 
@@ -121,11 +121,11 @@
 |[leetcode 647.回文子串](./leetcode%20blind75/字符串/LeetCode%200647.%20回文子串.md)| &#10004; | &#10004; | &#10004; | [回文子串](https://www.bilibili.com/video/BV1Bs421w7iw/) | 字符串 
 |[leetcode 104.二叉树的最大深度](./leetcode%20blind75/树/LeetCode%200104.%20二叉树的最大深度.md)| &#10004; | &#10004; | &#10004; | [二叉树的最大深度](https://www.bilibili.com/video/BV1MRYHeHEeP/) | 树
 |[leetcode 100.相同的树](./leetcode%20blind75/树/LeetCode%200100.%20相同的树.md) | &#10004; | &#10004; | &#10004; | [相同的树](https://www.bilibili.com/video/BV163Ype6E2L/) | 树
-|[leetcode 226.翻转二叉树](./leetcode%20blind75/树/LeetCode%200226.%20翻转二叉树.md) | &#10004; | &#10008; | &#10008; | [翻转二叉树](https://www.bilibili.com/video/BV1N7YheBE8H/) | 树
+|[leetcode 226.翻转二叉树](./leetcode%20blind75/树/LeetCode%200226.%20翻转二叉树.md) | &#10004; | &#10004; | &#10004; | [翻转二叉树](https://www.bilibili.com/video/BV1N7YheBE8H/) | 树
 |[leetcode 124.二叉树中的最大路径和](./leetcode%20blind75/树/LeetCode%200124.%20二叉树中的最大路径和.md) | &#10004; | &#10008; | &#10008; | [二叉树中的最大路径和](https://www.bilibili.com/video/BV12FYee2Eg6/) | 树
 |[leetcode 102.二叉树的层序遍历](./leetcode%20blind75/树/LeetCode%200102.%20二叉树的层序遍历.md) | &#10004; | &#10004; | &#10004; | [二叉树的层序遍历](https://www.bilibili.com/video/BV1MNeceFE1h/) | 树
 |[leetcode 297.二叉树的序列化与反序列化](./leetcode%20blind75/树/LeetCode%200297.%20二叉树的序列化与反序列化.md) | &#10004; | &#10008; | &#10008; | [二叉树的序列化与反序列化](https://www.bilibili.com/video/BV1TTeceoECg/) | 树
-|[leetcode 572.另一棵树的子树](./leetcode%20blind75/树/LeetCode%200572.%20另一棵树的子树.md) | &#10004; | &#10008; | &#10008; | [另一棵树的子树](https://www.bilibili.com/video/BV1BseceLE6R/) | 树
+|[leetcode 572.另一棵树的子树](./leetcode%20blind75/树/LeetCode%200572.%20另一棵树的子树.md) | &#10004; | &#10004; | &#10004; | [另一棵树的子树](https://www.bilibili.com/video/BV1BseceLE6R/) | 树
 |[leetcode 105.从前序与中序遍历序列构造二叉树](./leetcode%20blind75/树/LeetCode%200105.%20从前序与中序遍历序列构造二叉树.md) | &#10004; | &#10008; | &#10008; | [从前序与中序遍历序列构造二叉树](https://www.bilibili.com/video/BV1XAYke2ETp/) | 树
 |[leetcode 98.验证二叉搜索树](./leetcode%20blind75/树/LeetCode%200098.%20验证二叉搜索树.md) | &#10004; | &#10004; | &#10004; | [验证二叉搜索树](https://www.bilibili.com/video/BV1zVe7eoEiu/) | 树
 |[leetcode 230.二叉搜索树中第K小的元素](./leetcode%20blind75/树/LeetCode%200230.%20二叉搜索树中第K小的元素.md) | &#10004; | &#10008; | &#10008; | [二叉搜索树中第K小的元素](https://www.bilibili.com/video/BV1DseseYE38/) | 树

@@ -74,6 +74,85 @@ public:
 };
 ```
 
+## java代码
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public boolean isSubtree(TreeNode root, TreeNode subRoot) {
+          // 递归结束的条件，空节点null是任意树的子树
+        if (subRoot == null) return true;
+        // 递归结束的条件，此时subRoot不为null
+        if (root == null) return false;
+        // 递归结束的条件
+        if (isSameTree(root, subRoot)) return true;
+        // 子问题
+        return isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot);
+    }
+
+    public boolean isSameTree(TreeNode p, TreeNode q) {
+        // 递归结束的条件
+        if (p == null && q == null) {
+            return true;
+        }
+        // 递归结束的条件
+        if (p == null || q == null || p.val != q.val) {
+            return false;
+        }
+        // 子问题
+        return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+    }
+}
+```
+
+## python代码
+
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def isSubtree(self, root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:
+         # 递归结束的条件，空节点None是任意树的子树
+        if not subRoot:
+            return True
+        # 递归结束的条件，此时subRoot不为None
+        if not root:
+            return False
+        # 递归结束的条件
+        if self.isSameTree(root, subRoot):
+            return True
+        # 子问题
+        return self.isSubtree(root.left, subRoot) or self.isSubtree(root.right, subRoot)
+
+    def isSameTree(self, p: TreeNode, q: TreeNode) -> bool:
+        # 递归结束的条件
+        if not p and not q:
+            return True
+        # 递归结束的条件
+        if not p or not q or p.val != q.val:
+            return False
+        # 子问题
+        return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
+```
+
 ## 复杂度分析
 
 **时间复杂度：** 由于`s`的每一个节点都要与`t`进行去匹配，所以时间复杂度为 *O(ST)*，其中`S`为`s`的节点数量，`T`为`t`的节点数量。
